@@ -10,17 +10,17 @@
     <title>Formulari dades</title>
 </head>
 <body>
+    <?php include("header.html");?>
     <h1>Formulari</h1>
 
-    <form method="POST">
+    <form method="POST" action="ticket.php">
         <div>
             <div>
                 <p>Email</p>
             </div>
-            
             <div>
-                <br>
-                <input type="email" name="persona[Email]" maxlength="30" required/>
+            </br>
+                <input type="text" name="email" maxlength="30" required/>
             </div>
         </div>
         <hr/>
@@ -31,9 +31,9 @@
         if(!$_POST){
 
         } else {
-            echo $_POST['persona[Email]'];
+            echo $_POST['o'];
         }
     ?>
-
+    <?php include("footer.html");?>
 </body>
-</html>
+</html> 

@@ -10,5 +10,12 @@
 </head>
 <body>
     <h1>MENÚ</h1>
+    <form method="POST" action="formulariDades.php">
+        <label>prueba: </label> 
+        <input type="text" name="o" requiered>
+        <input id="Boton" type="Submit" value="Enviar">
+        
+    </form>
+
 </body>
 </html>
