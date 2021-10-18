@@ -13,6 +13,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="separate">
         <h1>Landing Page</h1>
