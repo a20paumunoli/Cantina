@@ -17,7 +17,7 @@
 <body>
     <div class="separate">
         <h1>Landing Page</h1>
-        <button type="button" class="btn btn-primary">Ver MENÚ</button>
+        <button type="button" class="btn btn-primary">Veure MENÚ</button>
     </div>
 </body>
 </html>
