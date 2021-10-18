@@ -19,7 +19,7 @@
     <form method="POST">
     <div id="mati">
         <ul>
-            <il>Bocata 1 <input type="checkbox" name="chorizo" value="bocata1"></il>
+            <il>Bocata 12 <input type="checkbox" name="chorizo" value="bocata1"></il>
             <il>Bocata 2 <input type="checkbox" name="jamón" value="bocata2"></il>
             <il>Bocata 3 <input type="checkbox" name="nocilla" value="bocata3"></il>
             <il>Bocata 4 <input type="checkbox" name="queso" value="bocata4"></il>
