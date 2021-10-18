@@ -26,5 +26,14 @@
         <hr/>
         <input id="Boton" type="Submit" value="Enviar">
     </form>
+
+    <?php
+        if(!$_POST){
+
+        } else {
+            echo $_POST['persona[Email]'];
+        }
+    ?>
+
 </body>
 </html>
