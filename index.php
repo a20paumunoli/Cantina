@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <?php include("header.html"); ?>
+        <?php include("header.html") ?>  
 
         <div class="separate">
             <h1>Index Page</h1>
