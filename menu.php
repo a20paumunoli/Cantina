@@ -9,7 +9,7 @@
     <title>MENU</title>
 </head>
 <body>
-    <include src="./header.html"></include>   variant_cmp
+    <?php include("header.html") ?>   variant_cmp
     <h1>MENÚ</h1>
 
     <form method="POST" action="formulariDades.php">
@@ -62,6 +62,6 @@
 
 
 
-    <include src="./footer.html"></include>
+    <?php include ("footer.html"); ?>
 </body>
 </html>
