@@ -10,7 +10,7 @@
     <title>Formulari dades</title>
 </head>
 <body>
-    <include src="./header.html"></include>  
+    <?php include("header.html") ?>  
     <h1>Formulari</h1>
 
     <form method="POST" action="ticket.php">

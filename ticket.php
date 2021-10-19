@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <include src="./header.html"></include>  
+    <?php include("header.html") ?>  
     <div class="separate"> 
         <h1>Ticket</h1>
     

@@ -3,7 +3,7 @@
         "nombre": "Bocata tortilla de patata",
         "id": "comida",
         "precio": "4.5",
-        "img": "bocatachorizo.jpg"
+        "img": "img/bocatachorizo.jpg"
     },
     {
         "nombre": "Bocata jamón",
@@ -33,7 +33,7 @@
         "nombre": "Cocacola",
         "id": "6",
         "precio":"1",
-        "img": "cocacola.jpg"
+        "img": "img/cocacola.jpg"
     },
     {
         "nombre": "Fanta de naranja",
