@@ -26,7 +26,7 @@
         <br>
             <div>
                 <label for="tlf">Teléfon</label>
-                <input name="tlf" type="tel" id="tlf" size="9" placeholder="+34XXXXXXXXX" pattern="[0-9]{9}" width="10px" required>
+                <input name="tlf" type="tel" id="tlf" size="9" placeholder="+34 XXXXXXXXX" width="10px" required>
             </div>
         <br>
             <div>
