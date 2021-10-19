@@ -9,7 +9,7 @@
     <title>MENU</title>
 </head>
 <body>
-    <?php include("header.html") ?>  
+    <include src="./header.html"></include>  
     <h1>MENÚ</h1>
 
     <form method="POST" action="formulariDades.php">
@@ -17,26 +17,30 @@
         <input type="text" name="o" requiered>
         <input id="Boton" type="Submit" value="Enviar">
     </form>
-
+    <div class="mati">
     <?php
     
-        $data = file_get_contents("cmati.json");
+        $data = file_get_contents("json/cmati.json");
         $menuMati = json_decode($data, true);
         foreach ($menuMati as $prod) {
             echo $prod["nombre"]." ". $prod["precio"]."€  ". $prod["id"];
             echo "<img src='".$prod["img"]."'></br>";
         }
-
-        $data = file_get_contents("ctarda.json");
+    ?>
+    </div>
+    <div class="tarda">
+    <?php
+        $data = file_get_contents("json/ctarda.json");
         $menuTarda = json_decode($data, true);
         foreach ($menuTarda as $prod) {
             echo $prod["nombre"]." ". $prod["precio"]."€  ". $prod["id"];
             echo "<img src='".$prod["img"]."'></br>";
         }
     ?>
+    </div>
 
 
 
-    <?php include ("footer.html"); ?>
+    <include src="./footer.html"></include>
 </body>
 </html>
