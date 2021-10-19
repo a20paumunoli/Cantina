@@ -9,7 +9,7 @@
     <title>MENU</title>
 </head>
 <body>
-    <include src="./header.html"></include>  
+    <include src="./header.html"></include>   variant_cmp
     <h1>MENÚ</h1>
 
     <form method="POST" action="formulariDades.php">
