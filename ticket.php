@@ -13,7 +13,9 @@
             }
         </style> 
 </head>
+
 <body>
+    <include src="./header.html"></include>  
     <div class="separate"> 
         <h1>Ticket</h1>
     
@@ -25,5 +27,10 @@
         }
     ?>
     </div>
+
+
+
+
+    <include src="./footer.html"></include>
 </body>
 </html>
