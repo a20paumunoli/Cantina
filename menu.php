@@ -14,8 +14,15 @@
         <label>prueba: </label> 
         <input type="text" name="o" requiered>
         <input id="Boton" type="Submit" value="Enviar">
-        
     </form>
 
+    <?php
+        $data = file_get_contents("cmati.json");
+        $menuMati = json_decode($data, true);
+        foreach ($menuMati as $prod) {
+            echo $prod["nombre"]." ". $prod["precio"]."€  ". $prod["id"];
+            echo "<img src='".$prod["img"]."'></br>";
+        }
+    ?>
 </body>
 </html>
