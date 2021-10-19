@@ -12,12 +12,12 @@
         
         #div_h{
             display: grid; 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr; 
+            align-content: center; 
         }
         
         #div1{
             justify-self: left;
-            align-self: center;
         }
 
         #div2{
@@ -32,8 +32,9 @@
         }
 
         #cant{
-            margin: 30px;
+            margin-left: 30px;
             display: inline;
+            font-size:33px;
         }
 
         #icon{
@@ -53,14 +54,12 @@
     
     <div id="div_h" class="alert alert-secondary">
         <div id="div1">        
-            <a href="index.php"><img id="logo" src="Logo.png"  width="40" height="45"> </a>
-            <h3 id="cant">CANTINA</h3>
+            <a href="index.php"><img id="logo" src="./Logo.png"  width="40" height="45"> </a>
+            <p id="cant">CANTINA</p>
         </div>
 
         <div id="div2"> 
-            <a href="index.php" class="btn"><i id="icon" class="bi bi-house"></i> HOME</a>
-            <a href="admin.php" class="btn"><i id="icon" class="bi bi-lock"></i>ADMIN</a>
-            
+            <a href="index.php" class="btn"><i id="icon" class="bi bi-house"></i> HOME</a>            
         </div>
 
     </div>
