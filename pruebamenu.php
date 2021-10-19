@@ -47,6 +47,10 @@
     
     echo $bocata[chorizo][1];
     ?>
+
+
+
+    <include src="./footer.html"></include>
 </body>
 </html>
 

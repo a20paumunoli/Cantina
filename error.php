@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="normalize.css">
     <title>Error</title>
 </head>
+
 <body>
+    <include src="./header.html"></include>  
     <h1>Error</h1>
+
+
+    <include src="./footer.html"></include>
 </body>
 </html>

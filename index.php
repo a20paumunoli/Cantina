@@ -15,11 +15,16 @@
     </head>
 
     <body>
+        <include src="./header.html"></include> 
+
         <div class="separate">
             <h1>Index Page</h1>
 
             <a href="menu.php">Menu</a>
 
         </div>
+
+
+        <include src="./footer.html"></include>
     </body>
 </html>

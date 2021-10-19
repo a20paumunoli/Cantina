@@ -9,7 +9,9 @@
     <title>MENU</title>
 </head>
 <body>
+    <include src="./header.html"></include>  
     <h1>MENÚ</h1>
+
     <form method="POST" action="formulariDades.php">
         <label>prueba: </label> 
         <input type="text" name="o" requiered>
@@ -17,5 +19,9 @@
         
     </form>
 
+
+
+
+    <include src="./footer.html"></include>
 </body>
 </html>

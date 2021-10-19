@@ -10,7 +10,7 @@
     <title>Formulari dades</title>
 </head>
 <body>
-    <?php include("header.html");?>
+    <include src="./header.html"></include>  
     <h1>Formulari</h1>
 
     <form method="POST" action="ticket.php">
@@ -34,6 +34,6 @@
             echo $_POST['o'];
         }
     ?>
-    <?php include("footer.html");?>
+    <include src="./footer.html"></include>
 </body>
 </html> 
