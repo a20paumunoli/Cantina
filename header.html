@@ -14,17 +14,22 @@
             display: grid; 
             grid-template-columns: auto 1fr auto; 
             align-content: center; 
+            padding: 10px 16px 10px 60px;
         }
         
         #h-1{
             justify-self: left;
             align-self: center;
+            padding-left: 14px; 
+            padding-right: 14px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
         }
 
         #h-2{
             align-self: end;
             justify-self: left;
-            margin-left: 10px;
+            margin-left: 10px
         }
 
         #h-3{
@@ -34,10 +39,10 @@
 
         .btn{
             color: #dc3545;
-            font-size: 20px;
+            font-size: 17.5px;
         } 
 
-        h1{ margin-bottom: 0px}
+        h1{ margin-bottom: 0px;}
 
         p{margin: 0px 0px 0px 0px}
 
@@ -55,7 +60,7 @@
     
     <div id="h-cont" class="alert alert-secondary">
         <div id="h-1">        
-            <a href="index.php"><img id="logo" src="../img/logo.png"  width="50"> </a>
+            <a href="index.php"><img id="logo" src="../img/logo.png"  width="60px"> </a>
         </div>
 
         <div id="h-2">
@@ -64,7 +69,7 @@
         </div>
 
         <div id="h-3"> 
-            <a href="index.php" class="btn"><i id="icon" class="bi bi-house"></i> <span>Home</span></a>            
+            <button href="index.php" class="btn btn-outline-danger""><i id="icon" class="bi bi-house"></i> <span>Home</span></button>            
         </div>
 
     </div>
