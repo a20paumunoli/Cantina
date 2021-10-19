@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <include src="./header.html"></include>  
+    <?php include("header.html") ?>  
     <h1>Error</h1>
 
 
