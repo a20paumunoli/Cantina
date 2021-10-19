@@ -69,7 +69,7 @@
         </div>
 
         <div id="h-3"> 
-            <button href="index.php" class="btn btn-outline-danger""><i id="icon" class="bi bi-house"></i> <span>Home</span></button>            
+            <button href="index.php" class="btn btn-outline-danger"><i id="icon" class="bi bi-house"></i> <span>Home</span></button>            
         </div>
 
     </div>

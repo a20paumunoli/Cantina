@@ -12,7 +12,7 @@
 
 <body>
     <h1>Validació comanda</h1>
-    <?php include("header.html") ?>  
+    <?php include("header.php") ?>  
 
     <!--Mostrar preu total compra-->
     
@@ -57,6 +57,6 @@
     </script>
 -->
 
-    <?php include ("footer.html"); ?>
+    <?php include ("footer.php"); ?>
 </body>
 </html>

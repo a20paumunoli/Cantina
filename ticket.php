@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <?php include("header.html") ?>  
+    <?php include("header.php") ?>  
     <div class="separate"> 
         <h1>Ticket</h1>
     
@@ -31,6 +31,6 @@
 
 
 
-    <?php include ("footer.html"); ?>
+    <?php include ("footer.php"); ?>
 </body>
 </html>
