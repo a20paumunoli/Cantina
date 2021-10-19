@@ -1,8 +1,8 @@
 [
     {
-        "nombre": "Bocata chorizo de Pamplona",
+        "nombre": "Bocata tortilla de patata",
         "id": "comida",
-        "precio": "3.5",
+        "precio": "4.5",
         "img": "bocatachorizo.jpg"
     },
     {
@@ -24,9 +24,9 @@
         "img": "img"
     },
     {
-        "nombre": "Bocata paté",
+        "nombre": "Donut",
         "id": "5",
-        "precio": "4",
+        "precio": "0.5",
         "img": "img"
     },
     {

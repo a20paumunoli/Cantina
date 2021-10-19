@@ -25,6 +25,13 @@
             echo $prod["nombre"]." ". $prod["precio"]."€  ". $prod["id"];
             echo "<img src='".$prod["img"]."'></br>";
         }
+
+        $data = file_get_contents("ctarda.json");
+        $menuTarda = json_decode($data, true);
+        foreach ($menuTarda as $prod) {
+            echo $prod["nombre"]." ". $prod["precio"]."€  ". $prod["id"];
+            echo "<img src='".$prod["img"]."'></br>";
+        }
     ?>
 
 
