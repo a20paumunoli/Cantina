@@ -117,13 +117,13 @@
                 height: auto;
             }
 
-            .text{
+            /*.text{
   _              
-            }
+            }*/
 
-            .img{
+            /*.img{
 _ 
-            }
+            }*/
         
         </style>
 
