@@ -34,6 +34,6 @@
             echo $_POST['o'];
         }
     ?>
-    <include src="./footer.html"></include>
+    <?php include ("footer.html"); ?>
 </body>
 </html> 

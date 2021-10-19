@@ -14,6 +14,6 @@
     <h1>Error</h1>
 
 
-    <include src="./footer.html"></include>
+    <?php include ("footer.html"); ?>
 </body>
 </html>
