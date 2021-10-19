@@ -19,24 +19,45 @@
     </form>
     <div class="mati">
     <?php
-    
+
         $data = file_get_contents("json/cmati.json");
         $menuMati = json_decode($data, true);
         foreach ($menuMati as $prod) {
-            echo $prod["nombre"]." ". $prod["precio"]."€  ". $prod["id"];
+    ?>
+        <div>
+        <?php
             echo "<img src='".$prod["img"]."'></br>";
+        ?>
+            <button class="afegir">+</button>
+        <?php
+            echo $prod["nombre"]." ". $prod["precio"]."€  ". $prod["id"];
+        ?>
+            <button class="treure">-</button>
+        </div>
+        <?php
         }
     ?>
     </div>
     <div class="tarda">
-    <?php
+        <?php
+
         $data = file_get_contents("json/ctarda.json");
         $menuTarda = json_decode($data, true);
         foreach ($menuTarda as $prod) {
-            echo $prod["nombre"]." ". $prod["precio"]."€  ". $prod["id"];
-            echo "<img src='".$prod["img"]."'></br>";
+            ?>
+            <div>
+                <?php
+                echo "<img src='".$prod["img"]."'></br>";
+                ?>
+                <button class="afegir">+</button>
+                <?php
+                echo $prod["nombre"]." ". $prod["precio"]."€  ". $prod["id"];
+                ?>
+                <button class="treure">-</button>
+            </div>
+            <?php
         }
-    ?>
+        ?>
     </div>
 
 
