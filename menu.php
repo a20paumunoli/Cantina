@@ -10,11 +10,17 @@
         <title>MENU</title>
 
         <style>
-            
             .grid-cont1{
                 display: grid;
                 grid-template-columns: 3fr 1fr;
                 margin: 10px 40px 10px 40px;
+            }
+
+            .pr-grid{
+                display: grid; 
+                grid-template-rows: 3fr 1fr;
+                align-items: center;
+                justify-items: center;
             }
 
             .grid-cont2{
@@ -25,22 +31,26 @@
                                      "bebida1 bebida2 bebida3 bebida4"
                                      "dulce dulce submit submit"
                                      "dulce1 dulce2 submit submit";
+                gap: 10px 25px;
+                grid-template-columns: auto;
+                grid-template-rows: 30px 250px 30px 250px 30px 250px;
+                
             }
 
             .gc1{
                 grid-area: comida;
-                background-color: red;
-                height: 50px;
+                background-color: lightsteelblue;
             }
 
             .gc2{
                 grid-area: comida1; 
-                background-color: blue;
+                background-color: lightsteelblue;
+                column-gap: 10px;
             }
 
             .gc3{
                 grid-area: comida2;
-                background-color: lightblue;
+                background-color: lightsteelblue;
             }
 
             .gc4{
@@ -50,50 +60,50 @@
 
             .gc5{
                 grid-area: comida4;
-                background-color: darkblue;
+                background-color: lightsteelblue;
             }
 
             .gc6{
                 grid-area: bebida;
-                background-color: limegreen;
+                background-color: lightsteelblue;
             }
 
             .gc7{
                 grid-area: bebida1;
-                background-color: lightseagreen;
+                background-color: lightsteelblue;
             }
             .gc8{
                 grid-area: bebida2;
-                background-color: green;
+                background-color: lightsteelblue;
             }
             .gc9{
                 grid-area: bebida3;
-                background-color: greenyellow;
+                background-color: lightsteelblue;
             }
             
             .gc10{
                 grid-area: bebida4;
-                background-color: lightgreen;
+                background-color: lightsteelblue;
             }
 
             .gc11{
                 grid-area: dulce;
-                background-color: lightcoral;
+                background-color: lightsteelblue;
             }
 
             .gc12{
                 grid-area: dulce1;
-                background-color: coral;
+                background-color: lightsteelblue;
             }
 
             .gc13{
                 grid-area: dulce2;
-                background-color: pink;
+                background-color: lightsteelblue;
             }
 
             .gc14{
                 grid-area: submit;
-                background-color: red;
+                background-color: lightsteelblue;
             }
             
             .ticket{
@@ -101,6 +111,19 @@
                 margin-left: 20px;
             }
 
+            .responsive{
+                width: 100%;
+                max-width: 150px;
+                height: auto;
+            }
+
+            .text{
+  _              
+            }
+
+            .img{
+_ 
+            }
         
         </style>
 
@@ -110,82 +133,120 @@
         <?php include("header.php") ?>
         
         <form method="POST" action="formulariDades.php">
-            <label>prueba: </label>
-            <input type="text" name="o" requiered>
-            <input id="Boton" type="Submit" value="Enviar">
-        </form>
-        
-        <div class="grid-cont1">
-            <div>
-                <p>MENÚ</p>
-                <div class="grid-cont2">
-                    <div class="gc1">Comida</div>
-                    <div class="gc2">a</div>
-                    <div class="gc3">a</div>
-                    <div class="gc4">a</div>
-                    <div class="gc5">a</div>
-                    <div class="gc6">Bebida</div>
-                    <div class="gc7">a</div>
-                    <div class="gc8">a</div>
-                    <div class="gc9">a</div>
-                    <div class="gc10">a</div>
-                    <div class="gc11">Dulce</div>
-                    <div class="gc12">a</div>
-                    <div class="gc13">a</div>
-                    <div class="gc14">Submit</div>
-                </div>
-            </div>
-            <div class="ticket">
-                <h3>Ticket</h3>
+            <div class="grid-cont1">
+                
+                <!-- Menú -->
                 <div>
+                    <p>MENÚ</p>
+                    <div class="grid-cont2">
+                    <?php
+                        $data = file_get_contents("json/cmati.json");
+                        $menuMati = json_decode($data, true);
+                        mostrarProd($menuMati);
 
+                        function mostrarProd($menuMati){                
+                            $var = 0;
+                            foreach ($menuMati as $prod) {
+                                if($var == 0){
+                                    echo "<div class='gc".($var+1)."'>Comida</div>";
+                                    $var++;
+                                }else if ($var == 5){
+                                    echo "<div class='gc".($var+1)."'>Begudes</div>";
+                                    $var++;
+                                }else if($var == 10){
+                                    echo "<div class='gc".($var+1)."'>Dolços</div>";
+                                    $var++;
+                                }         
+                                echo "<div class='gc".($var+1). " pr-grid'>";
+                                    echo '<div class="img">
+                                            <img src='.$prod["img"].' class="responsive">
+                                          </div>
+                                          <div class="text">
+                                            <input type="button" value="+">
+                                            '.$prod["nombre"].  ' '.$prod["precio"].'€  '.$prod["id"].'
+                                            <input type="button" value="-">
+                                          </div></div>';
+                                $var++; 
+                            }
+                            echo "<div class='gc".($var+1)."'><input type='submit' value='Finalitzar compra'></div>";
+                        }
+                    ?>
+    <!-- <div>
+        <div class="gc1">Comida</div>
+        <div class="gc2">
+
+        </div>
+        <div class="gc3">
+
+        </div>
+        <div class="gc4">
+
+        </div>
+        <div class="gc5">
+
+        </div>
+        <div class="gc6">Bebida</div>
+        <div class="gc7">
+
+        </div>
+        <div class="gc8">
+
+        </div>
+        <div class="gc9">
+
+        </div>
+        <div class="gc10">
+            
+        </div>
+        <div class="gc11">Dulce</div>
+        <div class="gc12">
+
+        </div>
+        <div class="gc13">
+
+        </div>
+        <div class="gc14">Submit</div>
+    </div>  -->
+                    </div>
+                </div>
+
+                <!-- Llistat elements seleccionats -->
+
+                <div class="ticket">
+                    <h3>Ticket</h3>
+                    <div>
+
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
 
 
             
-        <div class="mati">
-            <?php
-            $data = file_get_contents("json/cmati.json");
-            $menuMati = json_decode($data, true);
-            foreach ($menuMati as $prod) {
-            ?>
-                <div>
-                    <?php
-                        echo "<img src='" . $prod["img"] . "'></br>";
-                    ?>
-                    <button class="afegir">+</button>
-                    <?php
-                        echo $prod["nombre"] . " " . $prod["precio"] . "€  " . $prod["id"];
-                    ?>
-                    <button class="treure">-</button>
-                </div>
-            <?php
-            }
-            ?>
+
+                    
         </div>
 
-        <div class="tarda">
-            <?php
+        <!-- <div class="tarda">
+            
                 $data = file_get_contents("json/ctarda.json");
                 $menuTarda = json_decode($data, true);
                 foreach ($menuTarda as $prod) {
                 ?>
                     <div>
-                        <?php
+                    
                         echo "<img src='" . $prod["img"] . "'></br>";
-                        ?>
+                        
                         <button class="afegir">+</button>
-                        <?php
+                        
                         echo $prod["nombre"] . " " . $prod["precio"] . "€  " . $prod["id"];
-                        ?>
+                       
                         <button class="treure">-</button>
                     </div>
-            <?php
+            
             }
-            ?>
-        </div>
+           
+        </div> -->
 
         <?php include("footer.php"); ?>
     </body>

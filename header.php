@@ -42,7 +42,7 @@
             font-size: 17.5px;
         } 
 
-        h1{ margin-bottom: 0px;}
+        h1{ margin-bottom: 0px !important;}
 
         p{margin: 0px 0px 0px 0px}
 
@@ -69,7 +69,7 @@
         </div>
 
         <div id="h-3"> 
-            <button href="index.php" class="btn btn-outline-danger"><i id="icon" class="bi bi-house"></i> <span>Home</span></button>            
+            <a href="index.php" class="btn btn-outline-danger"><i id="icon" class="bi bi-house"></i> <span>Home</span></a>            
         </div>
 
     </div>
