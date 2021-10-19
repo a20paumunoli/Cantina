@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <include src="./header.html"></include>  
+    <?php include("header.html") ?>  
     <h1>Error</h1>
 
 
-    <include src="./footer.html"></include>
+    <?php include ("footer.html"); ?>
 </body>
 </html>

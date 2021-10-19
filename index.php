@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <include src="./header.html"></include> 
+        <?php include("header.html") ?>  
 
         <div class="separate">
             <h1>Index Page</h1>
@@ -25,6 +25,6 @@
         </div>
 
 
-        <include src="./footer.html"></include>
+        <?php include ("footer.html"); ?>
     </body>
 </html>

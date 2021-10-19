@@ -1,0 +1,62 @@
+[
+    {
+        "nombre": "Bocata tortilla de patata",
+        "id": "comida",
+        "precio": "4.5",
+        "img": "img/bocatachorizo.jpg"
+    },
+    {
+        "nombre": "Bocata jamón",
+        "id": "2",
+        "precio": "2.5",
+        "img": "img"
+    },
+    {
+        "nombre": "Bocata nocilla",
+        "id": "3",
+        "precio": "3",
+        "img": "img"
+    },
+    {
+        "nombre": "Bocata queso",
+        "id": "4",
+        "precio": "3",
+        "img": "img"
+    },
+    {
+        "nombre": "Donut",
+        "id": "5",
+        "precio": "0.5",
+        "img": "img"
+    },
+    {
+        "nombre": "Cocacola",
+        "id": "6",
+        "precio":"1",
+        "img": "img/cocacola.jpg"
+    },
+    {
+        "nombre": "Fanta de naranja",
+        "id": "7",
+        "precio":"1",
+        "img": "img"
+    },
+    {
+        "nombre": "Agua",
+        "id": "8",
+        "precio":"0.5",
+        "img": "img"
+    },
+    {
+        "nombre": "Nestea",
+        "id": "9",
+        "precio":"1",
+        "img": "img"
+    },
+    {
+        "nombre": "Café",
+        "id": "10",
+        "precio":"1.2",
+        "img": "img"
+    }
+]
