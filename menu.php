@@ -163,7 +163,7 @@ _
                                           </div>
                                           <div class="text">
                                             <input type="button" value="+">
-                                            '.$prod["nombre"].  ' '.$prod["precio"].'€  '.$prod["id"].'
+                                            '.$prod["nombre"].  ' <b> '.$prod["precio"].'€</b>   '.$prod["id"].'
                                             <input type="button" value="-">
                                           </div></div>';
                                 $var++; 
