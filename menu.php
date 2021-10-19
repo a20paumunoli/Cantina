@@ -135,7 +135,7 @@ _
         <form method="POST" action="formulariDades.php">
             <div class="grid-cont1">
                 
-                <!-- Menú -->
+                <!-- Menú -->      
                 <div>
                     <p>MENÚ</p>
                     <div class="grid-cont2">
@@ -144,6 +144,7 @@ _
                         $menuMati = json_decode($data, true);
                         mostrarProd($menuMati);
 
+                        /*  -- Graella productes --  */ 
                         function mostrarProd($menuMati){                
                             $var = 0;
                             foreach ($menuMati as $prod) {
@@ -162,14 +163,27 @@ _
                                             <img src='.$prod["img"].' class="responsive">
                                           </div>
                                           <div class="text">
-                                            <input type="button" value="+">
+                                            <input type="button" class="añadir" value="+">
                                             '.$prod["nombre"].  ' <b> '.$prod["precio"].'€</b>   '.$prod["id"].'
-                                            <input type="button" value="-">
+                                            <input type="button" class="quitar" value="-">
                                           </div></div>';
                                 $var++; 
                             }
                             echo "<div class='gc".($var+1)."'><input type='submit' value='Finalitzar compra'></div>";
                         }
+
+
+                        /*  -- Añadir Producto --  */ 
+
+
+
+
+                        /*  -- Retirar Producto --  */
+
+
+
+
+
                     ?>
     <!-- <div>
         <div class="gc1">Comida</div>
