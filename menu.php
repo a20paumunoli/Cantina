@@ -136,7 +136,7 @@ _
             <div class="grid-cont1">
                 
                 <!-- Menú -->      
-                <div>
+                <div id='bot'>
                     <p>MENÚ</p>
                     <div class="grid-cont2">
                     <?php
@@ -163,9 +163,10 @@ _
                                             <img src='.$prod["img"].' class="responsive">
                                           </div>
                                           <div class="text">
-                                            <input type="button" class="añadir" value="+">
-                                            '.$prod["nombre"].  ' <b> '.$prod["precio"].'€</b>   '.$prod["id"].'
-                                            <input type="button" class="quitar" value="-">
+                                            <input type="button" id="quitar" class="quitar" value="-">
+                                            <span>'.$prod["nombre"].  '</span><span> '.$prod["precio"].'€</span>
+                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="button" id="añadir" class="añadir" value="+">
                                           </div></div>';
                                 $var++; 
                             }
@@ -174,7 +175,6 @@ _
 
 
                         /*  -- Añadir Producto --  */ 
-
 
 
 
@@ -229,7 +229,7 @@ _
                 <div class="ticket">
                     <h3>Ticket</h3>
                     <div>
-
+                        <p id="ticket-p"></p>
                     </div>
                 </div>
             </div>
@@ -261,7 +261,17 @@ _
             }
            
         </div> -->
-
+        
         <?php include("footer.php"); ?>
+        <script>
+            document.getElementById("bot").addEventListener("click", function(e){
+                if(e.target.classList.contains("añadir")){
+                    var idProd = e.target.parentElement.childNodes[6].value;
+                    var nomProd = e.target.parentElement.childNodes[3].innerHTML;
+                    var preuProd = e.target.parentElement.childNodes[4].innerHTML;
+                    document.getElementById("ticket-p").innerHTML = nomProd;
+                }
+            });
+        </script>
     </body>
 </html>
