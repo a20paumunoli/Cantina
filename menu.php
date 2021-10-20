@@ -201,7 +201,7 @@ _
                                     </div>
                                     <div class="text">
                                         <input type="button" id="quitar" class="quitar" value="-">
-                                            <span>'.$prod["nombre"].  '</span><span> '.$prod["precio"].'€</span>
+                                            <span>'.$prod["nombre"].  '</span><span><b> '.$prod["precio"].'€</b></span>
                                             <input type="hidden" id="hidden" value="'.$prod["id"].'">
                                             <input type="button" id="añadir" class="añadir" value="+">
                                     </div></div>';
