@@ -3,60 +3,60 @@
         "nombre": "Bocata tortilla de patata",
         "id": "comida",
         "precio": "4.5",
-        "img": "img/bocatachorizo.jpg"
+        "img": "img/bocata_tortilla.png"
     },
     {
         "nombre": "Bocata jamón",
         "id": "2",
         "precio": "2.5",
-        "img": "img"
+        "img": "img/bocata_jamon.png"
     },
     {
-        "nombre": "Bocata nocilla",
+        "nombre": "Bocata bacon",
         "id": "3",
-        "precio": "3",
-        "img": "img"
+        "precio": "3.6",
+        "img": "img/bocata_bacon.png"
     },
     {
         "nombre": "Bocata queso",
         "id": "4",
         "precio": "3",
-        "img": "img"
-    },
-    {
-        "nombre": "Donut",
-        "id": "5",
-        "precio": "0.5",
-        "img": "img"
+        "img": "img/bocata_queso.png"
     },
     {
         "nombre": "Cocacola",
-        "id": "6",
+        "id": "5",
         "precio":"1",
-        "img": "img/cocacola.jpg"
+        "img": "img/cocacola.png"
     },
     {
         "nombre": "Fanta de naranja",
-        "id": "7",
+        "id": "6",
         "precio":"1",
-        "img": "img"
+        "img": "img/fanta.png"
     },
     {
         "nombre": "Agua",
-        "id": "8",
+        "id": "7",
         "precio":"0.5",
-        "img": "img"
-    },
-    {
-        "nombre": "Nestea",
-        "id": "9",
-        "precio":"1",
-        "img": "img"
+        "img": "img/agua.png"
     },
     {
         "nombre": "Café",
-        "id": "10",
+        "id": "8",
         "precio":"1.2",
-        "img": "img"
+        "img": "img/cafe.png"
+    },
+    {
+        "nombre": "Donut",
+        "id": "9",
+        "precio":"0.5",
+        "img": "img/donut.png"
+    },
+    {
+        "nombre": "Croissant",
+        "id": "10",
+        "precio":"0.6",
+        "img": "img/croissant.png"
     }
 ]

@@ -138,7 +138,7 @@ _
                 <!-- Menú -->      
                 <div id='bot'>
                     <p>MENÚ</p>
-                    <div class="grid-cont2">
+                    <div id="mati" class="grid-cont2">
                     <?php
                         $data = file_get_contents("json/cmati.json");
                         $menuMati = json_decode($data, true);
@@ -185,6 +185,60 @@ _
 
 
                     ?>
+                    </div>
+                    <div id="tarda" class="grid-cont2">
+                        <?php
+                        $data = file_get_contents("json/ctarda.json");
+                        $menuTarda = json_decode($data, true);
+                        mostrarMenu($menuTarda);
+
+                        /*  -- Graella productes --  */
+                        function mostrarMenu($menuTarda)
+                        {
+                            $var = 0;
+                            foreach ($menuTarda as $prod) {
+                                if ($var == 0) {
+                                    echo "<div class='gc" . ($var + 1) . "'>Comida</div>";
+                                    $var++;
+                                } else if ($var == 5) {
+                                    echo "<div class='gc" . ($var + 1) . "'>Begudes</div>";
+                                    $var++;
+                                } else if ($var == 10) {
+                                    echo "<div class='gc" . ($var + 1) . "'>Dolços</div>";
+                                    $var++;
+                                }
+                                echo "<div class='gc" . ($var + 1) . " pr-grid'>";
+                                echo '<div class="img">
+                                            <img src='.$prod["img"].' class="responsive">
+                                          </div>
+                                          <div class="text">
+                                            <input type="button" id="quitar" class="quitar" value="-">
+                                            <span>'.$prod["nombre"].  '</span><span> '.$prod["precio"].'€</span>
+                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="button" id="añadir" class="añadir" value="+">
+                                          </div></div>';
+                                $var++;
+                            }
+                            echo "<div class='gc" . ($var + 1) . "'><input type='submit' value='Finalitzar compra'></div>";
+                        }
+                        ?>
+                    </div>
+                        <script>
+                            var d = new Date();
+                            // var d = 13;
+                            //document.write(d.getHours());
+
+                            /*document.getElementById("pago").addEventListener('change',function(e){*/
+                            /*let target = e.target;*/
+
+                            if (d.getHours()<="12"){
+                                //if (d<="12"){
+                                document.getElementById("tarda").style.display="none";
+                            }else{
+                                document.getElementById("mati").style.display="none";
+                            }
+                            /*});*/
+                        </script>
     <!-- <div>
         <div class="gc1">Comida</div>
         <div class="gc2">
@@ -221,7 +275,7 @@ _
         </div>
         <div class="gc14">Submit</div>
     </div>  -->
-                    </div>
+
                 </div>
 
                 <!-- Llistat elements seleccionats -->
@@ -242,7 +296,7 @@ _
             
 
                     
-        </div>
+
 
         <!-- <div class="tarda">
             
