@@ -228,9 +228,6 @@ _
                             // var d = 13;
                             //document.write(d.getHours());
 
-                            /*document.getElementById("pago").addEventListener('change',function(e){*/
-                            /*let target = e.target;*/
-
                             if (d.getHours()<="12"){
                                 //if (d<="12"){
                                 document.getElementById("tarda").style.display="none";
