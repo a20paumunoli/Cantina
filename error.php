@@ -18,7 +18,7 @@
 <body>
     <?php include("header.php") ?>
     <div class="pantalla">
-    <h1>Error</h1>
+    <h1>Error, ja has fet una comanda avui.</h1>
     </div>
 
     <?php include ("footer.php"); ?>
