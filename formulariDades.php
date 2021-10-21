@@ -14,32 +14,55 @@
 
         .grid_div{
             display: grid;
-            grid-template-columns: 2fr 2fr;
+            grid-template-areas: "head head"
+                                "ticket dades";
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto;
             grid-column-gap: 60px;  
-            padding: 10px;      
-            margin: 25px;
-
+            padding: 20px;      
+            margin: 50px;
             background-color: grey;
         }
 
         .dades_comanda{
-            display: grid;
+            grid-area: ticket;
             background-color: lightcoral;
+            
         }
 
-        .formulari{
-            display: grid;
+        .dades_persona{
             align-items: center;
+            float: center;
             justify-items: left;
             background-color: lightblue;
+        }
+
+        .head{
+            grid-area: head;
+            justify-self: center;
+        }
+
+        .form_cont{
+           
+            
+            
+            padding: 15px;
+        }
+
+        .input{
+            float: right;
         }
 
         .sub{
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            padding-bottom: 25px;
         }
+
+
+
+
 
     </style>
     
@@ -48,57 +71,51 @@
 <body>
 <?php include("header.php") ?>
 
-<!--
-
-  **** Mostrar dades compra ****
-
--->
-
-<h1>Validació comanda</h1>
-
-
-<div class="grid_div">
-
-    <div class="dades_comanda">
-
-        Dades comanda
 
 
 
 
-    </div>
-
-
-    <!--Formulari Confirmació compra-->
-
-    <form method="post" name="form" action="ticket.php">
-
-        <div class="formulari">
-            <div class="form_cont">
-                <div>
-                    <label for="name">Nom</label>
-                    <input name="name" value="name" type="text" id="nom">
-                </div>
-                <br>
-                <div>
-                    <label for="tlf">Telèfon</label>
-                    <input name="tlf" value="tlf" type="tel" id="tlf" placeholder="+34 XXXXXXXXX" width="10px">
-
-                </div>
-                <br>
-                <div>
-                    <label for="email">Correu electrònic </label>
-                    <input name="email" value="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
-                </div>
-            </div>
-            <br>
-            <div class="sub">
-                <input type="submit" value="Comprar" id="submit">
-            </div>
-
+    <div class="grid_div">
+        <div class="head">
+            <h1>Validació comanda</h1>
         </div>
 
-    </form>
+        <div class="dades_comanda">
+            <div class="tit">
+                <h2>Dades comanda</h2>
+            </div>  
+        </div>
+
+
+        <!--Formulari Confirmació compra-->
+
+        <div class="dades_persona">
+            <form method="post" name="form" action="ticket.php">
+                <div class="form_cont">
+                    <div>
+                        <label for="name">Nom</label>
+                        <input class="input" name="name" type="text" id="nom">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="tlf">Telèfon</label>
+                        <input class="input" name="tlf" type="tel" id="tlf" width="10">
+
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email">Correu </label>
+                        <input class="input" name="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
+                    </div>
+                </div>
+                <br>
+                <div class="sub">
+                    <input type="submit" value="Comprar" id="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
 
 </div>
 
