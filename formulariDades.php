@@ -27,10 +27,12 @@
         .dades_comanda{
             grid-area: ticket;
             background-color: lightcoral;
+            
         }
 
         .dades_persona{
             align-items: center;
+            float: center;
             justify-items: left;
             background-color: lightblue;
         }
@@ -41,7 +43,14 @@
         }
 
         .form_cont{
+           
+            
+            
             padding: 15px;
+        }
+
+        .input{
+            float: right;
         }
 
         .sub{
@@ -85,18 +94,18 @@
                 <div class="form_cont">
                     <div>
                         <label for="name">Nom</label>
-                        <input name="name" type="text" id="nom">
+                        <input class="input" name="name" type="text" id="nom">
                     </div>
                     <br>
                     <div>
                         <label for="tlf">Telèfon</label>
-                        <input name="tlf" type="tel" id="tlf" width="10">
+                        <input class="input" name="tlf" type="tel" id="tlf" width="10">
 
                     </div>
                     <br>
                     <div>
                         <label for="email">Correu </label>
-                        <input name="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
+                        <input class="input" name="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
                     </div>
                 </div>
                 <br>
