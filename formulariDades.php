@@ -18,15 +18,22 @@
 
     </style>
 
-
-
 </head>
 
 <body>
     <?php include("header.php") ?>  
 
-    <!--Mostrar preu total compra-->
+    <!--
+        
+      **** Mostrar dades compra ****
+
+    -->
+
     <h1>Validació comanda</h1>
+
+
+    <!--Formulari Confirmació compra-->
+
     <form method="post" name="form" action="ticket.php">
 
         <div class="formulari" >
@@ -36,8 +43,8 @@
             </div>
         <br>
             <div>
-                <label for="tlf">Teléfon</label>
-                <input name="tlf" type="tel" id="tlf" size="9" placeholder="+34 XXXXXXXXX" width="10px">
+                <label for="tlf">Telèfon</label>
+                <input name="tlf" type="tel" id="tlf" placeholder="+34 XXXXXXXXX" width="10px">
                 
             </div>
         <br>
@@ -58,19 +65,15 @@
 
     <script>
 
-        const err = [];
-            err[0]="Introdueix nom";
-            err[1]="Introdueix un teléfon";
-            err[2]="Teléfon no numeric!";
-            err[3]="Número de teléfon incorrecte (9 dígits)!";
-            err[4]="Introdueix un email";
-            err[5]="Email incorrecte (@inspedrables.cat)!";
+        /* Array amb els missatages de error de validació  */
+        const err = ["Introdueix nom", "Introdueix un telèfon", "Telèfon no numeric!", "Número de telèfon incorrecte (9 dígits)!", "Introdueix un email", "Email incorrecte (@inspedrables.cat)!" ];
 
 
         window.onload = function(){
             document.getElementById("nom").focus();
         }
 
+        /* Mostrar missatges error */
         document.getElementById("submit").addEventListener("click", function(e){
             var n;
 
@@ -93,6 +96,8 @@
         });
 
 
+        /* Funcions comprovació */
+
         function comprovarNom() {
             return (document.getElementById("nom").value === "") ? true : false;
         }
@@ -106,17 +111,13 @@
             return n;
         }
 
-        /* comprovarEmail devuelve cierto si todo es ok, si no devuelve falso */
         function comprovarEmail() {
             let correu = document.getElementById("correu").value, n;
-            let exp = /^([a-zA-Z0-9._-]+)@inspedralbes.cat$/;
-            console.log("correu");
             if(correu == ""){ n = 4; }
-            else if(!exp.exec(correu)){ n = 5; }
+            else if(!(/^([a-zA-Z0-9._-]+)@inspedralbes.cat$/.exec(correu))){ n = 5; }
             else{ n = 0; }
             return n;
         } 
-
 
     </script>
 
