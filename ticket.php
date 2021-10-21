@@ -1,19 +1,7 @@
 <?php
-date_default_timezone_set("Europe/Madrid");
-
-$fecha = new DateTime();
-//echo $fecha->format("l Y-m-d H:i:s" ), "\n";
-$siguientefecha = $fecha->modify('+1 day');
-$d = $siguientefecha->format("l");
-$segact = strtotime("now");
-echo strtotime("now"), "\n";
-$segdia = strtotime("next $d");
-echo strtotime("next $d"), "\n";
-$resta = $segdia - $segact;
-echo $resta;
-//$fechaFinal = $fechatotal - $fecha;
-//echo $fechaFinal->format("Y-m-d H:i:s");
-setcookie('comanda',1,time()+ $resta);
+    $segundosActuales = (date('G')*3600 + date('i')*60 + date('s'));
+    $segundos24h = 86400;
+    setcookie('comanda', 1, time()+($segundos24h-$segundosActuales));
 ?>
 
 
