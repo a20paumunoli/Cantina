@@ -9,7 +9,7 @@
     <title>Error</title>
     <style>
         .pantalla{
-            height: 80vh; /* For 100% screen height */
+            height: 79vh; /* For 100% screen height */
             width:  80vw; /* For 100% screen width */
         }
     </style>
@@ -18,7 +18,8 @@
 <body>
     <?php include("header.php") ?>
     <div class="pantalla">
-    <h1>Error, ja has fet una comanda avui.</h1>
+        <h1>Error, ja has fet una comanda avui.</h1>
+
     </div>
 
     <?php include ("footer.php"); ?>
