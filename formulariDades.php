@@ -63,6 +63,14 @@
         
         let submit = document.getElementById("submit");
 
+        const err = [];
+            err[0]="Introdueix nom";
+            err[1]="Introdueix un teléfon";
+            err[2]="Teléfon no numeric!";
+            err[3]="Número de teléfon incorrecte (9 dígits)!";
+            err[4]="Introdueix un email!";
+
+
         window.onload = function(){
             nom.focus();
         }
@@ -70,24 +78,24 @@
         submit.addEventListener("click", function(e){
             let n = 0;
 
-            if(comprovarNom()=== 1){
+            if(comprovarNom()){
                 e.preventDefault();
-                alert("Introdueix nom");
+                alert(err[0]);
             }
 
             if(comprovarTel()){ 
                 e.preventDefault();
             }
 
-            if(comprovarEmail()){
-                e.preventDefault();
+            let vect = comprovarEmail();
+            if(vect !== 0){
+                if(vect[1] = 1)
                 alert("Introdueix email");
             }   
         });
 
         function comprovarNom() {
-            if(nom.value === ""){ n = 1; }
-            return n;
+            if(nom.value === ""){
         }
 
         function comprovarTel() {
@@ -95,7 +103,6 @@
                alert("Introdueix un teléfon");
            }else if(!(/^[0-9]+$/.test(tlf.value))){
                 alert("Teléfon no numeric!");
-            
            }else if (tlf.value.length != 9){
                 alert("Teléfon faltes o sobre nums!");
             }
@@ -106,7 +113,13 @@
         function comprovarEmail() {
             let correu = document.getElementById("correu").value;
             let expresion = /^([a-zA-Z0-9._-]+)@inspedralbes.cat$/;
-            return expresion.exec(correu) ? true : false;
+            let valid = 1;
+
+            if(correu===""){
+
+            }
+
+            return expresion.exec(correu) ? 1 : 0;
         } 
 
 
@@ -114,8 +127,6 @@
 
 
 
-
-        
 
     <?php include ("footer.php"); ?>
 </body>
