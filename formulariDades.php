@@ -17,7 +17,7 @@
         }
 
     </style>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -66,28 +66,32 @@
 <script>
 
     /* Array amb els missatages d'error de validació  */
-    const err = ["Introdueix nom", "Introdueix un telèfon", "Telèfon no numeric!", "Número de telèfon incorrecte (9 dígits)!", "Introdueix un email", "Email incorrecte (@inspedrables.cat)!" ];
+    const err = ["Introdueix nom", "Introdueix un telèfon", "Telèfon no numeric!", "Número de telèfon incorrecte (9 dígits)", "Introdueix un email", "Email incorrecte (@inspedrables.cat)" ];
 
-
+    /* Fer focus al camp nom al carregar la pàgina web */
     window.onload = function(){
         document.getElementById("nom").focus();
     }
 
     /* Mostrar missatges d'error */
     document.getElementById("submit").addEventListener("click", function(e){
-        var n, text="Error!", error = 0;
+        var n, text="", error = 0;
 
-        if(errorNom()){ text += err[0]; error = 1;}
+        if(errorNom()){ text += ("<b>"+err[0]+"!</b></br>"); error = 1;}
 
         n = errorTel();
-        if(n){ text += err[n]; error = 1; }
+        if(n){ text += ("<b>"+err[n]+"!</b></br>"); error = 1; }
 
         n = errorEmail();
-        if(n){ text += err[n]; error = 1;}
+        if(n){ text += ("<b>"+err[n]+"!</b>"); error = 1;}
 
         if(error){
             e.preventDefault();
-            alert(text);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!...',
+                html: text
+            });
         }
     });
 
