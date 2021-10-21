@@ -1,14 +1,12 @@
 
 <?php
-if (isset($_COOKIE["comanda"])){
-    header('Location: error.php');
-}
+    if (isset($_COOKIE["comanda"])){
+        header('Location: error.php');
+    }
 ?>
 
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <head>
         <meta charset="UTF-8">
@@ -211,7 +209,7 @@ _
                                     <div class="text">
                                         <input type="button" id="quitar" class="quitar" value="-">
                                             <span>'.$prod["nombre"].  '</span><span> '.$prod["precio"].'€</span>
-                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="hidden" id="'.$prod["id"].'" name="'.$prod["id"].'" value="0">
                                             <input type="button" id="añadir" class="añadir" value="+">
                                     </div></div>';
                                     $let++;
@@ -220,23 +218,6 @@ _
                         }
                     ?>
                     </div>
-
-                    <script>
-
-                        /* Menú matí / tarda */
-
-                        let d = new Date();
-                        // let d = 13;
-                        //document.write(d.getHours());
-
-                        if (d.getHours()<="12"){
-                            //if (d<="12"){
-                            document.getElementById("tarda").style.display="none";
-                        }else{
-                            document.getElementById("mati").style.display="none";
-                        }                            
-                    </script>
-
                 </div>
 
                 <!-- Llistat elements seleccionats -->
@@ -254,20 +235,27 @@ _
         </form>
        
         <script>
-            document.getElementById("bot").addEventListener("click", function(e){
-                if(e.target.classList.contains("añadir")){
-                    let idProd = e.target.parentElement.childNodes[6].value;
-                    let nomProd = e.target.parentElement.childNodes[3].innerHTML;
-                    let preuProd = e.target.parentElement.childNodes[4].innerHTML; 
 
+            /* Menú matí / tarda */
+            let d = new Date();
+            (d.getHours() <= "12") ? document.getElementById("tarda").style.display="none" : document.getElementById("mati").style.display="none";
+                
+            /* Actualitzar carrito */
+            document.getElementById("bot").addEventListener("click", function(e){
+                var idProd, nomProd, preuProd;
+                if(e.target.classList.contains("añadir")){
+                    idProd = e.target.parentElement.childNodes[6].id;
+                    nomProd = e.target.parentElement.childNodes[3].innerHTML;
+                    preuProd = e.target.parentElement.childNodes[4].innerHTML;
+                    document.getElementById(idProd).value++;
                     element = document.getElementById("prod"+idProd);
                     (typeof(element) != 'undefined' && element != null) ? document.getElementById("preu"+idProd).innerHTML++ : document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
                     document.getElementById("total").innerHTML = (parseFloat(preuProd) + parseFloat(document.getElementById("total").innerHTML));
                 }
-                else if(e.target.classList.contains("quitar")){
-                    let idProd = e.target.parentElement.childNodes[6].value;
-                    let nomProd = e.target.parentElement.childNodes[3].innerHTML;
-                    let preuProd = e.target.parentElement.childNodes[4].innerHTML;
+                else if(e.target.classList.contains("quitar")){ 
+                    idProd = e.target.parentElement.childNodes[6].id;
+                    nomProd = e.target.parentElement.childNodes[3].innerHTML;
+                    preuProd = e.target.parentElement.childNodes[4].innerHTML;
                     
                     element = document.getElementById("prod"+idProd);
                     if(typeof(element) != 'undefined' && element != null){
@@ -279,6 +267,9 @@ _
                     }
                 }
             });
+
+
+
         </script>
 
         <?php include("footer.php"); ?>
