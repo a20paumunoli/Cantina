@@ -171,7 +171,7 @@ _
                                           <div class="text">
                                             <input type="button" id="quitar" class="quitar" value="-">
                                             <span>'.$prod["nombre"].  '</span><span> '.$prod["precio"].'€</span>
-                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="hidden" id="'.$prod["id"].'" name="prodmati-'.$prod["id"].'" value="0">
                                             <input type="button" id="añadir" class="añadir" value="+">
                                           </div></div>';
                         $let++;
@@ -209,7 +209,7 @@ _
                                         <input type="button" id="quitar" class="quitar" value="-">
                                             <span>'.$prod["nombre"].'</span>
                                             <span>'.$prod["precio"].'€</span>
-                                            <input type="hidden" id="'.$prod["id"].'" name="prod-'.$prod["id"].'" value="0">
+                                            <input type="text" id="'.$prod["id"].'" name="prodtarda-'.$prod["id"].'" value="0">
                                             <input type="button" id="añadir" class="añadir" value="+">
                                     </div></div>';
                         $n++;
@@ -227,8 +227,8 @@ _
             <div id="carrito">
 
             </div>
-            <div>
-                <h4>Total: <span id="total">0</span><span>€</span>
+            <div id="total">
+                <h4>Total: 0€</h4>
             </div>
         </div>
     </div>
@@ -241,33 +241,39 @@ _
     (d.getHours() <= "12") ? document.getElementById("tarda").style.display="none" : document.getElementById("mati").style.display="none";
 
     /* Añadir & Quitar producto */
-    const idProductoJSON = 7;
+    const idProductoJSON = 6;
     document.getElementById("bot").addEventListener("click", function(e){
-        let idProd, element;
+        let idProd;
         if(e.target.classList.contains("añadir")){
             idProd = e.target.parentElement.childNodes[idProductoJSON].id;
-            element = document.getElementById(idProd);
-            element.value++;
-            actualizar_carrito(e, idProd);
+            document.getElementById(idProd).value++;
+            actualizar_carrito();
         }
         else if(e.target.classList.contains("quitar")){
             idProd = e.target.parentElement.childNodes[idProductoJSON].id;
-            element = document.getElementById(idProd);
-            if(element.value > 0){ element.value--; }
+            if(document.getElementById(idProd).value > 0){ document.getElementById(idProd).value--; }
+            actualizar_carrito();
         }
     });
 
     /* Actualizar carrito */
-    function actualizar_carrito(e, idProd){
-        parseFloat(e.target.parentElement.childNodes[5].innerHTML))
-
-        document.getElementById("carrito").insertAdjacentHTML("beforeend", "" +
-            "<p id=prod"+idProd+">"+e.target.parentElement.childNodes[3].innerHTML)+
-            "<span id=preu"+idProd+">1</span></p>" +
-            ");
-
-
+    function actualizar_carrito(){
+        let precio, nombre, text = "", total = 0, i, j;
+        for(i=0; i<10; i++){
+            nombre = document.getElementById(i+1).previousElementSibling.previousElementSibling.innerHTML;
+            precio = parseFloat(document.getElementById(i+1).previousElementSibling.innerHTML);
+            console.log(precio);
+            if(document.getElementById(i+1).value > 0){
+                text += ("<p>"+nombre+" "+document.getElementById(i+1).value+"</p></br>");
+                for(j=0; j<document.getElementById(i+1).value; j++){
+                    total += precio;
+                }
+            }
+        }
+        document.getElementById("carrito").innerHTML = text;
+        document.getElementById("total").innerHTML = "<h4>Total:"+total.toFixed(1)+"€</h4>";
     }
+
 
 
 </script>
