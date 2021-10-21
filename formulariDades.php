@@ -58,68 +58,63 @@
 
     <script>
 
-        let nom = document.getElementById("nom");
-        let tlf = document.getElementById("tlf");
-        
-        let submit = document.getElementById("submit");
-
         const err = [];
             err[0]="Introdueix nom";
             err[1]="Introdueix un teléfon";
             err[2]="Teléfon no numeric!";
             err[3]="Número de teléfon incorrecte (9 dígits)!";
-            err[4]="Introdueix un email!";
+            err[4]="Introdueix un email";
+            err[5]="Email incorrecte (@inspedrables.cat)!";
 
 
         window.onload = function(){
-            nom.focus();
+            document.getElementById("nom").focus();
         }
 
-        submit.addEventListener("click", function(e){
-            let n = 0;
+        document.getElementById("submit").addEventListener("click", function(e){
+            var n;
 
             if(comprovarNom()){
-                e.preventDefault();
                 alert(err[0]);
-            }
-
-            if(comprovarTel()){ 
                 e.preventDefault();
             }
 
-            let vect = comprovarEmail();
-            if(vect !== 0){
-                if(vect[1] = 1)
-                alert("Introdueix email");
-            }   
+            n = comprovarTel();
+            if(n){
+                e.preventDefault();
+                alert(err[n]);
+            }
+            
+            n = comprovarEmail()
+            if(comprovarEmail()){
+                e.preventDefault();
+                alert(err[n]);
+            }
         });
 
+
         function comprovarNom() {
-            if(nom.value === ""){
+            return (document.getElementById("nom").value === "") ? true : false;
         }
 
-        function comprovarTel() {
-            if(tlf.value === ""){
-               alert("Introdueix un teléfon");
-           }else if(!(/^[0-9]+$/.test(tlf.value))){
-                alert("Teléfon no numeric!");
-           }else if (tlf.value.length != 9){
-                alert("Teléfon faltes o sobre nums!");
-            }
+        function comprovarTel(){
+            let tlf = document.getElementById("tlf").value, n;
+            if(tlf == ""){ n = 1; }
+            else if(!(/^[0-9]+$/.test(tlf))){ n = 2; }
+            else if (tlf.length != 9){ n = 3; }
+            else{ n = 0; }
+            return n;
         }
 
-        
         /* comprovarEmail devuelve cierto si todo es ok, si no devuelve falso */
         function comprovarEmail() {
-            let correu = document.getElementById("correu").value;
-            let expresion = /^([a-zA-Z0-9._-]+)@inspedralbes.cat$/;
-            let valid = 1;
-
-            if(correu===""){
-
-            }
-
-            return expresion.exec(correu) ? 1 : 0;
+            let correu = document.getElementById("correu").value, n;
+            let exp = /^([a-zA-Z0-9._-]+)@inspedralbes.cat$/;
+            console.log("correu");
+            if(correu == ""){ n = 4; }
+            else if(!exp.exec(correu)){ n = 5; }
+            else{ n = 0; }
+            return n;
         } 
 
 
