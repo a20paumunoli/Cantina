@@ -21,109 +21,105 @@
 </head>
 
 <body>
-    <?php include("header.php") ?>  
+<?php include("header.php") ?>
 
-    <!--
-        
-      **** Mostrar dades compra ****
+<!--
 
-    -->
+  **** Mostrar dades compra ****
 
-    <h1>Validació comanda</h1>
+-->
+
+<h1>Validació comanda</h1>
 
 
-    <!--Formulari Confirmació compra-->
+<!--Formulari Confirmació compra-->
 
-    <form method="post" name="form" action="ticket.php">
+<form method="post" name="form" action="ticket.php">
 
-        <div class="formulari" >
-            <div>
-                <label for="name">Nom</label>
-                <input name="name" type="text" id="nom">
-            </div>
+    <div class="formulari" >
+        <div>
+            <label for="name">Nom</label>
+            <input name="name" type="text" id="nom">
+        </div>
         <br>
-            <div>
-                <label for="tlf">Telèfon</label>
-                <input name="tlf" type="tel" id="tlf" placeholder="+34 XXXXXXXXX" width="10px">
-                
-            </div>
-        <br>
-            <div>
-                <label for="email">Correu electrònic </label>
-                <input name="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
-            </div>
+        <div>
+            <label for="tlf">Telèfon</label>
+            <input name="tlf" type="tel" id="tlf" placeholder="+34 XXXXXXXXX" width="10px">
 
+        </div>
         <br>
-            <div class="buttons">
-                <input type="submit" value="Comprar" id="submit">
-                <input type="reset" value="Neteja">
-            </div>
+        <div>
+            <label for="email">Correu electrònic </label>
+            <input name="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
         </div>
 
-    </form>
+        <br>
+        <div class="buttons">
+            <input type="submit" value="Comprar" id="submit">
+            <input type="reset" value="Neteja">
+        </div>
+    </div>
+
+</form>
 
 
-    <script>
+<script>
 
-        /* Array amb els missatages de error de validació  */
-        const err = ["Introdueix nom", "Introdueix un telèfon", "Telèfon no numeric!", "Número de telèfon incorrecte (9 dígits)!", "Introdueix un email", "Email incorrecte (@inspedrables.cat)!" ];
+    /* Array amb els missatages d'error de validació  */
+    const err = ["Introdueix nom", "Introdueix un telèfon", "Telèfon no numeric!", "Número de telèfon incorrecte (9 dígits)!", "Introdueix un email", "Email incorrecte (@inspedrables.cat)!" ];
 
 
-        window.onload = function(){
-            document.getElementById("nom").focus();
+    window.onload = function(){
+        document.getElementById("nom").focus();
+    }
+
+    /* Mostrar missatges d'error */
+    document.getElementById("submit").addEventListener("click", function(e){
+        var n, text="Error!", error = 0;
+
+        if(errorNom()){ text += err[0]; error = 1;}
+
+        n = errorTel();
+        if(n){ text += err[n]; error = 1; }
+
+        n = errorEmail();
+        if(n){ text += err[n]; error = 1;}
+
+        if(error){
+            e.preventDefault();
+            alert(text);
         }
-
-        /* Mostrar missatges error */
-        document.getElementById("submit").addEventListener("click", function(e){
-            var n;
-
-            if(comprovarNom()){
-                alert(err[0]);
-                e.preventDefault();
-            }
-
-            n = comprovarTel();
-            if(n){
-                e.preventDefault();
-                alert(err[n]);
-            }
-            
-            n = comprovarEmail()
-            if(comprovarEmail()){
-                e.preventDefault();
-                alert(err[n]);
-            }
-        });
+    });
 
 
-        /* Funcions comprovació */
+    /* Funcions comprovació */
 
-        function comprovarNom() {
-            return (document.getElementById("nom").value === "") ? true : false;
-        }
+    function errorNom(){
+        return (document.getElementById("nom").value === "") ? true : false;
+    }
 
-        function comprovarTel(){
-            let tlf = document.getElementById("tlf").value, n;
-            if(tlf == ""){ n = 1; }
-            else if(!(/^[0-9]+$/.test(tlf))){ n = 2; }
-            else if (tlf.length != 9){ n = 3; }
-            else{ n = 0; }
-            return n;
-        }
+    function errorTel(){
+        let tlf = document.getElementById("tlf").value, n;
+        if(tlf == ""){ n = 1; }
+        else if(!(/^[0-9]+$/.test(tlf))){ n = 2; }
+        else if (tlf.length != 9){ n = 3; }
+        else{ n = 0; }
+        return n;
+    }
 
-        function comprovarEmail() {
-            let correu = document.getElementById("correu").value, n;
-            if(correu == ""){ n = 4; }
-            else if(!(/^([a-zA-Z0-9._-]+)@inspedralbes.cat$/.exec(correu))){ n = 5; }
-            else{ n = 0; }
-            return n;
-        } 
+    function errorEmail() {
+        let correu = document.getElementById("correu").value, n;
+        if(correu == ""){ n = 4; }
+        else if(!(/^([a-zA-Z0-9._-]+)@inspedralbes.cat$/.exec(correu))){ n = 5; }
+        else{ n = 0; }
+        return n;
+    }
 
-    </script>
+</script>
 
 
 
 
-    <?php include ("footer.php"); ?>
+<?php include ("footer.php"); ?>
 </body>
 </html>
