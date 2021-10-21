@@ -1,7 +1,8 @@
 <?php
     $segundosActuales = (date('G')*3600 + date('i')*60 + date('s'));
     $segundos24h = 86400;
-    setcookie('comanda', 1, time()+($segundos24h-$segundosActuales));
+    $restaTiempo = $segundos24h-$segundosActuales+7200;
+    setcookie('comanda', "comanda_hecha_".uniqid(), time()+$restaTiempo);
 ?>
 
 
