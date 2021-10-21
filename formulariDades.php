@@ -8,16 +8,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <title>Validació comanda</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
 
+        .grid_div{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            grid-column-gap: 60px;  
+            padding: 10px;      
+            margin: 25px;
+
+            background-color: grey;
+        }
+
+        .dades_comanda{
+            display: grid;
+            background-color: lightcoral;
+        }
+
         .formulari{
-            margin-left: 20px;
-            margin-top:50px;
+            display: grid;
+            align-items: center;
+            justify-items: left;
+            background-color: lightblue;
+        }
+
+        .sub{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
     </style>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </head>
 
 <body>
@@ -32,36 +57,50 @@
 <h1>Validació comanda</h1>
 
 
-<!--Formulari Confirmació compra-->
+<div class="grid_div">
 
-<form method="post" name="form" action="ticket.php">
+    <div class="dades_comanda">
 
-    <div class="formulari" >
-        <div>
-            <label for="name">Nom</label>
-            <input name="name" type="text" id="nom">
-        </div>
-        <br>
-        <div>
-            <label for="tlf">Telèfon</label>
-            <input name="tlf" type="tel" id="tlf" placeholder="+34 XXXXXXXXX" width="10px">
+        Dades comanda
 
-        </div>
-        <br>
-        <div>
-            <label for="email">Correu electrònic </label>
-            <input name="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
-        </div>
 
-        <br>
-        <div class="buttons">
-            <input type="submit" value="Comprar" id="submit">
-            <input type="reset" value="Neteja">
-        </div>
+
+
     </div>
 
-</form>
 
+    <!--Formulari Confirmació compra-->
+
+    <form method="post" name="form" action="ticket.php">
+
+        <div class="formulari">
+            <div class="form_cont">
+                <div>
+                    <label for="name">Nom</label>
+                    <input name="name" value="name" type="text" id="nom">
+                </div>
+                <br>
+                <div>
+                    <label for="tlf">Telèfon</label>
+                    <input name="tlf" value="tlf" type="tel" id="tlf" placeholder="+34 XXXXXXXXX" width="10px">
+
+                </div>
+                <br>
+                <div>
+                    <label for="email">Correu electrònic </label>
+                    <input name="email" value="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
+                </div>
+            </div>
+            <br>
+            <div class="sub">
+                <input type="submit" value="Comprar" id="submit">
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
 
 <script>
 
