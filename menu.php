@@ -155,19 +155,19 @@ _
 
                         /*  -- Graella productes --  */ 
                         function mostrarProd($menuMati){                
-                            $var = 0;
+                            $let = 0;
                             foreach ($menuMati as $prod) {
-                                if($var == 0){
-                                    echo "<div class='gc".($var+1)."'>Comida</div>";
-                                    $var++;
-                                }else if ($var == 5){
-                                    echo "<div class='gc".($var+1)."'>Begudes</div>";
-                                    $var++;
-                                }else if($var == 10){
-                                    echo "<div class='gc".($var+1)."'>Dolços</div>";
-                                    $var++;
+                                if($let == 0){
+                                    echo "<div class='gc".($let+1)."'>Comida</div>";
+                                    $let++;
+                                }else if ($let == 5){
+                                    echo "<div class='gc".($let+1)."'>Begudes</div>";
+                                    $let++;
+                                }else if($let == 10){
+                                    echo "<div class='gc".($let+1)."'>Dolços</div>";
+                                    $let++;
                                 }         
-                                echo "<div class='gc".($var+1). " pr-grid'>";
+                                echo "<div class='gc".($let+1). " pr-grid'>";
                                     echo '<div class="img">
                                             <img src='.$prod["img"].' class="responsive">
                                           </div>
@@ -177,9 +177,9 @@ _
                                             <input type="hidden" id="hidden" value="'.$prod["id"].'">
                                             <input type="button" id="añadir" class="añadir" value="+">
                                           </div></div>';
-                                $var++; 
+                                $let++; 
                             }
-                            echo "<div class='gc".($var+1)."'><input type='submit' value='Finalitzar compra'></div>";
+                            echo "<div class='gc".($let+1)."'><input type='submit' value='Finalitzar compra'></div>";
                         }
                     ?>
                 </div>
@@ -192,19 +192,19 @@ _
 
                         /*  -- Graella productes --  */
                         function mostrarMenu($menuTarda){
-                            $var = 0;
+                            $let = 0;
                             foreach ($menuTarda as $prod) {
-                                if ($var == 0) {
-                                    echo "<div class='gc" . ($var + 1) . "'>Comida</div>";
-                                    $var++;
-                                } else if ($var == 5) {
-                                    echo "<div class='gc" . ($var + 1) . "'>Begudes</div>";
-                                    $var++;
-                                } else if ($var == 10) {
-                                    echo "<div class='gc" . ($var + 1) . "'>Dolços</div>";
-                                    $var++;
+                                if ($let == 0) {
+                                    echo "<div class='gc" . ($let + 1) . "'>Comida</div>";
+                                    $let++;
+                                } else if ($let == 5) {
+                                    echo "<div class='gc" . ($let + 1) . "'>Begudes</div>";
+                                    $let++;
+                                } else if ($let == 10) {
+                                    echo "<div class='gc" . ($let + 1) . "'>Dolços</div>";
+                                    $let++;
                                 }
-                                echo "<div class='gc" . ($var + 1) . " pr-grid'>";
+                                echo "<div class='gc" . ($let + 1) . " pr-grid'>";
                                 echo '<div class="img">
                                         <img src='.$prod["img"].' class="responsive">
                                     </div>
@@ -214,9 +214,9 @@ _
                                             <input type="hidden" id="hidden" value="'.$prod["id"].'">
                                             <input type="button" id="añadir" class="añadir" value="+">
                                     </div></div>';
-                                    $var++;
+                                    $let++;
                             }
-                            echo "<div class='gc" . ($var + 1) . "'><input type='submit' value='Finalitzar compra'></div>";
+                            echo "<div class='gc" . ($let + 1) . "'><input type='submit' value='Finalitzar compra'></div>";
                         }
                     ?>
                     </div>
@@ -225,8 +225,8 @@ _
 
                         /* Menú matí / tarda */
 
-                        var d = new Date();
-                        // var d = 13;
+                        let d = new Date();
+                        // let d = 13;
                         //document.write(d.getHours());
 
                         if (d.getHours()<="12"){
@@ -254,24 +254,21 @@ _
         </form>
        
         <script>
-            var tot;
             document.getElementById("bot").addEventListener("click", function(e){
                 if(e.target.classList.contains("añadir")){
-                    var idProd = e.target.parentElement.childNodes[6].value;
-                    var nomProd = e.target.parentElement.childNodes[3].innerHTML;
-                    var preuProd = e.target.parentElement.childNodes[4].innerHTML; 
+                    let idProd = e.target.parentElement.childNodes[6].value;
+                    let nomProd = e.target.parentElement.childNodes[3].innerHTML;
+                    let preuProd = e.target.parentElement.childNodes[4].innerHTML; 
+
                     element = document.getElementById("prod"+idProd);
-                    if(typeof(element) != 'undefined' && element != null){
-                        document.getElementById("preu"+idProd).innerHTML++;
-                    }else{
-                        document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
-                    }
+                    (typeof(element) != 'undefined' && element != null) ? document.getElementById("preu"+idProd).innerHTML++ : document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
                     document.getElementById("total").innerHTML = (parseFloat(preuProd) + parseFloat(document.getElementById("total").innerHTML));
                 }
                 else if(e.target.classList.contains("quitar")){
-                    var idProd = e.target.parentElement.childNodes[6].value;
-                    var nomProd = e.target.parentElement.childNodes[3].innerHTML;
-                    var preuProd = e.target.parentElement.childNodes[4].innerHTML;
+                    let idProd = e.target.parentElement.childNodes[6].value;
+                    let nomProd = e.target.parentElement.childNodes[3].innerHTML;
+                    let preuProd = e.target.parentElement.childNodes[4].innerHTML;
+                    
                     element = document.getElementById("prod"+idProd);
                     if(typeof(element) != 'undefined' && element != null){
                         document.getElementById("preu"+idProd).innerHTML--;
