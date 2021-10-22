@@ -18,6 +18,7 @@
 <body>
     <?php include("header.php") ?>
     <div class="pantalla">
+        <img scr="img/error_pizza.png">
         <h1>Error, ja has fet una comanda avui.</h1>
 
     </div>
