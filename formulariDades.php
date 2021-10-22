@@ -32,7 +32,7 @@
 
         .dades_persona{
             align-items: center;
-            float: center;
+            /*float: center;*/
             justify-items: left;
             background-color: lightblue;
         }
@@ -45,7 +45,8 @@
         .form_cont{
            
             
-            
+            margin-left: 140px;
+            margin-right: 140px;
             padding: 15px;
         }
 
@@ -110,7 +111,7 @@
                 </div>
                 <br>
                 <div class="sub">
-                    <input type="submit" value="Comprar" id="submit">
+                    <input type="submit" value="Fer comanda" id="submit">
                 </div>
             </form>
         </div>
