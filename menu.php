@@ -135,86 +135,59 @@ if (isset($_COOKIE["comanda"])){
     </head>
 
     <body>
-        <?php include("header.php") ?>
+        <?php 
+            include("header.php");
+
+            /*  -- Graella productes --  */
+            function mostrarProd($menu, $n){
+                $nom = ($n == 0) ? "prodtarda-" : "prodmati-" ;
+                $let = 0;
+                foreach ($menu as $prod) {
+                    if($let == 0){
+                        echo "<div class='gc".($let+1)."'>Comida</div>";
+                        $let++;
+                    }else if ($let == 5){
+                        echo "<div class='gc".($let+1)."'>Begudes</div>";
+                        $let++;
+                    }else if($let == 10){
+                        echo "<div class='gc".($let+1)."'>Dolços</div>";
+                        $let++;
+                    }
+                    echo "<div class='gc".($let+1). " pr-grid'>";
+                    echo '<div class="img">
+                                        <img src='.$prod["img"].' class="responsive" alt="foto-'.$prod["img"].'">
+                                    </div>
+                                    <div class="text">
+                                        <input type="button" id="quitar" class="quitar" value="-">
+                                        <span>'.$prod["nombre"].  '</span><span> '.$prod["precio"].'€</span>
+                                        <input type="hidden" id="'.$nom.$prod["id"].'" name="'.$nom.$prod["id"].'" value="0">
+                                        <input type="button" id="añadir" class="añadir" value="+">
+                                    </div></div>';
+                    $let++;
+                }
+                echo "<div class='gc".($let+1)."'><input type='submit' value='Finalitzar compra'></div>";
+            }
+        ?>
 
         <form method="POST" action="formulariDades.php">
             <div class="grid-cont1">
-
-                <!-- Menú -->
                 <div id='bot'>
                     <p>MENÚ</p>
                     <div id="mati" class="grid-cont2">
                         <?php
-                        $data = file_get_contents("json/cmati.json");
-                        $menuMati = json_decode($data, true);
-                        mostrarProd($menuMati);
-
-                        /*  -- Graella productes --  */
-                        function mostrarProd($menuMati){
-                            $let = 0;
-                            foreach ($menuMati as $prod) {
-                                if($let == 0){
-                                    echo "<div class='gc".($let+1)."'>Comida</div>";
-                                    $let++;
-                                }else if ($let == 5){
-                                    echo "<div class='gc".($let+1)."'>Begudes</div>";
-                                    $let++;
-                                }else if($let == 10){
-                                    echo "<div class='gc".($let+1)."'>Dolços</div>";
-                                    $let++;
-                                }
-                                echo "<div class='gc".($let+1). " pr-grid'>";
-                                echo '<div class="img">
-                                                    <img src='.$prod["img"].' class="responsive" alt="foto-'.$prod["img"].'">
-                                                </div>
-                                                <div class="text">
-                                                    <input type="button" id="quitar" class="quitar" value="-">
-                                                    <span>'.$prod["nombre"].  '</span><span> '.$prod["precio"].'€</span>
-                                                    <input type="hidden" id="'.$prod["id"].'" name="prodmati-'.$prod["id"].'" value="0">
-                                                    <input type="button" id="añadir" class="añadir" value="+">
-                                                </div></div>';
-                                $let++;
-                            }
-                            echo "<div class='gc".($let+1)."'><input type='submit' value='Finalitzar compra'></div>";
-                        }
+                            $n = 1;
+                            $data = file_get_contents("json/cmati.json");
+                            $menuMati = json_decode($data, true);
+                            mostrarProd($menuMati, $n);
                         ?>
                     </div>
 
                     <div id="tarda" class="grid-cont2">
                         <?php
+                            $n = 0;
                             $data = file_get_contents("json/ctarda.json");
                             $menuTarda = json_decode($data, true);
-                            mostrarMenu($menuTarda);
-
-                            /*  -- Graella productes --  */
-                            function mostrarMenu($menuTarda){
-                                $n = 0;
-                                foreach ($menuTarda as $prod) {
-                                    if ($n == 0) {
-                                        echo "<div class='gc".($n + 1)."'>Comida</div>";
-                                        $n++;
-                                    } else if ($n == 5) {
-                                        echo "<div class='gc".($n + 1)."'>Begudes</div>";
-                                        $n++;
-                                    } else if ($n == 10) {
-                                        echo "<div class='gc".($n + 1)."'>Dolços</div>";
-                                        $n++;
-                                    }
-                                    echo "<div class='gc" .($n + 1)." pr-grid'>";
-                                    echo '<div class="img">
-                                                    <img src='.$prod["img"].' class="responsive" alt="desc-'.$prod["img"].'">
-                                                </div>
-                                                <div class="text">
-                                                    <input type="button" id="quitar" class="quitar" value="-">
-                                                        <span>'.$prod["nombre"].'</span>
-                                                        <span>'.$prod["precio"].'€</span>
-                                                        <input type="hidden" id="'.$prod["id"].'" name="prodtarda-'.$prod["id"].'" value="0">
-                                                        <input type="button" id="añadir" class="añadir" value="+">
-                                                </div></div>';
-                                    $n++;
-                                }
-                                echo "<div class='gc".($n + 1)."'><input type='submit' value='Finalitzar compra'></div>";
-                            }
+                            mostrarProd($menuTarda, $n);
                         ?>
                     </div>
                 </div>
@@ -223,9 +196,7 @@ if (isset($_COOKIE["comanda"])){
 
                 <div class="ticket">
                     <h3>Ticket</h3>
-                    <div id="carrito">
-
-                    </div>
+                    <div id="carrito"></div>
                     <div id="total">
                         <h4>Total: 0€</h4>
                     </div>
@@ -237,7 +208,7 @@ if (isset($_COOKIE["comanda"])){
             /* Menú matí o tarda */
             let d = new Date();
             (d.getHours() <= "12") ? document.getElementById("tarda").style.display="none" : document.getElementById("mati").style.display="none";
-
+            
             /* Añadir & Quitar producto */
             const idProductoJSON = 6;
             document.getElementById("bot").addEventListener("click", function(e){
@@ -256,14 +227,16 @@ if (isset($_COOKIE["comanda"])){
 
             /* Actualizar carrito */
             function actualizar_carrito(){
+                let nom = (d.getHours() > "12") ? "prodtarda-" : "prodmati-" ; 
                 let precio, nombre, text = "", total = 0, i, j;
-                for(i=0; i<10; i++){
-                    nombre = document.getElementById(i+1).previousElementSibling.previousElementSibling.innerHTML;
-                    precio = parseFloat(document.getElementById(i+1).previousElementSibling.innerHTML);
+                for(i=1; i<=10; i++){
+                    console.log(nom+i);
+                    nombre = document.getElementById(nom+i).previousElementSibling.previousElementSibling.innerHTML;
+                    precio = parseFloat(document.getElementById(nom+i).previousElementSibling.innerHTML);
                     console.log(precio);
-                    if(document.getElementById(i+1).value > 0){
-                        text += ("<p>"+nombre+"......"+document.getElementById(i+1).value+"</p></br>");
-                        for(j=0; j<document.getElementById(i+1).value; j++){
+                    if(document.getElementById(nom+i).value > 0){
+                        text += ("<p>"+nombre+"......"+document.getElementById(nom+i).value+"</p></br>");
+                        for(j=0; j<document.getElementById(nom+i).value; j++){
                             total += precio;
                         }
                     }
