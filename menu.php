@@ -165,7 +165,7 @@ if (isset($_COOKIE["comanda"])){
                                     </div></div>';
                     $let++;
                 }
-                echo "<div class='gc".($let+1)."'><input type='submit' value='Finalitzar compra'></div>";
+                echo "<div class='gc".($let+1)."'><input type='submit' value='Finalitzar comanda'></div>";
             }
         ?>
 
