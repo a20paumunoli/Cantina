@@ -11,6 +11,8 @@
         .pantalla{
             height: 79vh; /* For 100% screen height */
             width:  80vw; /* For 100% screen width */
+          
+            justify-content: center;
         }
     </style>
 </head>
@@ -18,7 +20,7 @@
 <body>
     <?php include("header.php") ?>
     <div class="pantalla">
-        <img scr="img/error_pizza.png">
+        <img src="img/error_pizza.png">
         <h1>Error, ja has fet una comanda avui.</h1>
 
     </div>
