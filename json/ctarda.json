@@ -1,27 +1,27 @@
 [
     {
-        "nombre": "Bocata tortilla de patata",
+        "nombre": "Hot Dog",
         "id": "1",
-        "precio": "4.5",
-        "img": "img/bocata_tortilla.png"
+        "precio": "1",
+        "img": "img/hotdog.png"
     },
     {
-        "nombre": "Bocata jamón",
+        "nombre": "Pizza Pepperoni",
         "id": "2",
-        "precio": "2.5",
-        "img": "img/bocata_jamon.png"
+        "precio": "0.8",
+        "img": "img/pizza_pep.png"
     },
     {
-        "nombre": "Bocata bacon",
+        "nombre": "Bocata tortilla",
         "id": "3",
-        "precio": "3.6",
-        "img": "img/bocata_bacon.png"
+        "precio": "1.6",
+        "img": "img/bocata_tort.png"
     },
     {
-        "nombre": "Bocata queso",
+        "nombre": "Panini",
         "id": "4",
-        "precio": "3",
-        "img": "img/bocata_queso.png"
+        "precio": "0.8",
+        "img": "img/panini.png"
     },
     {
         "nombre": "Cocacola",
@@ -42,21 +42,21 @@
         "img": "img/agua.png"
     },
     {
-        "nombre": "Café",
+        "nombre": "Brownies + café",
         "id": "8",
-        "precio":"1.2",
+        "precio":"1.6",
         "img": "img/cafe.png"
     },
     {
-        "nombre": "Donut",
+        "nombre": "KitKat",
         "id": "9",
-        "precio":"0.5",
+        "precio":"0.9",
         "img": "img/donut.png"
     },
     {
-        "nombre": "Croissant",
+        "nombre": "Palmera chocolate",
         "id": "10",
-        "precio":"0.6",
+        "precio":"0.8",
         "img": "img/croissant.png"
     }
 ]
