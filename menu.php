@@ -208,7 +208,7 @@ if (isset($_COOKIE["comanda"])){
                                                     <input type="button" id="quitar" class="quitar" value="-">
                                                         <span>'.$prod["nombre"].'</span>
                                                         <span>'.$prod["precio"].'€</span>
-                                                        <input type="text" id="'.$prod["id"].'" name="prodtarda-'.$prod["id"].'" value="0">
+                                                        <input type="hidden" id="'.$prod["id"].'" name="prodtarda-'.$prod["id"].'" value="0">
                                                         <input type="button" id="añadir" class="añadir" value="+">
                                                 </div></div>';
                                     $n++;
