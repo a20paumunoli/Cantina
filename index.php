@@ -33,11 +33,41 @@
             }
             
             .carousel-caption {
-                background-color: rgba(0, 0, 0, 0.357);
+                background-color: rgba(166, 61, 43, 0.39);
             }
 
             .text{
                 padding-bottom: 15px;
+            }
+
+            .btn-secondary, .btn-secondary:active, .btn-secondary:hover, .btn-secondary:visited, .btn-secondary:visited, .btn-secondary:focus{
+                background-color: #A63D2B !important;
+                border-color: #A63D2B !important;
+            }
+
+            .more{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content:space-evenly; 
+                margin: 35px;
+            }
+
+            .novetats{
+                background-color: grey;
+                width: 550px;
+                height: 300px;
+                text-align: center;
+            }
+            
+            
+            .admin{
+                display: flex;
+                flex-direction: row;
+                background-color: grey;
+                display: flex;
+                flex-direction: column;
+                width: 360px;
             }
 
 
@@ -47,6 +77,7 @@
     <body>
         <?php include("header.php") ?>  
 
+        <!-- Carousel imagenes -->
         <div id="myCarousel" class="carousel slide " data-bs-ride="carousel">
 
             <ol class="carousel-indicators">
@@ -56,52 +87,61 @@
                 <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
             </ol>
 
-
-
             <div class="carousel-inner">
-
                 <div class="carousel-item active" style="background-image: url(img/foto1.png);">
                     <!--<div class="container">
                         <h1>Example</h1>
                         <p>tetxuydeygdhufuiehf fjrfhuer</p> 
-                        <a href="menu.php" class="btn btn-warning btn-lg">Menú</a>
+                        <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>
                     </div>-->
                 </div>
-
                 <div class="carousel-item" style="background-image: url(img/foto3.png);">
                    <!-- <div class="container">
                         <h1>Example2</h1>
                         <p>tetxuydeygdhufuiehf fjrfhuer</p>
-                        <a href="menu.php" class="btn btn-warning btn-lg">Menú</a>
+                        <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>
                     </div>-->
                 </div>
-
                 <div class="carousel-item" style="background-image: url(img/foto7.png);">
                     <!--
                     <div class="container">
                         <h1>Example3</h1>
                         <p>tetxuydeygdhufuiehf fjrfhuer</p>
-                        <a href="menu.php" class="btn btn-warning btn-lg">Menú</a>   
+                        <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>   
                     </div>-->
                 </div>
-
                 <div class="carousel-item" style="background-image: url(img/foto8.png);">
                     <!--<div class="container">
                         <h1>Example4</h1>
                         <p>tetxuydeygdhufuiehf fjrfhuer</p>
-                        <a href="menu.php" class="btn btn-warning btn-lg">Menú</a>
+                        <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>
                     </div>-->
                 </div>
-
             </div>
 
             <div class="carousel-caption">
                 <p class="text">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                <a href="menu.php" class="btn btn-warning btn-lg">Menú</a>
+                <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>
             </div>
-
         </div>
 
+
+        <!-- Novetats i admin -->
+        <div class="more">
+            <div class="novetats">
+                Novetats
+            </div>
+
+            <div class="admin">
+                    <img scr="img/admin.png" width="50" height="50">
+                    <h5>Ets administrador?</h5> 
+                    <div class="admin2">
+                    <a href="admin.php" class="btn btn-secondary">entrar com admin</a>
+        
+                </div>
+
+            </div>
+        </div>
 
         <?php include ("footer.php"); ?>
     </body>
