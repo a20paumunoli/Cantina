@@ -3,6 +3,7 @@
     $segundos24h = 86400;
     $restaTiempo = $segundos24h-$segundosActuales+7200;
     setcookie('comanda', "comanda_hecha_".uniqid(), time()+$restaTiempo);
+    session_start();
 ?>
 
 
@@ -18,26 +19,88 @@
     <style>
             .separate{
                 margin-left: 15px;
+                width: auto;
+                height: 75vh;
+                display: flex;
+            }
+            .tabla{
+                width: 500px;
+            }
+            h1{
+                width: 500px;
+                text-align: center;
             }
         </style> 
 </head>
 <body>
-    <?php include("header.php") ?>  
-    <div class="separate"> 
-        <h1>Ticket</h1>
-    
-    <?php
-        if(!$_POST){
+    <?php include("header.php") ?>
 
-        } else {
-            echo $_POST['email'];
+    <h1>Ticket</h1>
+    <div class="separate">
+        <?php
+        //$_SESSION["productos"]=$_POST[$nom.$i]];
+        if($_POST){
+            ?>
+        <div class="tabla">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Nom: </th>
+                <td><?php echo $_POST['name'];?></td>
+                
+            </tr>
+            <tr>
+                <th scope="row">Telèfon: </th>
+                <td><?php echo $_POST['tel'];?></td>
+            </tr>
+            <tr>
+                <th scope="row">Correu: </th>
+                <td colspan="2"><?php echo $_POST['email'];}?></td>
+            </tr>
+            <tr>
+                <th scope="row">Comanda: </th>
+
+                    <td>
+                        <?php
+                        if($_SESSION){
+                        for($i=0; $i<count($_SESSION['nombre']); $i++){
+                        echo $_SESSION['nombre'][$i]."  x";
+                        echo $_SESSION['nproductos'][$i]."<br>";} ?>
+                    </td>
+            </tr>
+            <tr>
+                <th scope="row">Preu Total: </th>
+                <td colspan="2"><?php echo $_SESSION['total'];?> €</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    <?php
+    //$_SESSION["productos"]=$_POST[$nom.$i]];
+    /*if($_POST){
+        echo $_POST['name'];
+        echo "<br>";
+        echo $_POST['tel'];
+        echo "<br>";
+        echo $_POST['email'];
+        echo "<br>";*/
+    /*if($_SESSION){
+        for($i=0; $i<count($_SESSION['nombre']); $i++){
+            echo $_SESSION['nombre'][$i];
+            echo $_SESSION['nproductos'][$i]."</br>";
         }
+        echo $_SESSION['total'];*/
+        session_destroy();
+    }
+
     ?>
     </div>
-
-
-
-
     <?php include ("footer.php"); ?>
 </body>
 </html>

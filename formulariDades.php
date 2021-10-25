@@ -67,6 +67,11 @@
     </head>
 
     <body>
+    <?php
+    // start a session
+    session_start();
+
+    ?>
         <?php include("header.php") ?>
 
         <div class="grid_div">
@@ -91,21 +96,30 @@
                         if($_POST){
                             $data = file_get_contents($fit);
                             $menu = json_decode($data, true);
+                            $bocatas = array();
+                            $nproductos = array();
 
                             for($i=1; $i<=10; $i++){
                                 if($_POST[$nom.$i] > 0){
                                     foreach($menu as $m){
                                         if($m['id'] == $i){
                                             echo ("<p>".$m['nombre'].".....".$_POST[$nom.$i]."</p>");
+                                            array_push($bocatas, $m['nombre']);
+                                            array_push($nproductos, $_POST[$nom.$i]);
                                             for($j=0; $j<$_POST[$nom.$i]; $j++){
                                                 $total += $m['precio'];
                                             }
                                         }
+                                        //$_SESSION["productes"]=$_POST[$nom.$i];
                                     }
                                 }
                             }
-                            echo "<h4>Total: ".$total."€</h4>";
                         }
+                            echo "<h4>Total: ".$total."€</h4>";
+                            $_SESSION['total']=$total;
+                            $_SESSION['nombre']=$bocatas;
+                            $_SESSION['nproductos']=$nproductos;
+                    //print_r($_SESSION);
                     ?>
                 </div>
             </div>
@@ -123,7 +137,7 @@
                         <br>
                         <div>
                             <label for="tlf">Telèfon</label>
-                            <input class="input" name="tlf" type="tel" id="tlf" width="10">
+                            <input class="input" name="tel" type="tel" id="tlf" width="10">
 
                         </div>
                         <br>
@@ -138,6 +152,17 @@
                     </div>
                 </form>
             </div>
+            <?php
+
+            /*if( $_POST["submit"] ){
+            foreach($_POST as $campo => $valor) {
+            $_SESSION["registro"][$campo] = $valor;
+            }
+            }
+            echo $_SESSION['registro']['name'];
+            echo $_SESSION['registro']['tlf'];
+            echo $_SESSION['registro']['email'];*/
+            ?>
         </div>
 
 
