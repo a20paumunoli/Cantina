@@ -1,0 +1,65 @@
+.carousel-item{
+    top: 0px;
+    height: 512px;
+    background-color: black;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 50px;
+    background-color: black;
+
+}
+
+.carousel-caption {
+    background-color: rgba(166, 61, 43, 0.39);
+}
+
+.text{
+    padding-bottom: 15px;
+}
+
+.btn-secondary, .btn-secondary:active, .btn-secondary:hover, .btn-secondary:visited, .btn-secondary:visited, .btn-secondary:focus{
+    background-color: #A63D2B !important;
+    border-color: #A63D2B !important;
+}
+
+.more{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly; 
+    margin: 35px;
+}
+
+.novetats{
+    background-color: #E2E3E5;
+    width: 550px;
+    height: 300px;
+    text-align: center;
+}
+
+
+.admin{
+    display: flex;
+    flex-direction: column;
+    background-color: #E2E3E5;
+    width: 360px;
+    height: 150px;
+}
+
+.admin2{
+    display: flex;
+    align-self: center;
+    width: max-content;
+}
+
+#admin_btn{
+    margin:7px;
+}
