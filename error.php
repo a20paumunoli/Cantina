@@ -8,21 +8,37 @@
     <link rel="stylesheet" href="normalize.css">
     <title>Error</title>
     <style>
+
         .pantalla{
-            height: 79vh; /* For 100% screen height */
-            width:  80vw; /* For 100% screen width */
-          
-            justify-content: center;
+            width: auto;
+            height: 82vh;
+            display: flex;
+            align-items: center;
         }
+
+        .err{
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            margin-right: auto; 
+            flex-direction: column;          
+        }
+
+        .err_h1{
+            color: #800000;
+        }
+
+
     </style>
 </head>
 
 <body>
     <?php include("header.php") ?>
-    <div class="pantalla">
-        <img src="img/error_pizza.png">
-        <h1>Error, ja has fet una comanda avui.</h1>
-
+    <div class=pantalla>
+        <div class="err">
+            <img src="img/error_pizza.png">
+            <h1 class="err_h1">Error, ja has fet la comanda d'avui!</h1>
+        </div>
     </div>
 
     <?php include ("footer.php"); ?>
