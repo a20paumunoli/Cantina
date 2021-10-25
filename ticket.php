@@ -4,9 +4,9 @@
     $restaTiempo = $segundos24h-$segundosActuales+7200;
     setcookie('comanda', "comanda_hecha_".uniqid(), time()+$restaTiempo);
     session_start();
-    $texto = array( "Nombre" => "'.$_POST["name"].'",
-                    "Telèfon" =>"'.$_POST["tel"].'",
-                    "Correu" =>"'.$_POST["email"].'");
+    $json = array("Nombre" => "'".$_POST["name"]."'",
+                   "Telefon" => "'".$_POST["tel"]."'",
+                   "Correu" => "'".$_POST["email"]."'");
 ?>
 
 
@@ -76,9 +76,10 @@
                             if($_SESSION){
                             for($i=0; $i<count($_SESSION['nombre']); $i++){
                                 echo $_SESSION['nombre'][$i]."  x".$_SESSION['nproductos'][$i]."<br>";
-                                $texto .= '"'.$_SESSION['nombre'][$i].' x'.$_SESSION['nproductos'][$i].'"';
-                                if($i!=count($_SESSION['nombre'])-1){ $texto .= ",";}
+                                $json = array_merge($json, array('producte'.$i => $_SESSION['nombre'][$i]." x".$_SESSION['nproductos'][$i]));
                             } 
+                            $json = array_merge($json, array('total' => $_SESSION['total']));
+                            
                         ?>
                     </td>
             </tr>
@@ -104,7 +105,6 @@
             echo $_SESSION['nproductos'][$i]."</br>";
         }
         echo $_SESSION['total'];*/
-        $texto .= "]}\n";
         session_destroy();
     }
 
@@ -112,12 +112,24 @@
     </div>
     <?php 
     
-    $fecha = date("d"."-"."m"."-"."Y");
-    $fitx = fopen($fecha.".json", "a+");
+    $n = 1;
+    do{
+        $nF = "./comandes/".date("d"."-"."m"."-"."Y")."-n".$n.".json";
+        if(file_exists($nF)){ $n++; }
+    }while(file_exists($nF));
+
+    file_put_contents($nF, json_encode($json));
+
+
+    /*if(!file_exists($nF)){
+        file_put_contents($nF, json_encode($json));
+    }else{
+        file_put_contents($nF, json_encode($json), FILE_APPEND);    
+    }*/
+    
+    
     
 
-
-    fwrite($fitx, $texto);    
     
     
     
