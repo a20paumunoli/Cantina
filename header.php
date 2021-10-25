@@ -37,14 +37,19 @@
             align-self: end;
         }
 
-        .btn{
-            color: #dc3545;
-            font-size: 17.5px;
-        } 
+        .btn-outline-danger, .btn-outline-danger:visited, .btn-outline-danger:focus{
+            color: #A63D2B;
+            border-color: #A63D2B !important;
+        }
+
+        .btn-outline-danger:active, .btn-outline-danger:hover, .btn-outline-danger:visited{
+            background-color: #A63D2B !important;
+            border-color: #A63D2B !important;
+        }
 
         h1{ margin-bottom: 0px !important;}
 
-        p{margin: 0px 0px 0px 0px}
+        p{ margin: 0px 0px 0px 0px; }
 
         .sp2{
             font-weight: lighter;
