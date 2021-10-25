@@ -45,18 +45,18 @@
         "nombre": "Brownies + café",
         "id": "8",
         "precio":"1.6",
-        "img": "img/cafe.png"
+        "img": "img/brownie_cafe.png"
     },
     {
         "nombre": "KitKat",
         "id": "9",
         "precio":"0.9",
-        "img": "img/donut.png"
+        "img": "img/kitkat.png"
     },
     {
         "nombre": "Palmera chocolate",
         "id": "10",
         "precio":"0.8",
-        "img": "img/croissant.png"
+        "img": "img/palmera.png"
     }
 ]
