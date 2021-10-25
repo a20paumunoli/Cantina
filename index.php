@@ -54,7 +54,7 @@
             }
 
             .novetats{
-                background-color: grey;
+                background-color: #E2E3E5;
                 width: 550px;
                 height: 300px;
                 text-align: center;
@@ -63,11 +63,20 @@
             
             .admin{
                 display: flex;
-                flex-direction: row;
-                background-color: grey;
-                display: flex;
                 flex-direction: column;
+                background-color: #E2E3E5;
                 width: 360px;
+                height: 150px;
+            }
+
+            .admin2{
+                display: flex;
+                align-self: center;
+                width: max-content;
+            }
+
+            #admin_btn{
+                margin:7px;
             }
 
 
@@ -133,12 +142,11 @@
             </div>
 
             <div class="admin">
-                    <img scr="img/admin.png" width="50" height="50">
-                    <h5>Ets administrador?</h5> 
+                        <img scr="img/admiin.png" width="50" height="50">
+                        <h5>Ets administrador?</h5>
                     <div class="admin2">
-                    <a href="admin.php" class="btn btn-secondary">entrar com admin</a>
-        
-                </div>
+                        <a href="admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
+                    </div>
 
             </div>
         </div>
