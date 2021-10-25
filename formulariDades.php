@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="css/normalize.css">
+        <link type="text/css" rel="stylesheet" href="header.css">
         <title>Validació comanda</title>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -77,7 +78,7 @@
                 <div class="tit">
                     <h2>Dades comanda</h2>
                     <?php
-                        if(date("g") > 12){
+                        if(date("H") > 12){
                             $nom = "prodtarda-" ;
                             $fit = "json/ctarda.json";
                         }else{

@@ -12,126 +12,9 @@ if (isset($_COOKIE["comanda"])){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link type="text/css" rel="stylesheet" href="css/normalize.css">
+        <link type="text/css" rel="stylesheet" href="menu.css">
+        <link type="text/css" rel="stylesheet" href="header.css">
         <title>MENU</title>
-
-        <style>
-            .grid-cont1{
-                display: grid;
-                grid-template-columns: 3fr 1fr;
-                margin: 10px 40px 10px 40px;
-            }
-
-            .pr-grid{
-                display: grid;
-                grid-template-rows: 3fr 1fr;
-                align-items: center;
-                justify-items: center;
-            }
-
-            .grid-cont2{
-                display: grid;
-                grid-template-areas: "comida comida comida comida"
-                                        "comida1 comida2 comida3 comida4"
-                                        "bebida bebida bebida bebida"
-                                        "bebida1 bebida2 bebida3 bebida4"
-                                        "dulce dulce submit submit"
-                                        "dulce1 dulce2 submit submit";
-                gap: 10px 25px;
-                grid-template-columns: auto;
-                grid-template-rows: 30px 250px 30px 250px 30px 250px;
-
-            }
-
-            .gc1{
-                grid-area: comida;
-                background-color: lightsteelblue;
-            }
-
-            .gc2{
-                grid-area: comida1;
-                background-color: lightsteelblue;
-                column-gap: 10px;
-            }
-
-            .gc3{
-                grid-area: comida2;
-                background-color: lightsteelblue;
-            }
-
-            .gc4{
-                grid-area: comida3;
-                background-color: lightsteelblue;
-            }
-
-            .gc5{
-                grid-area: comida4;
-                background-color: lightsteelblue;
-            }
-
-            .gc6{
-                grid-area: bebida;
-                background-color: lightsteelblue;
-            }
-
-            .gc7{
-                grid-area: bebida1;
-                background-color: lightsteelblue;
-            }
-            .gc8{
-                grid-area: bebida2;
-                background-color: lightsteelblue;
-            }
-            .gc9{
-                grid-area: bebida3;
-                background-color: lightsteelblue;
-            }
-
-            .gc10{
-                grid-area: bebida4;
-                background-color: lightsteelblue;
-            }
-
-            .gc11{
-                grid-area: dulce;
-                background-color: lightsteelblue;
-            }
-
-            .gc12{
-                grid-area: dulce1;
-                background-color: lightsteelblue;
-            }
-
-            .gc13{
-                grid-area: dulce2;
-                background-color: lightsteelblue;
-            }
-
-            .gc14{
-                grid-area: submit;
-                background-color: lightsteelblue;
-            }
-
-            .ticket{
-                background-color: grey;
-                margin-left: 20px;
-            }
-
-            .responsive{
-                width: 100%;
-                max-width: 150px;
-                height: auto;
-            }
-
-            /*.text{
-    _
-            }*/
-
-            /*.img{
-    _
-            }*/
-
-        </style>
-
     </head>
 
     <body>
@@ -144,17 +27,30 @@ if (isset($_COOKIE["comanda"])){
                 $let = 0;
                 foreach ($menu as $prod) {
                     if($let == 0){
-                        echo "<div class='gc".($let+1)."'>Comida</div>";
+                        echo "<div class='gc".($let+1)."'><p class='text-center fs-3'>Menjar</p></div>";
                         $let++;
                     }else if ($let == 5){
-                        echo "<div class='gc".($let+1)."'>Begudes</div>";
+                        echo "<div class='gc".($let+1)."'><p class='text-center fs-3'>Begudes</p></div>";
                         $let++;
                     }else if($let == 10){
-                        echo "<div class='gc".($let+1)."'>Dolços</div>";
+                        echo "<div class='gc".($let+1)."'><p class='text-center fs-3'>Dolços</p></div>";
                         $let++;
                     }
-                    echo "<div class='gc".($let+1). " pr-grid'>";
+                    echo "<div class='gc".($let+1). " pr-grid shadow-sm mb-5 p-3 rounded-1'>";
+                    
                     echo '<div class="img">
+                            <img src='.$prod["img"].' class="responsive" alt="foto-'.$prod["img"].'">
+                         </div>
+
+                        <div class="text-center">
+                        <span>'.$prod["nombre"].' </span><span> '.$prod["precio"].'€</span></br>
+                            <input type="hidden" id="'.$nom.$prod["id"].'" name="'.$nom.$prod["id"].'" value="0">
+                            <input type="button" class="quitar btn btn-outline-primary"  id="quitar" value="-">
+                            <input type="button" id="añadir" class="añadir btn btn-outline-primary" value="+">
+                        </div>                
+                        </div>';
+
+                    /*echo '<div class="img">
                                         <img src='.$prod["img"].' class="responsive" alt="foto-'.$prod["img"].'">
                                     </div>
                                     <div class="text">
@@ -162,7 +58,8 @@ if (isset($_COOKIE["comanda"])){
                                         <span>'.$prod["nombre"].  '</span><span> '.$prod["precio"].'€</span>
                                         <input type="hidden" id="'.$nom.$prod["id"].'" name="'.$nom.$prod["id"].'" value="0">
                                         <input type="button" id="añadir" class="añadir" value="+">
-                                    </div></div>';
+                                    </div></div>';*/
+                
                     $let++;
                 }
                 echo "<div class='gc".($let+1)."'><input type='submit' value='Finalitzar comanda'></div>";
@@ -170,9 +67,8 @@ if (isset($_COOKIE["comanda"])){
         ?>
 
         <form method="POST" action="formulariDades.php">
-            <div class="grid-cont1">
+            <div class="grid-cont1 shadow-lg p-3 mb-5 bg-body rounded">
                 <div id='bot'>
-                    <p>MENÚ</p>
                     <div id="mati" class="grid-cont2">
                         <?php
                             $n = 1;
@@ -210,7 +106,7 @@ if (isset($_COOKIE["comanda"])){
             (d.getHours() <= "12") ? document.getElementById("tarda").style.display="none" : document.getElementById("mati").style.display="none";
             
             /* Añadir & Quitar producto */
-            const idProductoJSON = 6;
+            const idProductoJSON = 5;
             document.getElementById("bot").addEventListener("click", function(e){
                 let idProd;
                 if(e.target.classList.contains("añadir")){
@@ -231,8 +127,8 @@ if (isset($_COOKIE["comanda"])){
                 let precio, nombre, text = "", total = 0, i, j;
                 for(i=1; i<=10; i++){
                     console.log(nom+i);
-                    nombre = document.getElementById(nom+i).previousElementSibling.previousElementSibling.innerHTML;
-                    precio = parseFloat(document.getElementById(nom+i).previousElementSibling.innerHTML);
+                    nombre = document.getElementById(nom+i).previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+                    precio = parseFloat(document.getElementById(nom+i).previousElementSibling.previousElementSibling.innerHTML);
                     console.log(precio);
                     if(document.getElementById(nom+i).value > 0){
                         text += ("<p>"+nombre+"......"+document.getElementById(nom+i).value+"</p></br>");
@@ -247,6 +143,5 @@ if (isset($_COOKIE["comanda"])){
         </script>
 
         <?php include("footer.php"); ?>
-
     </body>
 </html>

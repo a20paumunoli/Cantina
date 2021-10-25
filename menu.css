@@ -1,0 +1,131 @@
+/*
+
+e2e3e5
+a63d2b
+040e33
+666666
+fff
+
+*/
+
+body{
+    color: #040e33 !important;
+}
+
+.pr-grid{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    align-items: center;
+    justify-items: center;
+    border: 2px solid #040e33;
+    background-color: #e2e3e5;
+    
+}
+
+.grid-cont1{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin: 10px 40px 10px 40px;
+}
+
+
+
+.grid-cont2{
+    display: grid;
+    grid-template-areas: "comida comida comida comida"
+                            "comida1 comida2 comida3 comida4"
+                            "bebida bebida bebida bebida"
+                            "bebida1 bebida2 bebida3 bebida4"
+                            "dulce dulce submit submit"
+                            "dulce1 dulce2 submit submit";
+    gap: 10px 15px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+
+.gc1{
+    grid-area: comida;
+
+}
+
+.gc2{
+    grid-area: comida1;
+}
+
+.gc3{
+    grid-area: comida2;
+}
+
+.gc4{
+    grid-area: comida3;
+}
+
+.gc5{
+    grid-area: comida4;
+
+}
+
+.gc6{
+    grid-area: bebida;
+
+}
+
+.gc7{
+    grid-area: bebida1;
+
+}
+.gc8{
+    grid-area: bebida2;
+
+}
+.gc9{
+    grid-area: bebida3;
+
+}
+
+.gc10{
+    grid-area: bebida4;
+
+}
+
+.gc11{
+    grid-area: dulce;
+
+}
+
+.gc12{
+    grid-area: dulce1;
+
+}
+
+.gc13{
+    grid-area: dulce2;
+
+}
+
+.gc14{
+    grid-area: submit;
+
+}
+
+.ticket{
+    background-color: #666666;
+    margin-left: 20px;
+}
+
+.responsive{
+    width: 100%;
+    max-width: 125px;
+    height: auto;
+}
+
+.btn, .btn-outline-primary, .btn-outline-primary:visited, .btn-outline-primary:focus{
+    color: #040e33 !important;
+    border-color: #040e33 !important;
+}
+
+.btn-outline-primary:active, .btn-outline-primary:hover, .btn-outline-primary:visited{
+    background-color: #040e33 !important;
+    border-color: #040e33 !important;
+    color: white !important;
+}
