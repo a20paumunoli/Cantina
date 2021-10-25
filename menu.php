@@ -227,7 +227,7 @@ if (isset($_COOKIE["comanda"])){
 
             /* Actualizar carrito */
             function actualizar_carrito(){
-                let nom = (d.getHours() > "12") ? "prodtarda-" : "prodmati-" ; 
+                let nom = (d.getHours() > "12") ? "prodtarda-" : "prodmati-" ;
                 let precio, nombre, text = "", total = 0, i, j;
                 for(i=1; i<=10; i++){
                     console.log(nom+i);
