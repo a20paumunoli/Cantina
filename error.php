@@ -11,7 +11,7 @@
 
         .pantalla{
             width: auto;
-            height: 82vh;
+            height: 81vh;
             display: flex;
             align-items: center;
         }
