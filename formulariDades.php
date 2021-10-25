@@ -6,63 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link type="text/css" rel="stylesheet" href="header.css">
-        <title>Validació comanda</title>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-        <style>
-
-            .grid_div{
-                display: grid;
-                grid-template-areas: "head head"
-                                    "ticket dades";
-                grid-template-columns: 2fr 1fr;
-                grid-template-rows: auto auto;
-                grid-column-gap: 60px;
-                padding: 20px;
-                margin: 50px;
-                background-color: grey;
-            }
-
-            .dades_comanda{
-                grid-area: ticket;
-                background-color: lightcoral;
-
-            }
-
-            .dades_persona{
-                align-items: center;
-                /*float: center;*/
-                justify-items: left;
-                background-color: lightblue;
-            }
-
-            .head{
-                grid-area: head;
-                justify-self: center;
-            }
-
-        .form_cont{
-           
-            
-            margin-left: 140px;
-            margin-right: 140px;
-            padding: 15px;
-        }
-
-            .input{
-                float: right;
-            }
-
-            .sub{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding-bottom: 25px;
-            }
-
-        </style>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link type="text/css" rel="stylesheet" href="css/header.css">
+        <link type="text/css" rel="stylesheet" href="css/form.css">
+        <title>Validació comanda</title>
 
     </head>
 
