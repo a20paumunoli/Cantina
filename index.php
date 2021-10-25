@@ -34,7 +34,6 @@
             
             .carousel-caption {
                 background-color: rgba(0, 0, 0, 0.357);
-
             }
 
             .text{
