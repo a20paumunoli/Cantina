@@ -4,6 +4,11 @@
     $restaTiempo = $segundos24h-$segundosActuales+7200;
     setcookie('comanda', "comanda_hecha_".uniqid(), time()+$restaTiempo);
     session_start();
+    $texto = '[{
+        "Nombre":"'.$_POST["name"].'",
+        "Telèfon":"'.$_POST["tel"].'",
+        "Correu":"'.$_POST["email"].'",
+        "Comanda": [';
 ?>
 
 
@@ -68,10 +73,13 @@
 
                     <td>
                         <?php
-                        if($_SESSION){
-                        for($i=0; $i<count($_SESSION['nombre']); $i++){
-                        echo $_SESSION['nombre'][$i]."  x";
-                        echo $_SESSION['nproductos'][$i]."<br>";} ?>
+                            if($_SESSION){
+                            for($i=0; $i<count($_SESSION['nombre']); $i++){
+                                echo $_SESSION['nombre'][$i]."  x".$_SESSION['nproductos'][$i]."<br>";
+                                $texto .= '"'.$_SESSION['nombre'][$i].' x'.$_SESSION['nproductos'][$i].'"';
+                                if($i!=count($_SESSION['nombre'])-1){ $texto .= ",";}
+                            } 
+                        ?>
                     </td>
             </tr>
             <tr>
@@ -96,11 +104,29 @@
             echo $_SESSION['nproductos'][$i]."</br>";
         }
         echo $_SESSION['total'];*/
+        $texto .= "]}\n";
         session_destroy();
     }
 
     ?>
     </div>
-    <?php include ("footer.php"); ?>
+    <?php 
+    
+    $fecha = date("d"."-"."m"."-"."Y");
+    $fitx = fopen($fecha.".json", "a+");
+    
+
+
+    fwrite($fitx, $texto);    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    include ("footer.php"); ?>
 </body>
 </html>
