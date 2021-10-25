@@ -4,11 +4,9 @@
     $restaTiempo = $segundos24h-$segundosActuales+7200;
     setcookie('comanda', "comanda_hecha_".uniqid(), time()+$restaTiempo);
     session_start();
-    $texto = '[{
-        "Nombre":"'.$_POST["name"].'",
-        "Telèfon":"'.$_POST["tel"].'",
-        "Correu":"'.$_POST["email"].'",
-        "Comanda": [';
+    $texto = array( "Nombre" => "'.$_POST["name"].'",
+                    "Telèfon" =>"'.$_POST["tel"].'",
+                    "Correu" =>"'.$_POST["email"].'");
 ?>
 
 
