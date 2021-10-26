@@ -16,30 +16,30 @@
     <body>
         <?php include("header.php") ?>  
 
-        <!-- Carousel imagenes -->
-        
         <div class="carousel">
-            <div class="slides">
-                <!-- botones -->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
+        
+            <div class="slider">
+                <ul>
+                    <li>
+                        <img class="foto" src="img/foto1.png">
+                    </li>
+                    <li>
+                        <img class="foto" src="img/foto3.PNG">
+                    </li>
+                    <li>
+                        <img class="foto" src="img/foto5.png">
+                    </li>
+                    <li>
+                        <img class="foto" src="img/foto7.png">
+                    </li>
+                </ul>
+            </div>
 
-                <!-- img -->
-                <div class="slide first">
-                    <img src="foto1">
-                </div>
-                
-
+            <div class="button">
+                <a href="menu.php" class="boton">Menú</button>
             </div>
         </div>
-
-
-
-
-
-
+        
         <!-- Novetats i admin -->
         <div class="more">
             <div class="novetats">
@@ -47,11 +47,20 @@
             </div>
 
             <div class="admin">
+<<<<<<< HEAD
+                <img scr="img/admiin.png" width="50" height="50">
+                <h5>Ets administrador?</h5>
+
+                <div class="admin2">
+                    <a href="../administrador/admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
+                </div>
+=======
                         <img scr="img/admiin.png" width="50" height="50">
                         <h5>Ets administrador?</h5>
                     <div class="admin2">
                         <a href="../administrador/admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
                     </div>
+>>>>>>> 40cf3897b7383e0001ce5d2737fa89e18051caa6
 
             </div>
         </div>
@@ -70,3 +79,4 @@
         </script>
     </body>
 </html>
+
