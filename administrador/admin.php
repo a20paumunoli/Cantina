@@ -18,20 +18,35 @@
             justify-content:center
         }
         .novetats1{
+            color: white;
             background-color: #E2E3E5;
-            width: 750px;
-            height: 700px;
+            width: 500px;
+            height: 750px;
             text-align: center;
             border: 1px black solid;
             background-image: url("img/pizarra.jpg");
-            -webkit-background-size: 700px;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-
+            -webkit-background-size: contain;
+            margin: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
-        img{
-            width: 600px;
-            height: 600px;
+        .novetats2{
+            color: white;
+            background-color: #E2E3E5;
+            width: 500px;
+            height: 750px;
+            text-align: center;
+            border: 1px black solid;
+            background-image: url("img/menu.jpg");
+            -webkit-background-size: contain;
+            margin: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        h2{
+            background-color: black;
         }
     </style>
 
@@ -41,9 +56,10 @@
 
     <div class=pantalla>
         <div class="novetats1">
+            <a href="ConsultarComandes.php"></a>
             <h2>Consultar Comandes</h2>
         </div>
-        <div class="novetats">
+        <div class="novetats2">
             <h2>Modificar Menú</h2>
         </div>
     </div>
