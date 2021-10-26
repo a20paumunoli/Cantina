@@ -74,6 +74,7 @@
                             $_SESSION['nproductos']=$nproductos;
                     //print_r($_SESSION);
                     ?>
+                    <input type="button" id="back" value="Back">
                 </div>
             </div>
 
@@ -174,6 +175,11 @@
             else{ n = 0; }
             return n;
         }
+
+            document.getElementById("back").addEventListener("click",function (e){
+            window.history.back();
+
+        });
     </script>
 
 
