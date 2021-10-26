@@ -32,7 +32,11 @@
                 <div class="tit">
                     <h2>Dades comanda</h2>
                     <?php
-                        if(date("H") > 12){
+
+                        if(date("H") < 11){ $h = 0; }
+                        else if( date("H") == 11 && date("i") <= "30"){ $h = 0; }
+                        else{ $h = 1; }
+                        if($h){
                             $nom = "prodtarda-" ;
                             $fit = "json/ctarda.json";
                         }else{
@@ -70,6 +74,7 @@
                             $_SESSION['nproductos']=$nproductos;
                     //print_r($_SESSION);
                     ?>
+                    <input type="button" id="back" value="Back">
                 </div>
             </div>
 
@@ -170,6 +175,11 @@
             else{ n = 0; }
             return n;
         }
+
+            document.getElementById("back").addEventListener("click",function (e){
+            window.history.back();
+
+        });
     </script>
 
 

@@ -104,8 +104,12 @@ if (isset($_COOKIE["comanda"])){
         <script>
             /* Menú matí o tarda */
             let d = new Date();
-            (d.getHours() <= "12") ? document.getElementById("tarda").style.display="none" : document.getElementById("mati").style.display="none";
-            
+            let h;
+            if(d.getHours() < 11){ h = 0; }
+            else if(d.getHours() == 11 && d.getMinutes() <= "30"){ h = 0; }
+            else{ h = 1; }
+            (!h) ? document.getElementById("tarda").style.display="none" : document.getElementById("mati").style.display="none";
+
             /* Añadir & Quitar producto */
             const idProductoJSON = 5;
             document.getElementById("bot").addEventListener("click", function(e){
@@ -124,7 +128,7 @@ if (isset($_COOKIE["comanda"])){
 
             /* Actualizar carrito */
             function actualizar_carrito(){
-                let nom = (d.getHours() > "12") ? "prodtarda-" : "prodmati-" ;
+                let nom = (h) ? "prodtarda-" : "prodmati-" ;
                 let precio, nombre, text = "", total = 0, i, j;
                 for(i=1; i<=10; i++){
                     console.log(nom+i);
