@@ -72,7 +72,5 @@
     document.getElementById("area2").addEventListener("click", function(){
         window.location.href = "ModificarMenu.php";
     });
-
-
 </script>
 </html>

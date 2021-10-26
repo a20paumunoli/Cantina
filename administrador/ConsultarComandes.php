@@ -17,9 +17,9 @@
 
         <?php
             $carp = opendir("./comandes");
-            while (false !== ($arch = readdir($carp))) {
+            while(false !== ($arch = readdir($carp))){
                 if(str_contains($arch, date("d"."-"."m"."-"."Y"))){
-                    $data = file_get_contents($arch);
+                    $data = file_get_contents("./comandes/".$arch);
                     $fitx = json_decode($data, true);
                     print_r($fitx);
                 }
