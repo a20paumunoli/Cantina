@@ -1,0 +1,40 @@
+#grid-c{
+    display: grid;  
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: #e2e3e5;
+    padding: 10px;
+}
+#d1{
+    justify-self: left;
+    align-self: center;
+}
+
+#d2{
+    justify-self: center;
+    align-self: center;
+}
+
+#d3{
+    justify-self: right;
+    align-self: center;
+}
+
+p{
+    margin: 0px 0px 0px 0px;
+}
+
+.sp{
+    border-right: 1px solid black;
+    margin-right: 5px;
+}
+
+a, a:visited, a:focus, a:active, a:visited{
+    color: #A63D2B;
+    font-size: 16px;
+}
+
+ a:hover{
+    background-color: #A63D2B;
+    border-color: #A63D2B;
+    color: white;
+}
