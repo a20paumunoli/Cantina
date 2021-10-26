@@ -12,12 +12,13 @@
         <link type="text/css" rel="stylesheet" href="css/form.css">
         <title>Validació comanda</title>
     </head>
+
     <body>
-    <?php
-        // start a session
-        session_start();
-        include("header.php") 
-    ?>
+        <?php
+            // start a session
+            session_start();
+            include("header.php") 
+        ?>
 
         <div class="grid_div">
             <div class="head">
@@ -89,7 +90,6 @@
                         <div>
                             <label for="tlf">Telèfon</label>
                             <input class="input" name="tel" type="tel" id="tlf" width="10">
-
                         </div>
                         <br>
                         <div>
@@ -104,9 +104,6 @@
                 </form>
             </div>
         </div>
-
-
-    </div>
 
     <script>
         /* Fer focus al camp nom al carregar la pàgina web */
@@ -130,7 +127,7 @@
             if(n){ text += ("<b>"+err[n]+"!</b>"); error = 1;}
 
             if(error){
-                e.preventDefault();
+                e.preventDefault(); //prevee/bloqueja la funció predeterminada del form, submit
                 Swal.fire({
                     icon: 'error',
                     title: 'Error!...',
@@ -139,7 +136,7 @@
             }
         });
 
-        /* Funcions comprovació Nom & Telefon & Email */
+        /* Funcions comprovació Nom, Telefon & Email */
 
         function errorNom(){
             return (document.getElementById("nom").value === "") ? true : false;
@@ -162,11 +159,15 @@
             return n;
         }
 
-            document.getElementById("back").addEventListener("click",function (e){
-            window.history.back();
 
+        /* Funció per a tornar a la pàgina anterior (menú comana) */
+
+        document.getElementById("back").addEventListener("click",function (e){
+            window.history.back();
         });
+
     </script>
+
     <?php include ("footer.php")?>
     </body>
 </html>
