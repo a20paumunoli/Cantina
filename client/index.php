@@ -17,52 +17,27 @@
         <?php include("header.php") ?>  
 
         <!-- Carousel imagenes -->
-        <div id="myCarousel" class="carousel slide " data-bs-ride="carousel">
+        
+        <div class="carousel">
+            <div class="slides">
+                <!-- botones -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
 
-            <ol class="carousel-indicators">
-                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
-            </ol>
+                <!-- img -->
+                <div class="slide first">
+                    <img src="foto1">
+                </div>
+                
 
-            <div class="carousel-inner">
-                <div class="carousel-item active" style="background-image: url(img/foto1.png);">
-                    <!--<div class="container">
-                        <h1>Example</h1>
-                        <p>tetxuydeygdhufuiehf fjrfhuer</p> 
-                        <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>
-                    </div>-->
-                </div>
-                <div class="carousel-item" style="background-image: url(img/foto3.png);">
-                   <!-- <div class="container">
-                        <h1>Example2</h1>
-                        <p>tetxuydeygdhufuiehf fjrfhuer</p>
-                        <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>
-                    </div>-->
-                </div>
-                <div class="carousel-item" style="background-image: url(img/foto7.png);">
-                    <!--
-                    <div class="container">
-                        <h1>Example3</h1>
-                        <p>tetxuydeygdhufuiehf fjrfhuer</p>
-                        <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>   
-                    </div>-->
-                </div>
-                <div class="carousel-item" style="background-image: url(img/foto8.png);">
-                    <!--<div class="container">
-                        <h1>Example4</h1>
-                        <p>tetxuydeygdhufuiehf fjrfhuer</p>
-                        <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>
-                    </div>-->
-                </div>
-            </div>
-
-            <div class="carousel-caption">
-                <p class="text">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                <a href="menu.php" class="btn btn-secondary btn-lg">Menú</a>
             </div>
         </div>
+
+
+
+
 
 
         <!-- Novetats i admin -->
@@ -75,7 +50,7 @@
                         <img scr="img/admiin.png" width="50" height="50">
                         <h5>Ets administrador?</h5>
                     <div class="admin2">
-                        <a href="admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
+                        <a href="../administrador/admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
                     </div>
 
             </div>

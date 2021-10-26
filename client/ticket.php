@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/snormalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/header.css">
     <title>Ticket</title>
     <style>
@@ -24,22 +24,38 @@
                 margin-left: 15px;
                 width: auto;
                 height: 75vh;
-                display: flex;
+                display: grid;
+                font-size: 20px;
+                justify-content:center
             }
             .tabla{
                 width: 500px;
+                justify-content:center
             }
             h1{
-                width: 500px;
                 text-align: center;
+            }
+            .table{
+                padding: 5px;
+                margin-left: 35px;
+                border: 1px black solid;
+            }
+            th{
+                padding: 15px;
+                text-align: end;
+            }
+            td{
+                text-align: left;
             }
         </style> 
 </head>
 <body>
     <?php include("header.php") ?>
 
-    <h1>Ticket</h1>
+
     <div class="separate">
+        <h1>Ticket</h1>
+
         <?php
         //$_SESSION["productos"]=$_POST[$nom.$i]];
         if($_POST){
@@ -47,27 +63,23 @@
         <div class="tabla">
         <table class="table">
             <thead>
-            <tr>
-                <th scope="col"></th>
-
-            </tr>
             </thead>
             <tbody>
             <tr>
-                <th scope="row">Nom: </th>
+                <th>Nom: </th>
                 <td><?php echo $_POST['name'];?></td>
                 
             </tr>
             <tr>
-                <th scope="row">Telèfon: </th>
+                <th>Telèfon: </th>
                 <td><?php echo $_POST['tel'];?></td>
             </tr>
             <tr>
-                <th scope="row">Correu: </th>
+                <th>Correu: </th>
                 <td colspan="2"><?php echo $_POST['email'];}?></td>
             </tr>
             <tr>
-                <th scope="row">Comanda: </th>
+                <th>Comanda: </th>
 
                     <td>
                         <?php
@@ -82,8 +94,8 @@
                     </td>
             </tr>
             <tr>
-                <th scope="row">Preu Total: </th>
-                <td colspan="2"><?php echo $_SESSION['total'];?> €</td>
+                <th>Preu Total: </th>
+                <td><?php echo $_SESSION['total'];?> €</td>
             </tr>
             </tbody>
         </table>
