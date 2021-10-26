@@ -55,11 +55,11 @@
     <?php include("../client/header.php") ?>
 
     <div class=pantalla>
-        <div class="novetats1">
-            <a href="ConsultarComandes.php"></a>
+        <div id="area1" class="novetats1">
+
             <h2>Consultar Comandes</h2>
         </div>
-        <div class="novetats2">
+        <div id="area2" class="novetats2">
             <h2>Modificar Menú</h2>
         </div>
     </div>
@@ -67,5 +67,14 @@
 
     <?php include ("../client/footer.php"); ?>
 </body>
+<script>
+    document.getElementById("area1").addEventListener("click", function(){
+        window.location.href = "ConsultarComandes.php";
+    });
+    document.getElementById("area2").addEventListener("click", function(){
+        window.location.href = "ModificarMenu.php";
+    });
 
+
+</script>
 </html>
