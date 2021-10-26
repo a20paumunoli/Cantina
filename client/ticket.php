@@ -26,11 +26,11 @@
                 height: 75vh;
                 display: grid;
                 font-size: 20px;
-                justify-content:center
+                justify-content:center;
             }
             .tabla{
                 width: 500px;
-                justify-content:center
+                justify-content:center;
             }
             h1{
                 text-align: center;

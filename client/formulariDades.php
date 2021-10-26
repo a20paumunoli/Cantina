@@ -51,7 +51,7 @@
                                 if($_POST[$nom.$i] > 0){
                                     foreach($menu as $m){
                                         if($m['id'] == $i){
-                                            echo ("<p>".$m['nombre'].".....".$_POST[$nom.$i]."</p>");
+                                            echo ("<p>".$m['nombre']." x".$_POST[$nom.$i]."</p>");
                                             array_push($bocatas, $m['nombre']);
                                             array_push($nproductos, $_POST[$nom.$i]);
                                             for($j=0; $j<$_POST[$nom.$i]; $j++){
