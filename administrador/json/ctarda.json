@@ -22,7 +22,6 @@
         "id": "4",
         "precio": "3.6",
         "img": "img/bocata_bacon.png"
-
     },
     {
         "nombre": "Cocacola",
@@ -59,5 +58,17 @@
         "id": "10",
         "precio":"0.8",
         "img": "img/palmera.png"
+    },
+    {
+        "nombre": "M&M's",
+        "id": "11",
+        "precio":"1",
+        "img": "img/m&m.png"
+    },
+    {
+        "nombre": "Pastís de formatge",
+        "id": "12",
+        "precio":"3",
+        "img": "img/tarta.png"
     }
 ]

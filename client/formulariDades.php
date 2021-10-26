@@ -42,12 +42,13 @@
                         $total=0;
 
                         if($_POST){
+                            $prodTot = 12;
                             $data = file_get_contents($fit);
                             $menu = json_decode($data, true);
                             $bocatas = array();
                             $nproductos = array();
 
-                            for($i=1; $i<=10; $i++){
+                            for($i=1; $i<=$prodTot; $i++){
                                 if($_POST[$nom.$i] > 0){
                                     foreach($menu as $m){
                                         if($m['id'] == $i){

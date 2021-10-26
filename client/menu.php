@@ -1,7 +1,7 @@
 <?php
-if (isset($_COOKIE["comanda"])){
-    header('Location: error.php');
-}
+    if (isset($_COOKIE["comanda"])){
+        header('Location: error.php');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,7 @@ if (isset($_COOKIE["comanda"])){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="css/normalize.css">
         <link type="text/css" rel="stylesheet" href="css/header.css">
+        <link type="text/css" rel="stylesheet" href="css/footer.css">
         <link type="text/css" rel="stylesheet" href="css/menu.css">
         <title>MENU</title>
     </head>
@@ -23,50 +24,27 @@ if (isset($_COOKIE["comanda"])){
             /*  -- Graella productes --  */
             function mostrarProd($menu, $n){
                 $nom = ($n == 0) ? "prodtarda-" : "prodmati-" ;
-                $let = 0;
+                $let = 1;
+                echo "<div class='menu'><h1>MENU</h1></div>";
                 foreach ($menu as $prod) {
-                    if($let == 0){
-                        echo "<div class='gc".($let+1)."'><p class='text-center fs-3'>Menjar</p></div>";
-                        $let++;
-                    }else if ($let == 5){
-                        echo "<div class='gc".($let+1)."'><p class='text-center fs-3'>Begudes</p></div>";
-                        $let++;
-                    }else if($let == 10){
-                        echo "<div class='gc".($let+1)."'><p class='text-center fs-3'>Dolços</p></div>";
-                        $let++;
-                    }
-                    echo "<div class='gc".($let+1). " pr-grid shadow-sm mb-5 p-3 rounded-1'>";
-                    
+                    echo "<div class='gc".$let." pr-grid'>";
                     echo '<div class="img">
                             <img src='.$prod["img"].' class="responsive" alt="foto-'.$prod["img"].'">
                          </div>
-
-                        <div class="text-center">
-                        <span>'.$prod["nombre"].' </span><span> '.$prod["precio"].'€</span></br>
+                        <div class="text">
+                            <input type="button" class="quitar bt"  id="quitar" value="-">
+                            <span>'.$prod["nombre"].' </span><span> '.$prod["precio"].'€</span>
                             <input type="hidden" id="'.$nom.$prod["id"].'" name="'.$nom.$prod["id"].'" value="0">
-                            <input type="button" class="quitar btn btn-outline-primary"  id="quitar" value="-">
-                            <input type="button" id="añadir" class="añadir btn btn-outline-primary" value="+">
+                            <input type="button" id="añadir" class="bt añadir" value="+">
                         </div>                
-                        </div>';
-
-                    /*echo '<div class="img">
-                                        <img src='.$prod["img"].' class="responsive" alt="foto-'.$prod["img"].'">
-                                    </div>
-                                    <div class="text">
-                                        <input type="button" id="quitar" class="quitar" value="-">
-                                        <span>'.$prod["nombre"].  '</span><span> '.$prod["precio"].'€</span>
-                                        <input type="hidden" id="'.$nom.$prod["id"].'" name="'.$nom.$prod["id"].'" value="0">
-                                        <input type="button" id="añadir" class="añadir" value="+">
-                                    </div></div>';*/
-                
+                        </div>';                
                     $let++;
                 }
-                echo "<div class='gc".($let+1)."'><input type='submit' value='Finalitzar comanda'></div>";
             }
         ?>
 
         <form method="POST" action="formulariDades.php">
-            <div class="grid-cont1 shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="grid-cont1">
                 <div id='bot'>
                     <div id="mati" class="grid-cont2">
                         <?php
@@ -90,11 +68,15 @@ if (isset($_COOKIE["comanda"])){
                 <!-- Llistat elements seleccionats -->
 
                 <div class="ticket">
-                    <h3>Ticket</h3>
-                    <div id="carrito"></div>
-                    <div id="total">
-                        <h4>Total: 0€</h4>
+                    <div class='menu'><h1>TICKET</h1></div>
+                    <div id="carrito" class="carrito"></div>
+                    <div id="total" class="total">
+                        <h2 class="end">Total: 0€</h2>
                     </div>
+                    <div class="sbm">
+                        <input type="submit" class="boton" value="Finalitzar comanda ->">
+                    </div>
+                    
                 </div>
             </div>
         </form>
@@ -109,7 +91,7 @@ if (isset($_COOKIE["comanda"])){
             (!h) ? document.getElementById("tarda").style.display="none" : document.getElementById("mati").style.display="none";
 
             /* Añadir & Quitar producto */
-            const idProductoJSON = 5;
+            const idProductoJSON = 6;
             document.getElementById("bot").addEventListener("click", function(e){
                 let idProd;
                 if(e.target.classList.contains("añadir")){
@@ -126,22 +108,23 @@ if (isset($_COOKIE["comanda"])){
 
             /* Actualizar carrito */
             function actualizar_carrito(){
+                const prodTot = 13;
                 let nom = (h) ? "prodtarda-" : "prodmati-" ;
                 let precio, nombre, text = "", total = 0, i, j;
-                for(i=1; i<=10; i++){
+                for(i=1; i<prodTot; i++){
                     console.log(nom+i);
-                    nombre = document.getElementById(nom+i).previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
-                    precio = parseFloat(document.getElementById(nom+i).previousElementSibling.previousElementSibling.innerHTML);
+                    nombre = document.getElementById(nom+i).previousElementSibling.previousElementSibling.innerHTML;
+                    precio = parseFloat(document.getElementById(nom+i).previousElementSibling.innerHTML);
                     console.log(precio);
                     if(document.getElementById(nom+i).value > 0){
-                        text += ("<p>"+nombre+"......"+document.getElementById(nom+i).value+"</p></br>");
+                        text += ("<p>"+nombre+" x"+document.getElementById(nom+i).value+"</p></br>");
                         for(j=0; j<document.getElementById(nom+i).value; j++){
                             total += precio;
                         }
                     }
                 }
                 document.getElementById("carrito").innerHTML = text;
-                document.getElementById("total").innerHTML = "<h4>Total:"+total.toFixed(1)+"€</h4>";
+                document.getElementById("total").innerHTML = "<h2 class='end'>Total: "+total.toFixed(1)+"€</h2>";
             }
         </script>
 
