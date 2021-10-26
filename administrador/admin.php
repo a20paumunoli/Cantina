@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    <link type="text/css" rel="stylesheet" href="./css/header.css">
-    <link type="text/css" rel="stylesheet" href="./css/footer.css">
+    <link type="text/css" rel="stylesheet" href="../client/css/header.css">
+    <link type="text/css" rel="stylesheet" href="../client/css/footer.css">
     <title>Admin</title>
     <style>
 
@@ -21,7 +21,7 @@
             color: white;
             background-color: #E2E3E5;
             width: 500px;
-            height: 750px;
+            height: auto;
             text-align: center;
             border: 1px black solid;
             background-image: url("img/pizarra.jpg");
@@ -35,7 +35,7 @@
             color: white;
             background-color: #E2E3E5;
             width: 500px;
-            height: 750px;
+            height: auto;
             text-align: center;
             border: 1px black solid;
             background-image: url("img/menu.jpg");

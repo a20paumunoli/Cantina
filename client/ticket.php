@@ -84,12 +84,12 @@
                     <td>
                         <?php
                             if($_SESSION){
-                            for($i=0; $i<count($_SESSION['nombre']); $i++){
-                                echo $_SESSION['nombre'][$i]."  x".$_SESSION['nproductos'][$i]."<br>";
-                                $json = array_merge($json, array('producte'.$i => $_SESSION['nombre'][$i]." x".$_SESSION['nproductos'][$i]));
-                            } 
-                            $json = array_merge($json, array('total' => $_SESSION['total']));
-                            
+                                for($i=0; $i<count($_SESSION['nombre']); $i++){
+                                    echo $_SESSION['nombre'][$i]."  x".$_SESSION['nproductos'][$i]."<br>";
+                                    $json = array_merge($json, array('producte'.$i => $_SESSION['nombre'][$i]." x".$_SESSION['nproductos'][$i]));
+                                } 
+                                $json = array_merge($json, array('total' => $_SESSION['total']));
+                            }
                         ?>
                     </td>
             </tr>
@@ -100,27 +100,9 @@
             </tbody>
         </table>
         </div>
-    <?php
-    //$_SESSION["productos"]=$_POST[$nom.$i]];
-    /*if($_POST){
-        echo $_POST['name'];
-        echo "<br>";
-        echo $_POST['tel'];
-        echo "<br>";
-        echo $_POST['email'];
-        echo "<br>";*/
-    /*if($_SESSION){
-        for($i=0; $i<count($_SESSION['nombre']); $i++){
-            echo $_SESSION['nombre'][$i];
-            echo $_SESSION['nproductos'][$i]."</br>";
-        }
-        echo $_SESSION['total'];*/
-        session_destroy();
-    }
-
-    ?>
     </div>
     <?php
+        session_destroy();
         $n = 1;
         do{
             $nF = "../administrador/comandes/".date("d"."-"."m"."-"."Y")."-n".$n.".json";
