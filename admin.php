@@ -16,7 +16,7 @@
             height: 81vh;
             display: flex;
             text-align: center;
-
+            justify-content:center
         }
         .novetats{
             background-color: #E2E3E5;
@@ -24,6 +24,7 @@
             height: 700px;
             text-align: center;
             border: 1px black solid;
+
         }
     </style>
 
@@ -32,10 +33,10 @@
     <?php include("header.php") ?>
 
     <div class=pantalla>
-        <div class="novetats">
+        <div class="novetats" id="area1">
             <h2>Consultar Comandes</h2>
         </div>
-        <div class="novetats">
+        <div class="novetats" id="area2">
             <h2>Modificar Menú</h2>
         </div>
     </div>
@@ -43,4 +44,11 @@
 
     <?php include ("footer.php"); ?>
 </body>
+<script>
+    document.getElementById("area1").addEventListener("click",function(e){
+
+        document.getElementById("x").innerHTML= "X: "+ e.x;
+        document.getElementById("y").innerHTML= "Y: "+ e.y;
+    })
+</script>
 </html>
