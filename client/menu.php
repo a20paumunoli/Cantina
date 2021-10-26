@@ -71,7 +71,7 @@ if (isset($_COOKIE["comanda"])){
                     <div id="mati" class="grid-cont2">
                         <?php
                             $n = 1;
-                            $data = file_get_contents("json/cmati.json");
+                            $data = file_get_contents("../administrador/json/cmati.json");
                             $menuMati = json_decode($data, true);
                             mostrarProd($menuMati, $n);
                         ?>
@@ -80,7 +80,7 @@ if (isset($_COOKIE["comanda"])){
                     <div id="tarda" class="grid-cont2">
                         <?php
                             $n = 0;
-                            $data = file_get_contents("json/ctarda.json");
+                            $data = file_get_contents("../administrador/json/ctarda.json");
                             $menuTarda = json_decode($data, true);
                             mostrarProd($menuTarda, $n);
                         ?>

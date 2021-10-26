@@ -108,35 +108,15 @@
 
     ?>
     </div>
-    <?php 
-    
-    $n = 1;
-    do{
-        $nF = "./comandes/".date("d"."-"."m"."-"."Y")."-n".$n.".json";
-        if(file_exists($nF)){ $n++; }
-    }while(file_exists($nF));
+    <?php
+        $n = 1;
+        do{
+            $nF = "../administrador/comandes/".date("d"."-"."m"."-"."Y")."-n".$n.".json";
+            if(file_exists($nF)){ $n++; }
+        }while(file_exists($nF));
 
-    file_put_contents($nF, json_encode($json));
-
-
-    /*if(!file_exists($nF)){
         file_put_contents($nF, json_encode($json));
-    }else{
-        file_put_contents($nF, json_encode($json), FILE_APPEND);    
-    }*/
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    include ("footer.php"); ?>
+        include ("footer.php"); 
+    ?>
 </body>
 </html>

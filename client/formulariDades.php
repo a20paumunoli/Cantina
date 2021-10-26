@@ -10,16 +10,13 @@
         <link type="text/css" rel="stylesheet" href="css/header.css">
         <link type="text/css" rel="stylesheet" href="css/form.css">
         <title>Validació comanda</title>
-
     </head>
-
     <body>
     <?php
-    // start a session
-    session_start();
-
+        // start a session
+        session_start();
+        include("header.php") 
     ?>
-        <?php include("header.php") ?>
 
         <div class="grid_div">
             <div class="head">
@@ -36,10 +33,10 @@
                         else{ $h = 1; }
                         if($h){
                             $nom = "prodtarda-" ;
-                            $fit = "json/ctarda.json";
+                            $fit = "../administrador/json/ctarda.json";
                         }else{
                             $nom = "prodmati-" ;
-                            $fit = "json/cmati.json";
+                            $fit = "../administrador/json/cmati.json";
                         }
 
                         $total=0;
@@ -104,17 +101,6 @@
                     </div>
                 </form>
             </div>
-            <?php
-
-            /*if( $_POST["submit"] ){
-            foreach($_POST as $campo => $valor) {
-            $_SESSION["registro"][$campo] = $valor;
-            }
-            }
-            echo $_SESSION['registro']['name'];
-            echo $_SESSION['registro']['tlf'];
-            echo $_SESSION['registro']['email'];*/
-            ?>
         </div>
 
 
@@ -179,10 +165,6 @@
 
         });
     </script>
-
-
-
-
-        <?php include ("footer.php"); ?>
+    <?php include ("footer.php"); ?>
     </body>
 </html>
