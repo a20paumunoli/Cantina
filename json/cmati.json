@@ -12,11 +12,10 @@
         "img": "img/bocata_jamon.png"
     },
     {
-        "nombre": "Bocata bacon",
-        "id": "3",
-        "precio": "3.6",
-        "img": "img/bocata_bacon.png"
-        
+        "nombre": "Panini",
+        "id": "4",
+        "precio": "0.8",
+        "img": "img/panini.png"
     },
     {
         "nombre": "Bocata queso",
