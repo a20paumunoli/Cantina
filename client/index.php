@@ -17,7 +17,6 @@
         <?php include("header.php") ?>  
 
         <div class="carousel">
-        
             <div class="slider">
                 <ul>
                     <li>
@@ -33,27 +32,26 @@
                         <img class="foto" src="img/foto7.png">
                     </li>
                 </ul>
-            </div>
-
-            <div class="button">
-                <a href="menu.php" class="boton">Menú</button>
-            </div>
+            </div> 
         </div>
         
         <!-- Novetats i admin -->
         <div class="more">
-            <div class="novetats">
-                Novetats
+            <div class="menu">
+                <div class="button">
+                    <a href="menu.php" class="btn">VEURE MENÚ</a>
+                </div>
             </div>
 
             <div class="admin">
-                <img scr="img/admiin.png" width="50" height="50">
-                <h5>Ets administrador?</h5>
-
-                <div class="admin2">
-                    <a href="../administrador/admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
+                <div class="admin-button">
+                    <img class="imgg" scr="img/admin.png" width="50" height="50">
+                    <h4>Ets administrador?</h4>
                 </div>
 
+                <div class="admin2">
+                    <a href="../../administrador/admin.php" id="admin_btn">entrar com admin</a>
+                </div>
             </div>
         </div>
 

@@ -33,9 +33,38 @@
 }
 
 .button{
+    margin: 15%;
+    padding: 0px;
+    height: 0%;
     display: flex;
     justify-content: center;
-    padding: 5px;
+    align-items: center;    
+}
+
+.btn{
+    font-family: 'Calibri';
+    font-size: 18px;
+    font-weight: bold;
+    background: #A63D2B;
+    width: 160px;
+    padding: 20px;
+    text-align: center; 
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 105px  rgba(0, 0, 0, 0.1) ;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+.btn:hover, .btn:active, .btn:focus{
+    box-shadow: 0 0 10px  rgba(128, 46, 32, 0.856);
+    transform: scale(1.1);
+}
+
+.btn:visited{
+    color: white;
 }
 
 @keyframes cambio{
@@ -59,21 +88,27 @@
     justify-content:space-evenly; 
     margin: 35px;
     margin-bottom: 200px;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
-.novetats{
-    background-color: #E2E3E5;
+.menu{
+    background-image: url("../img/menu.png");
     width: 550px;
     height: 300px;
     text-align: center;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 2px;
+ 
 }
 
 .admin{
     display: flex;
     flex-direction: column;
     background-color: #E2E3E5;
-    width: 360px;
+    width: 330px;
     height: 150px;
 }
 
@@ -84,5 +119,26 @@
 }
 
 #admin_btn{
-    margin:7px;
+    margin:10px;
+    font-family: 'Calibri';
+    font-size: 14px;
+    font-weight: bold;
+    background: #A63D2B;
+    width: 120px;
+    padding: 10px;
+    text-align: center; 
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.imgg{
+    margin: 10px;
+}
+
+.admin-button{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
 }
