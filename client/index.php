@@ -14,7 +14,7 @@
 
     
     <body>
-        <?php include("header.php") ?>  
+        <?php include("../header.php") ?>  
 
         <div class="carousel">
             <div class="slider">
@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <?php include ("footer.php"); ?>
+        <?php include ("../footer.php")?>
         <script>
             if (document.cookie.split(';').some((item) => item.trim().startsWith('comanda='))) {
                 Swal.fire({

@@ -16,7 +16,7 @@
     <?php
         // start a session
         session_start();
-        include("header.php") 
+        include("../header.php") 
     ?>
 
         <div class="grid_div">
@@ -167,6 +167,6 @@
 
         });
     </script>
-    <?php include ("footer.php"); ?>
+    <?php include ("../footer.php")?>
     </body>
 </html>

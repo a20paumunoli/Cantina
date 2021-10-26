@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <?php include("header.php") ?>
+    <?php include("../header.php")?>
     <div class=pantalla>
         <div class="err">
             <img src="img/error_pizza.png">
@@ -42,6 +42,6 @@
         </div>
     </div>
 
-    <?php include ("footer.php"); ?>
+    <?php include ("../footer.php")?>
 </body>
 </html>

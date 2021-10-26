@@ -8,9 +8,13 @@
     <link type="text/css" rel="stylesheet" href="css/footer.css">
     <title>Modificar Menu</title>
 </head>
+
 <body>
+    <?php include("../header.php")?>
+
     <div>
         <h1>Modificar Menu</h1>
     </div>
+    <?php include ("../footer.php")?>
 </body>
 </html>

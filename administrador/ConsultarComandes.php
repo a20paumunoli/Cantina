@@ -9,6 +9,8 @@
     <title>Consultar Comandes</title>
 </head>
 <body>
+    <?php include ("../header.php")?>   
+
     <div>
         <h1>Consultar Comandes</h1>
 
@@ -24,12 +26,10 @@
 
             closedir($carp);
              
-
-
-
-
         ?>
+
     </div>
 
+    <?php include ("../footer.php")?>
 </body>
 </html>
