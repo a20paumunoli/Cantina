@@ -8,6 +8,7 @@
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <link rel="stylesheet" href="css/normalize.css">
         <link type="text/css" rel="stylesheet" href="css/header.css">
+        <link type="text/css" rel="stylesheet" href="css/footer.css">
         <link type="text/css" rel="stylesheet" href="css/form.css">
         <title>Validació comanda</title>
     </head>

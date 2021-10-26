@@ -47,20 +47,12 @@
             </div>
 
             <div class="admin">
-<<<<<<< HEAD
                 <img scr="img/admiin.png" width="50" height="50">
                 <h5>Ets administrador?</h5>
 
                 <div class="admin2">
                     <a href="../administrador/admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
                 </div>
-=======
-                        <img scr="img/admiin.png" width="50" height="50">
-                        <h5>Ets administrador?</h5>
-                    <div class="admin2">
-                        <a href="../administrador/admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
-                    </div>
->>>>>>> 40cf3897b7383e0001ce5d2737fa89e18051caa6
 
             </div>
         </div>
