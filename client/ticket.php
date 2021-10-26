@@ -51,7 +51,7 @@
         </style> 
 </head>
 <body>
-    <?php include("../header.php")?>
+    <?php include("header.php")?>
 
     <div class="separate">
         <h1>Ticket</h1>
@@ -95,7 +95,7 @@
             </tr>
             <tr>
                 <th>Preu Total: </th>
-                <td><?php echo $_SESSION['total'];?> €</td>
+                <td><?php if($_SESSION){ echo $_SESSION['total']."€"; }?></td>
             </tr>
             </tbody>
         </table>
@@ -110,7 +110,7 @@
         }while(file_exists($nF));
 
         file_put_contents($nF, json_encode($json));
-        include ("../footer.php"); 
+        include ("footer.php"); 
     ?>
 </body>
 </html>

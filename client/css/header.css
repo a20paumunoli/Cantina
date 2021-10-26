@@ -13,7 +13,7 @@ body{
 
 #h-1{
     justify-self: left;
-    align-self: center;
+    align-self: end;
     padding-left: 14px; 
     padding-right: 14px;
     border-left: 1px solid black;
@@ -24,8 +24,6 @@ body{
     align-self: end;
     justify-self: left;
     margin-left: 10px;
-    font-size: 23px;
-
 }
 
 #h-3{
@@ -46,11 +44,15 @@ body{
     color: white;
 }
 
-h1{ margin-bottom: 0px;}
-
 p{ margin: 0px 0px 0px 0px; }
 
 .sp2{
     font-weight: 100;
-    font-size: 20px;
+    font-size: 30px;
+}
+
+.n{
+    font-weight: 400;
+    font-size: 55px;
+    height: 55px;
 }

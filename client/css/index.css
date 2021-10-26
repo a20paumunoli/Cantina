@@ -1,6 +1,5 @@
 *{
-    margin: 0;
-    padding: 0;
+
     box-sizing: border-box;
 }
 
@@ -20,6 +19,8 @@
     display: flex;
     animation: cambio 20s infinite alternate linear;
     width: 400%;
+    margin: 0;
+    padding: 0;
 }
 
 .slider li{

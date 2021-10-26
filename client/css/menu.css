@@ -52,59 +52,31 @@ h3, h2{ margin: 0px; }
     border-bottom: #040e33 solid 2px;
 }
 
-h1{
-    margin: 0px;
-}
+h1{ margin: 0px; }
 
-.gc1{
-    grid-area: comida1;
-}
+.gc1{ grid-area: comida1; }
 
-.gc2{
-    grid-area: comida2;
-}
+.gc2{ grid-area: comida2; }
 
-.gc3{
-    grid-area: comida3;
-}
+.gc3{ grid-area: comida3; }
 
-.gc4{
-    grid-area: comida4;
+.gc4{ grid-area: comida4; }
 
-}
+.gc5{ grid-area: bebida1; }
 
-.gc5{
-    grid-area: bebida1;
-}
+.gc6{ grid-area: bebida2; }
 
-.gc6{
-    grid-area: bebida2;
-}
+.gc7{ grid-area: bebida3; }
 
-.gc7{
-    grid-area: bebida3;
-}
+.gc8{ grid-area: bebida4; }
 
+.gc9{ grid-area: dulce1; }
 
-.gc8{
-    grid-area: bebida4;
-}
+.gc10{ grid-area: dulce2; }
 
-.gc9{
-    grid-area: dulce1;
-}
+.gc11{ grid-area: dulce3; }
 
-.gc10{
-    grid-area: dulce2;
-}
-
-.gc11{
-    grid-area: dulce3;
-}
-
-.gc12{
-    grid-area: dulce4;
-}
+.gc12{ grid-area: dulce4; }
 
 .ticket{
     color:#040e33;
@@ -112,9 +84,7 @@ h1{
     padding: 5px 20px 5px 20px;
 }
 
-.carrito{
-    padding-top: 10px;
-}
+.carrito{ padding-top: 10px; }
 
 .responsive{
     width: 100%;
