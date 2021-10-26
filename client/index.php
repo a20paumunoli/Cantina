@@ -50,7 +50,7 @@
                         <img scr="img/admiin.png" width="50" height="50">
                         <h5>Ets administrador?</h5>
                     <div class="admin2">
-                        <a href="admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
+                        <a href="../administrador/admin.php" class="btn btn-secondary" id="admin_btn">entrar com admin</a>
                     </div>
 
             </div>
