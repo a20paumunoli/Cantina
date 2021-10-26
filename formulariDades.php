@@ -32,7 +32,11 @@
                 <div class="tit">
                     <h2>Dades comanda</h2>
                     <?php
-                        if(date("H") > 12){
+
+                        if(date("H") < 11){ $h = 0; }
+                        else if( date("H") == 11 && date("i") <= "30"){ $h = 0; }
+                        else{ $h = 1; }
+                        if($h){
                             $nom = "prodtarda-" ;
                             $fit = "json/ctarda.json";
                         }else{
