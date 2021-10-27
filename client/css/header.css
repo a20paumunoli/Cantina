@@ -50,17 +50,17 @@ body{
     padding: 10px;
 }
 
-.btn_menu{
-    background-color: #A63D2B;
-    transition-property: transform;
-}
-
 .boton:hover, .boton:active, .boton:focus{
     transform: scale(1.1);
 }
 
 .boton:visited{
     color: white;
+}
+
+.btn_menu{
+    background-color: #A63D2B;
+    transition-property: transform;
 }
 
 p{ margin: 0px 0px 0px 0px; }
