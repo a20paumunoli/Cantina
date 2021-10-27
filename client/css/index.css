@@ -1,7 +1,4 @@
-*{
-
-    box-sizing: border-box;
-}
+*{ box-sizing: border-box; }
 
 .slider{
     width: 98.9vw;

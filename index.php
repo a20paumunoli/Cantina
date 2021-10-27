@@ -18,16 +18,16 @@
             <div class="slider">
                 <ul>
                     <li>
-                        <img class="foto" src="client/img/foto1.png">
+                        <img class="foto" src="./client/img/foto1.png">
                     </li>
                     <li>
-                        <img class="foto" src="client/img/foto3.PNG">
+                        <img class="foto" src="./client/img/foto3.PNG">
                     </li>
                     <li>
-                        <img class="foto" src="client/img/foto5.png">
+                        <img class="foto" src="./client/img/foto5.png">
                     </li>
                     <li>
-                        <img class="foto" src="client/img/foto7.png">
+                        <img class="foto" src="./client/img/foto7.png">
                     </li>
                 </ul>
             </div> 
@@ -43,7 +43,7 @@
 
             <div class="admin">
                 <div class="admin-button">
-                    <img class="imgg" scr="img/admin.png" width="50" height="50">
+                    <img class="imgg" src="./client/img/admin.png" width="50px">
                     <h4>Ets administrador?</h4>
                 </div>
 
@@ -51,6 +51,7 @@
                     <a href="./administrador/admin.php" id="admin_btn">entrar com admin</a>
                 </div>
             </div>
+
         </div>
 
         <?php include ("client/footer.php")?>
