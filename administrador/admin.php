@@ -7,48 +7,8 @@
     <link type="text/css" rel="stylesheet" href="/Cantina/client/css/normalize.css">
     <link type="text/css" rel="stylesheet" href="/Cantina/client/css/header.css">
     <link type="text/css" rel="stylesheet" href="/Cantina/client/css/footer.css">
+    <link type="text/css" rel="stylesheet" href="/Cantina/administrador/css/admin.css">
     <title>Admin</title>
-    <style>
-        .pantalla{
-            width: auto;
-            height: 81vh;
-            display: flex;
-            text-align: center;
-            justify-content:center;
-        }
-        .novetats1{
-            color: white;
-            background-color: #E2E3E5;
-            width: 500px;
-            height: auto;
-            text-align: center;
-            border: 1px black solid;
-            background-image: url("img/pizarra.jpg");
-            -webkit-background-size: contain;
-            margin: 15px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-        .novetats2{
-            color: white;
-            background-color: #E2E3E5;
-            width: 500px;
-            height: auto;
-            text-align: center;
-            border: 1px black solid;
-            background-image: url("img/menu.jpg");
-            -webkit-background-size: contain;
-            margin: 15px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-        h2{
-            background-color: black;
-        }
-    </style>
-
 </head>
     <body>
     <?php include ("../client/header.php")?>
@@ -67,10 +27,10 @@
 </body>
 <script>
     document.getElementById("area1").addEventListener("click", function(){
-        window.location.href = "ConsultarComandes.php";
+        window.location.href = "/Cantina/administrador/ConsultarComandes.php";
     });
     document.getElementById("area2").addEventListener("click", function(){
-        window.location.href = "ModificarMenu.php";
+        window.location.href = "/Cantina/administrador/ModificarMenu.php";
     });
 </script>
 </html>

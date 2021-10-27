@@ -1,0 +1,41 @@
+.pantalla{
+    width: auto;
+    height: 81vh;
+    display: flex;
+    text-align: center;
+    justify-content:center;
+}
+
+.novetats1{
+    color: white;
+    background-color: #E2E3E5;
+    width: 500px;
+    height: auto;
+    text-align: center;
+    border: 1px black solid;
+    background-image: url("/Cantina/administrador/img/pizarra.jpg");
+    -webkit-background-size: contain;
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.novetats2{
+    color: white;
+    background-color: #E2E3E5;
+    width: 500px;
+    height: auto;
+    text-align: center;
+    border: 1px black solid;
+    background-image: url("/Cantina/administrador/img/menu.jpg");
+    -webkit-background-size: contain;
+    margin: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h2{
+    background-color: black;
+}
