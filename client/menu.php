@@ -71,10 +71,10 @@
                     <div class='menu'><h1>TICKET</h1></div>
                     <div id="carrito" class="carrito"></div>
                     <div id="total" class="total">
-                        <h2 class="end">Total: 0€</h2>
+                        <h2 class="end">Total: <span id="pr">0.0</span>€</h2>
                     </div>
                     <div class="sbm">
-                        <input type="submit" class="boton" value="Finalitzar comanda ->">
+                        <input type="submit" id="submit" class="boton" value="Finalitzar comanda ->">
                     </div>
                     
                 </div>
@@ -112,10 +112,8 @@
                 let nom = (h) ? "prodtarda-" : "prodmati-" ;
                 let precio, nombre, text = "", total = 0, i, j;
                 for(i=1; i<prodTot; i++){
-                    console.log(nom+i);
                     nombre = document.getElementById(nom+i).previousElementSibling.previousElementSibling.innerHTML;
                     precio = parseFloat(document.getElementById(nom+i).previousElementSibling.innerHTML);
-                    console.log(precio);
                     if(document.getElementById(nom+i).value > 0){
                         text += ("<p>"+nombre+" x"+document.getElementById(nom+i).value+"</p></br>");
                         for(j=0; j<document.getElementById(nom+i).value; j++){
@@ -123,9 +121,19 @@
                         }
                     }
                 }
+                
                 document.getElementById("carrito").innerHTML = text;
-                document.getElementById("total").innerHTML = "<h2 class='end'>Total: "+total.toFixed(1)+"€</h2>";
+                document.getElementById("pr").innerHTML = total.toFixed(1);
+                
+                /* Afegir el botó de finalitzar compra si s'ha seleccionat un producte i esborrar-ho si no hi ha cap producte seleccionat*/
+                t = (parseInt(document.getElementById("pr").innerHTML) > 0) ? "inline" : "none" ;
+                document.getElementById("submit").style.display = t;
             }
+
+
+
+            
+
         </script>
 
         <?php include("footer.php"); ?>

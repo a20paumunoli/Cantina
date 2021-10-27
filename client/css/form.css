@@ -7,19 +7,22 @@
     grid-column-gap: 60px;
     padding: 20px;
     margin: 50px;
-    background-color: grey;
+    background-color: #666666;
 }
 
 .dades_comanda{
     grid-area: ticket;
-    background-color: lightcoral;
+    background-color: white;
+    width: 60%;
+    margin-left: 100px;
 }
 
 .dades_persona{
     align-items: center;
     /*float: center;*/
     justify-items: left;
-    background-color: lightblue;
+    background-color: white;
+    margin-right: 100px;
 }
 
 .head{

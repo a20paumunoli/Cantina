@@ -43,7 +43,6 @@ body{
     text-align: center; 
     text-decoration: none;
     color: white;
-    background-color: #A63D2B;
     border-radius: 8px;
     cursor: pointer;
     transition-duration: 0.3s;
@@ -57,6 +56,11 @@ body{
 
 .boton:visited{
     color: white;
+}
+
+.btn_menu{
+    background-color: #A63D2B;
+    transition-property: transform;
 }
 
 p{ margin: 0px 0px 0px 0px; }

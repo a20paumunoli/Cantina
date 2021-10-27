@@ -27,6 +27,9 @@
 
             <div class="dades_comanda">
                 <div class="tit">
+
+                    <!-- Dades comanda -->
+
                     <h2>Dades comanda</h2>
                     <?php
 
