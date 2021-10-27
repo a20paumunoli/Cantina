@@ -39,7 +39,7 @@
         "nombre": "Agua",
         "id": "7",
         "precio":"0.5",
-        "img": "img/.png"
+        "img": "img/agua.png"
     },
     {
         "nombre": "Café",

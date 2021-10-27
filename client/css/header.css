@@ -1,6 +1,7 @@
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #040e33;
+    padding-bottom: 10px;
 }
 
 #h-cont{
@@ -29,18 +30,32 @@ body{
 #h-3{
     justify-self: right;
     align-self: end;
+    padding-bottom: 6px;
 }
 
-.boton, .boton:visited, .boton:focus, .boton:active, .boton:visited{
-    color: #A63D2B;
-    border-color: #A63D2B;
+#logo:hover{
+    background-color: none;
+}
+
+.boton{
     font-size: 18px;
-    border-radius: 5px;
+    font-weight: bold;
+    text-align: center; 
+    text-decoration: none;
+    color: white;
+    background-color: #A63D2B;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    padding: 10px;
 }
 
- .boton:hover{
-    background-color: #A63D2B;
-    border-color: #A63D2B;
+.boton:hover, .boton:active, .boton:focus{
+    transform: scale(1.1);
+}
+
+.boton:visited{
     color: white;
 }
 

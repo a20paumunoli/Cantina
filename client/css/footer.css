@@ -28,13 +28,13 @@ p{
     margin-right: 5px;
 }
 
-a, a:visited, a:focus, a:active, a:visited{
-    color: #A63D2B;
+.a_foot, .a_foot:visited, .a_foot:focus, .a_foot:active, .a_foot:visited{
+    color: #a63D2B;
     font-size: 16px;
 }
 
- a:hover{
-    background-color: #A63D2B;
-    border-color: #A63D2B;
+.a_foot:hover{
+    background-color: #a63D2B;
+    border-color: #a63D2B;
     color: white;
 }
