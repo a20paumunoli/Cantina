@@ -37,7 +37,7 @@
         <div class="more">
             <div class="menu">
                 <div class="button">
-                    <a href="./client/menu.php" class="btn">VEURE MENÚ</a>
+                    <a href="./client/menu.php" class="btn boton">VEURE MENÚ</a>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="admin2">
-                    <a href="./administrador/admin.php" id="admin_btn">entrar com admin</a>
+                    <a href="./administrador/admin.php" class="admin_btn boton">entrar com admin</a>
                 </div>
             </div>
 

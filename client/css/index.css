@@ -40,17 +40,9 @@
 }
 
 .btn{
-    font-family: 'Calibri';
-    font-size: 18px;
-    font-weight: bold;
     background: #A63D2B;
     width: 160px;
     padding: 20px;
-    text-align: center; 
-    text-decoration: none;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
     box-shadow: 105px  rgba(0, 0, 0, 0.1) ;
     transition-duration: 0.3s;
     transition-property: box-shadow, transform;
@@ -118,18 +110,11 @@
     width: max-content;
 }
 
-#admin_btn{
+.admin_btn{
     margin:10px;
-    font-family: 'Calibri';
     font-size: 14px;
-    font-weight: bold;
     background: #A63D2B;
     width: 120px;
-    padding: 10px;
-    text-align: center; 
-    text-decoration: none;
-    color: white;
-    border-radius: 8px;
 }
 
 .imgg{
