@@ -13,7 +13,7 @@
     height: auto;
     text-align: center;
     border: 1px black solid;
-    background-image: url("/Cantina/administrador/img/pizarra.jpg");
+    background-image: url("../img/pizarra.jpg");
     -webkit-background-size: contain;
     margin: 15px;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@
     height: auto;
     text-align: center;
     border: 1px black solid;
-    background-image: url("/Cantina/administrador/img/menu.jpg");
+    background-image: url("../img/menu.jpg");
     -webkit-background-size: contain;
     margin: 15px;
     background-repeat: no-repeat;
