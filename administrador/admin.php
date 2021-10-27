@@ -11,9 +11,9 @@
     <title>Admin</title>
 </head>
     <body>
-    <?php include ("../client/header.php")?>
+    <?php include ("/Cantina/client/header.php")?>
 
-    <div class=pantalla>
+    <div class="pantalla">
         <div id="area1" class="novetats1">
             <h2>Consultar Comandes</h2>
         </div>
@@ -22,8 +22,7 @@
         </div>
     </div>
 
-
-    <?php include ("../client/footer.php")?>
+    <?php include ("/Cantina/client/footer.php")?>
 </body>
 <script>
     document.getElementById("area1").addEventListener("click", function(){
