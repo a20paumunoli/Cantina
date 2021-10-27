@@ -79,7 +79,7 @@
         $n = 1;
         /* Afegir dades comanda */
         do{
-            $nF = "/Cantina/administrador/comandes/".date("d"."-"."m"."-"."Y")."-n".$n.".json";
+            $nF = "../administrador/comandes/".date("d"."-"."m"."-"."Y")."-n".$n.".json";
             if(file_exists($nF)){ $n++; }
         }while(file_exists($nF));
 
