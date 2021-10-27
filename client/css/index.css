@@ -83,13 +83,14 @@
 }
 
 .more{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-evenly; 
+    display: grid;
+    grid-gap: 50px 100px;
+    grid-template-columns: auto auto auto;    justify-content:space-evenly; 
     margin: 35px;
     margin-bottom: 200px;
     margin-top: 100px;
+    margin-left: 300px;
+    
 }
 
 .menu{
@@ -102,7 +103,6 @@
     justify-content: center;
     align-items: center;  
     border-radius: 2px;
- 
 }
 
 .admin{
@@ -111,6 +111,7 @@
     background-color: #E2E3E5;
     width: 330px;
     height: 150px;
+    margin: auto;
 }
 
 .admin2{
