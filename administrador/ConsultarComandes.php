@@ -24,9 +24,7 @@
                     print_r($fitx);
                 }
             }
-
             closedir($carp);
-             
         ?>
 
     </div>

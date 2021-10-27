@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="/Cantina/client/css/normalize.css">
-    <link type="text/css" rel="stylesheet" href="/Cantina/client/css/header.css">
-    <link type="text/css" rel="stylesheet" href="/Cantina/client/css/footer.css">
-    <link type="text/css" rel="stylesheet" href="/Cantina/administrador/css/admin.css">
+    <link type="text/css" rel="stylesheet" href="../client/css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="../client/css/header.css">
+    <link type="text/css" rel="stylesheet" href="../client/css/footer.css">
+    <link type="text/css" rel="stylesheet" href="./css/admin.css">
     <title>Admin</title>
 </head>
     <body>
-    <?php include ("/Cantina/client/header.php")?>
+    <?php include ("../client/header.php")?>
 
     <div class="pantalla">
         <div id="area1" class="novetats1">
@@ -22,14 +22,14 @@
         </div>
     </div>
 
-    <?php include ("/Cantina/client/footer.php")?>
+    <?php include ("../client/footer.php")?>
 </body>
 <script>
     document.getElementById("area1").addEventListener("click", function(){
-        window.location.href = "/Cantina/administrador/ConsultarComandes.php";
+        window.location.href = "./ConsultarComandes.php";
     });
     document.getElementById("area2").addEventListener("click", function(){
-        window.location.href = "/Cantina/administrador/ModificarMenu.php";
+        window.location.href = "./ModificarMenu.php";
     });
 </script>
 </html>
