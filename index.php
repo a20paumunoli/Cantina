@@ -43,7 +43,7 @@
 
             <div class="admin">
                 <div class="admin-button">
-                    <img class="imgg" src="./client/img/admin.png" width="50px">
+                    <img class="imgg" src="./client/img/admin.png" width="70px">
                     <h4>Ets administrador?</h4>
                 </div>
 
