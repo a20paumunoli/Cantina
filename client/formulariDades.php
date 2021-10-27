@@ -133,7 +133,7 @@
                 e.preventDefault(); //prevee/bloqueja la funció predeterminada del form, submit
                 Swal.fire({
                     icon: 'error',
-                    title: 'Error!...',
+                    title: 'ERROR...',
                     html: text
                 });
             }
