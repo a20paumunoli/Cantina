@@ -38,8 +38,6 @@
             ?>
         <div class="tabla">
             <table class="table">
-                <thead>
-                </thead>
                 <tbody>
                     <tr>
                         <th>Nom: </th>
