@@ -43,12 +43,16 @@ body{
     text-align: center; 
     text-decoration: none;
     color: white;
-    background-color: #A63D2B;
     border-radius: 8px;
     cursor: pointer;
     transition-duration: 0.3s;
     transition-property: transform;
     padding: 10px;
+}
+
+.btn_menu{
+    background-color: #A63D2B;
+    transition-property: transform;
 }
 
 .boton:hover, .boton:active, .boton:focus{
