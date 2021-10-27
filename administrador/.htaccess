@@ -1,5 +1,5 @@
 #Protect Admin
 AuthType Basic
-AuthUserFile "./.htpasswd"
+AuthUserFile "/home/a20paumunoli/web/cantina1.alumnes.inspedralbes.cat/public_html/administrador/.htpasswd"
 AuthName "Arxius d'Administració"
 Require user pedralbes
