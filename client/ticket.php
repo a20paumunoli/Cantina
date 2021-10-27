@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/header.css">
     <link type="text/css" rel="stylesheet" href="css/footer.css">
-    <link type="text/css" rel="stylesheet" href="css/header.css">
+    <link type="text/css" rel="stylesheet" href="css/ticket.css">
     <title>Ticket</title>
 </head>
 
