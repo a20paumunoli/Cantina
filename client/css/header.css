@@ -31,18 +31,23 @@ body{
     align-self: end;
 }
 
-.boton, .boton:visited, .boton:focus, .boton:active, .boton:visited{
-    color: #A63D2B;
+.boton{
+    background: #A63D2B;
     border-color: #A63D2B;
+    width: 90px;
+    text-align: center; 
+    text-decoration: none;
+    color: white;
     font-size: 18px;
     border-radius: 5px;
+    transition-duration: 0.3s;
+    transition-property: transform;
 }
 
- .boton:hover{
-    background-color: #A63D2B;
-    border-color: #A63D2B;
-    color: white;
+.boton:hover, .boton:active, .boton:focus{
+    transform: scale(1.1);
 }
+
 
 p{ margin: 0px 0px 0px 0px; }
 
