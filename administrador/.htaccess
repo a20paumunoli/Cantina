@@ -1,0 +1,5 @@
+#Protect Admin
+AuthType Basic
+AuthUserFile "./.htpasswd"
+AuthName "Arxius d'Administració"
+Require user pedralbes
