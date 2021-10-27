@@ -8,13 +8,30 @@
     <link type="text/css" rel="stylesheet" href="../client/css/header.css">
     <link type="text/css" rel="stylesheet" href="../client/css/footer.css">
     <title>Consultar Comandes</title>
+    <style>
+        .box {
+            border: 1px black solid;
+            padding: 20px 20px 20px 20px;
+            width: auto;
+
+        }
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-column-gap: 6px;
+            grid-row-gap:6px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <?php include("../client/header.php")?>  
 
     <div>
         <h1>Consultar Comandes</h1>
-
+            <div class="wrapper">
         <?php
             $carp = opendir("./comandes");
             while(false !== ($arch = readdir($carp))){
@@ -22,11 +39,21 @@
                     $data = file_get_contents("./comandes/".$arch);
                     $fitx = json_decode($data, true);
                     print_r($fitx);
+
+
+                    echo "<div class='box'>";
+                    echo "<ol>";
+                        echo "<li>Nombre: ".$fitx["Nombre"]."</li>";
+                        echo "<li>Telefon: ".$fitx["Telefon"]."</li>";
+                        echo "<li>Correu".$fitx["Correu"]."</li>";
+                    echo "</ol>";
+                    echo "</div>";
                 }
             }
+
             closedir($carp);
         ?>
-
+            </div>
     </div>
 
     <?php include("../client/footer.php")?>
