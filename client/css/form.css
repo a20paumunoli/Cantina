@@ -1,10 +1,12 @@
 .grid_div{
     display: grid;
+    justify-items: center;
+    align-content: center ;
     grid-template-areas: "head head"
                         "ticket dades";
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 800px 450px;
     grid-template-rows: auto auto;
-    grid-column-gap: 60px;
+    grid-column-gap: 10px;
     padding: 20px;
     margin: 50px;
     background-color: #666666;
@@ -14,15 +16,11 @@
     grid-area: ticket;
     background-color: white;
     width: 60%;
-    margin-left: 100px;
 }
 
 .dades_persona{
-    align-items: center;
-    /*float: center;*/
-    justify-items: left;
     background-color: white;
-    margin-right: 100px;
+    
 }
 
 .head{
@@ -31,11 +29,15 @@
 }
 
 .form_cont{
+    /*margin-left: 140px;*/
+    /*margin-right: 140px;*/
+    padding: 10px;
+}
 
-
-margin-left: 140px;
-margin-right: 140px;
-padding: 15px;
+.form_item{
+    margin-bottom: 18px;
+    margin-left: 28px;
+    margin-right: 28px;
 }
 
 .input{

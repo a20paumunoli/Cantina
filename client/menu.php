@@ -74,7 +74,7 @@
                         <h2 class="end">Total: 0€</h2>
                     </div>
                     <div class="sbm">
-                        <input type="submit" class="boton" value="Finalitzar comanda ->">
+                        <input type="submit" class="boton btn_ticket" value="Finalitzar comanda ->">
                     </div>
                     
                 </div>

@@ -102,6 +102,9 @@ h1{ margin: 0px; }
     margin-top: 10px;
 }
 
+.btn_ticket{
+    background-color: #A63D2B;
+}
 
 .bt, .bt:visited, .bt:focus, .bt:active, .bt:visited{
     color: #040e33;

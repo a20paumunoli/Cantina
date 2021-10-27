@@ -85,17 +85,17 @@
             <div class="dades_persona">
                 <form method="post" name="form" action="ticket.php">
                     <div class="form_cont">
-                        <div>
+                        <div class="form_item">
                             <label for="name">Nom</label>
                             <input class="input" name="name" type="text" id="nom">
                         </div>
                         <br>
-                        <div>
+                        <div class="form_item">
                             <label for="tlf">Telèfon</label>
                             <input class="input" name="tel" type="tel" id="tlf" width="10">
                         </div>
                         <br>
-                        <div>
+                        <div class="form_item">
                             <label for="email">Correu </label>
                             <input class="input" name="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
                         </div>
