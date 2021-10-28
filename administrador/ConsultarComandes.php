@@ -12,12 +12,12 @@
         .box {
             border: 1px black solid;
             padding: 20px 20px 20px 20px;
-            width: auto;
+            width: 325px;
 
         }
         .wrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
             grid-column-gap: 6px;
             grid-row-gap:6px;
         }
@@ -33,21 +33,34 @@
         <h1>Consultar Comandes</h1>
             <div class="wrapper">
         <?php
+        $p = 1;
             $carp = opendir("./comandes");
             while(false !== ($arch = readdir($carp))){
                 if(str_contains($arch, date("d"."-"."m"."-"."Y"))){
                     $data = file_get_contents("./comandes/".$arch);
                     $fitx = json_decode($data, true);
-                    print_r($fitx);
+                    //print_r($fitx);
+
 
 
                     echo "<div class='box'>";
-                    echo "<ol>";
-                        echo "<li>Nombre: ".$fitx["Nombre"]."</li>";
-                        echo "<li>Telefon: ".$fitx["Telefon"]."</li>";
-                        echo "<li>Correu".$fitx["Correu"]."</li>";
-                    echo "</ol>";
+                    echo "<div>";
+
+                        echo "<div><h3>Comanda nº$p</h3></div>";
+                        echo "<div><b>Nombre:</b> ".$fitx["Nombre"]."</div>";
+                        echo "<div><b>Telefon:</b> ".$fitx["Telefon"]."</div>";
+                        echo "<div><b>Correu:</b> ".$fitx["Correu"]."</div>";
+
+                        $nprod = (count($fitx)-4);
+                        //echo $nprod;
+                        echo "<div><b>Comanda: </b></div>";
+                        for($i=0; $i<$nprod; $i++){
+                        echo "<div>".$fitx['producte'.$i]."</div>";
+                        };
+                        echo  "<div><b>Preu total:</b> ".$fitx["total"]." €</div>";
                     echo "</div>";
+                    echo "</div>";
+                    $p ++;
                 }
             }
 
@@ -56,6 +69,9 @@
             </div>
     </div>
 
-    <?php include("../client/footer.php")?>
+    <div class="div_foot">
+        <?php include("../client/footer.php"); ?>
+    </div>
+
 </body>
 </html>

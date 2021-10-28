@@ -19,6 +19,9 @@
         <h1 class="err_h1">Error, ja has fet la comanda d'avui!</h1>
     </div>
 
-    <?php include ("footer.php")?>
+    <div class="div_foot">
+        <?php include("footer.php"); ?>
+    </div>
+    
 </body>
 </html>

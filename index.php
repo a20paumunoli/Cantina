@@ -10,7 +10,8 @@
         <link type="text/css" rel="stylesheet" href="client/css/footer.css">
         <link type="text/css" rel="stylesheet" href="client/css/index.css">
         <title>Landing page</title>
-    </head>    
+    </head>   
+     
     <body>
         <?php include("client/header.php") ?>
 

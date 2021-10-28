@@ -49,3 +49,10 @@
     width: 27px;
     padding-bottom: 1px;
 }
+
+.div_foot{
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
