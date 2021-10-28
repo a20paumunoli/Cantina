@@ -1,7 +1,7 @@
 *{ box-sizing: border-box; }
 
 .slider{
-    width: 98.9vw;
+    width: 99.1vw;
     height: 80vh;
     overflow: hidden;
     background: black;
@@ -15,7 +15,7 @@
 .slider ul{
     display: flex;
     animation: cambio 20s infinite alternate linear;
-    width: 400%;
+    width: 700%;
     margin: 0;
     padding: 0;
 }
@@ -25,7 +25,7 @@
 }
 
 .foto{
-    width: 99vw;
+    width: 99.2vw;
     height: 80vh;
     opacity: 90%; 
 }
@@ -106,7 +106,7 @@
     flex-direction: column;
     background-color: #E2E3E5;
     width: 330px;
-    height: 150px;
+    height: 200px;
     margin: auto;
 }
 
@@ -118,6 +118,7 @@
 
 .imgg{
     margin: 10px;
+    width: 100px;
 }
 
 .admin-button{
