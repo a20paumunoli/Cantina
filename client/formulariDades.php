@@ -13,6 +13,7 @@
         <title>Validació comanda</title>
     </head>
 
+
     <body>
         <?php
             // start a session
@@ -85,7 +86,7 @@
             <!--Formulari Confirmació compra-->
 
             <div class="dades_persona">
-                <form method="post" name="form" action="ticket.php">
+                <form class="from1" method="post" name="form" action="ticket.php">
                     <div class="form_cont">
                         <div class="form_item">
                             <label for="name">Nom</label>
