@@ -7,19 +7,29 @@
     justify-content:center;
 }
 
+body{
+    background-image: url("../img/estasi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .tabla{
     width: 500px;
     justify-content:center;
+    margin-top: 200px;
 }
 
 h1{
     text-align: center;
+    color:white;
 }
 
 .table{
     padding: 5px;
     margin-left: 35px;
     border: 1px black solid;
+    background: white;
+    border-radius: 8px;
 }
 
 th{
