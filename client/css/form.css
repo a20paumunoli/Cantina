@@ -59,3 +59,14 @@
     align-items: center;
     padding-bottom: 25px;
 }
+
+.btn_submit, .btn_back{
+    background-color: #A63D2B;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    border: 1px solid #A63D2B
+}
+
+.btn_back:hover, .btn_back:active, .btn_back:focus, .btn_submit:hover, .btn_submit:active, .btn_submit:focus{
+    transform: scale(1.05);
+}

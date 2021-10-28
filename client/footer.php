@@ -6,17 +6,17 @@
         <a class="a_foot" href="" >Contactanos</a>
     </div>
     <div id="d2">
-        <p>Copyright © 2021 Ins Pedralbes. Todos los derechos reservados.</p>
+        <p class="p_footer">Copyright © 2021 Ins Pedralbes. Todos los derechos reservados.</p>
     </div>
     <div id="d3">
         <span class="sp">
-            <a class="a_foot" href="https://www.instagram.com/inspedralbes/">Instagram</a>
+            <a href="https://www.instagram.com/inspedralbes/"><img class="icon" src="../client/img/instagram.png"></img></a>
         </span>
         <span class="sp">
-            <a class="a_foot" href="https://www.linkedin.com/school/institut-pedralbes">Linkedin</a>
+            <a href="https://www.linkedin.com/school/institut-pedralbes"><img class="icon2" src="../client/img/linkedin.png"></img></a>
         </span>
         <span>
-            <a class="a_foot" href="https://www.twitter.com/inspedralbes/">Twitter</a>
+            <a href="https://www.twitter.com/inspedralbes/"><img class="icon" src="../client/img/twitter.png"></img></a>
         </span>
     </div>
 </div>
