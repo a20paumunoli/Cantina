@@ -9,23 +9,35 @@
     grid-column-gap: 10px;
     padding: 20px;
     margin: 50px;
-    background-color: #666666;
+}
+
+body{
+    background-image: url("../img/fondo_comanda.png");
 }
 
 .dades_comanda{
     grid-area: ticket;
-    background-color: white;
     width: 60%;
+    background-image: url("../img/ticket.png");
+    height: 300px;
+
 }
+
+.tit{
+       font-family: monospace;
+}
+
 
 .dades_persona{
     background-color: white;
-    
+    border-radius: 5px;
+    padding: 16px;
 }
 
 .head{
     grid-area: head;
     justify-self: center;
+    color: white;
 }
 
 .form_cont{
@@ -57,14 +69,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 25px;
+    padding-bottom: 5px;
 }
 
 .btn_submit, .btn_back{
     background-color: #A63D2B;
     transition-duration: 0.3s;
     transition-property: transform;
-    border: 1px solid #A63D2B
+    border: 1px solid #A63D2B;
 }
 
 .btn_back:hover, .btn_back:active, .btn_back:focus, .btn_submit:hover, .btn_submit:active, .btn_submit:focus{

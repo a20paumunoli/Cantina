@@ -13,21 +13,24 @@
         <title>Validació comanda</title>
     </head>
 
+
     <body>
         <?php
             // start a session
             session_start();
             include("header.php") 
         ?>
-
+    
         <div class="grid_div">
+        
             <div class="head">
                 <h1>Validació comanda</h1>
             </div>
-
+        
             <div class="dades_comanda">
-                <div class="tit">
-
+            
+            <div class="tit">
+                
                     <!-- Dades comanda -->
 
                     <h2>Dades comanda</h2>
@@ -75,15 +78,16 @@
                             $_SESSION['nproductos']=$nproductos;
                     ?>
 
-                    <input type="button" id="back" class="boton btn_back" value="Back">
+                    
                 </div>
+                <input type="button" id="back" class="boton btn_back" value="Back">
             </div>
 
 
             <!--Formulari Confirmació compra-->
 
             <div class="dades_persona">
-                <form method="post" name="form" action="ticket.php">
+                <form class="from1" method="post" name="form" action="ticket.php">
                     <div class="form_cont">
                         <div class="form_item">
                             <label for="name">Nom</label>
@@ -168,6 +172,9 @@
         });
 
     </script>
+
+    
+
 
     <div class="div_foot">
         <?php include("footer.php"); ?>
