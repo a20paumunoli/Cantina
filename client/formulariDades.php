@@ -73,9 +73,9 @@
                             $_SESSION['total']=$total;
                             $_SESSION['nombre']=$bocatas;
                             $_SESSION['nproductos']=$nproductos;
-                    //print_r($_SESSION);
                     ?>
-                    <input type="button" id="back" value="Back">
+
+                    <input type="button" id="back" class="boton btn_back" value="Back">
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
                     </div>
                     <br>
                     <div class="sub">
-                        <input type="submit" value="Fer comanda" id="submit">
+                        <input type="submit" value="Fer comanda" class="boton btn_submit" id="submit">
                     </div>
                 </form>
             </div>
@@ -140,7 +140,6 @@
         });
 
         /* Funcions comprovació Nom, Telefon & Email */
-
         function errorNom(){
             return (document.getElementById("nom").value === "") ? true : false;
         }
@@ -163,8 +162,7 @@
         }
 
 
-        /* Funció per a tornar a la pàgina anterior (menú comana) */
-
+        /* Funció per a tornar a la pàgina anterior (menú.php) */
         document.getElementById("back").addEventListener("click",function (e){
             window.history.back();
         });

@@ -129,11 +129,6 @@
                 t = (parseInt(document.getElementById("pr").innerHTML) > 0) ? "inline" : "none" ;
                 document.getElementById("submit").style.display = t;
             }
-
-
-
-            
-
         </script>
 
         <?php include("footer.php"); ?>

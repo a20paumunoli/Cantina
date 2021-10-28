@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="admin2">
-                    <a href="./administrador/admin.php" class="admin_btn boton">entrar com admin</a>
+                    <a href="./administrador/admin.php" class="admin_btn boton">Entrar com admin</a>
                 </div>
             </div>
 
