@@ -131,6 +131,9 @@
             }
         </script>
 
+    <div class="div_foot">
         <?php include("footer.php"); ?>
+    </div>
+
     </body>
 </html>

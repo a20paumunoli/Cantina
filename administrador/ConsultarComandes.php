@@ -56,6 +56,9 @@
             </div>
     </div>
 
-    <?php include("../client/footer.php")?>
+    <div class="div_foot">
+        <?php include("../client/footer.php"); ?>
+    </div>
+
 </body>
 </html>

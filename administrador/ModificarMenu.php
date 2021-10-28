@@ -16,6 +16,11 @@
     <div>
         <h1>Modificar Menu</h1>
     </div>
-    <?php include ("../client/footer.php")?>
+
+
+    <div class="div_foot">
+        <?php include("../client/footer.php"); ?>
+    </div>
+
 </body>
 </html>
