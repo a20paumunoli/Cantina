@@ -101,7 +101,7 @@
     flex-direction: column;
     background-color: #E2E3E5;
     width: 330px;
-    height: 150px;
+    height: 200px;
     margin: auto;
 }
 
@@ -120,6 +120,7 @@
 
 .imgg{
     margin: 10px;
+    width: 100px;
 }
 
 .admin-button{
