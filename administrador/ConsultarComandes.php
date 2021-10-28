@@ -20,6 +20,7 @@
             grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
             grid-column-gap: 6px;
             grid-row-gap:6px;
+            margin-left: 25px;
         }
         h1{
             text-align: center;
