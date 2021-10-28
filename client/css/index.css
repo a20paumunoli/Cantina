@@ -53,6 +53,7 @@
     box-shadow: 0 0 10px rgba(128, 46, 32, 0.856);
     transform: scale(1.1);
 }
+
 .button{
     margin: 15%;
     padding: 0px;
@@ -79,27 +80,36 @@
 
 .more{
     display: grid;
-    gap: 50px 100px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
-    margin: 100px;
+    gap: 50px 100px;
+    margin: 50px 100px 50px 100px;
+    height: 300px;
 }
 
 .menu{
     background-image: url("../img/menu.png");
+    display: grid;
+    justify-content: center;
+    align-content: center;
     text-align: center;
     border-radius: 2px;
 }
 
 .admin{
-    display: flex;
-    flex-direction: column;
     background-color: #E2E3E5;
-    width: 330px;
-    height: 150px;
-    margin: auto;
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    place-self: center center;
+    padding: 20px;
 }
+
 .imgg{
-    margin: 10px;
-    width: 100px;
+    height: 200px;
 }
+
+.ad{ height: 100px;}
+
+h3{ margin: 0px 0px 5px 0px; }
