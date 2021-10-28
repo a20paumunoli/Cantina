@@ -169,6 +169,9 @@
 
     </script>
 
+<img src="img/error_pizza.png">
+
+
     <div class="div_foot">
         <?php include("footer.php"); ?>
     </div>
