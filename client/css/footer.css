@@ -2,7 +2,7 @@
     display: grid;  
     grid-template-columns: 1fr 2fr 1fr;
     background-color: #e2e3e5;
-    padding: 10px;
+    padding: 20px;
 }
 #d1{
     justify-self: left;
@@ -22,21 +22,22 @@
 
 p{
     margin: 0px 0px 0px 0px;
+    color: #595959 !important;
+    font-size: 15px;
 }
 
 .sp{
     margin: 6px;
 }
 
-.a_foot, .a_foot:visited, .a_foot:focus, .a_foot:active, .a_foot:visited{
+.a_foot, .a_foot:visited, .a_foot:focus, .a_foot:active{
     color: #a63D2B;
     font-size: 16px;
+    text-decoration: none;
 }
 
 .a_foot:hover{
-    background-color: #a63D2B;
-    border-color: #a63D2B;
-    color: white;
+    color: #040e33;
 }
 
 .icon{
