@@ -20,10 +20,10 @@
     margin-right: 10px;
 }
 
-p{
+.p_footer{
     margin: 0px 0px 0px 0px;
-    color: #595959 !important;
     font-size: 15px;
+    color: #666666;
 }
 
 .sp{
