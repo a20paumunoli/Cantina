@@ -33,10 +33,10 @@
         <h1>Consultar Comandes</h1>
             <div class="wrapper">
         <?php
-        $p = 1;
+            $p = 1;
             $carp = opendir("./comandes");
             while(false !== ($arch = readdir($carp))){
-                if(str_contains($arch, date("d"."-"."m"."-"."Y"))){
+                if(strstr($arch, date("d"."-"."m"."-"."Y"))){
                     $data = file_get_contents("./comandes/".$arch);
                     $fitx = json_decode($data, true);
                     //print_r($fitx);
