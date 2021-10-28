@@ -28,14 +28,11 @@
             </div>
         
             <div class="dades_comanda">
-            
-            <div class="tit">
-                
+                <div class="tit">
+                    <h1>Dades de la comanda</h1>
+
                     <!-- Dades comanda -->
-
-                    <h2>Dades comanda</h2>
                     <?php
-
                         if(date("H") < 11){ $h = 0; }
                         else if( date("H") == 11 && date("i") <= "30"){ $h = 0; }
                         else{ $h = 1; }
@@ -60,25 +57,22 @@
                                 if($_POST[$nom.$i] > 0){
                                     foreach($menu as $m){
                                         if($m['id'] == $i){
-                                            echo ("<p>".$m['nombre']." x".$_POST[$nom.$i]."</p>");
+                                            echo ("<p>- ".$m['nombre']." x".$_POST[$nom.$i]."</p>");
                                             array_push($bocatas, $m['nombre']);
                                             array_push($nproductos, $_POST[$nom.$i]);
                                             for($j=0; $j<$_POST[$nom.$i]; $j++){
                                                 $total += $m['precio'];
                                             }
                                         }
-                                        //$_SESSION["productes"]=$_POST[$nom.$i];
                                     }
                                 }
                             }
                         }
-                            echo "<h4>Total: ".$total."€</h4>";
-                            $_SESSION['total']=$total;
-                            $_SESSION['nombre']=$bocatas;
-                            $_SESSION['nproductos']=$nproductos;
+                        echo "<h2>Total: ".$total."€</h2>";
+                        $_SESSION['total']=$total;
+                        $_SESSION['nombre']=$bocatas;
+                        $_SESSION['nproductos']=$nproductos;
                     ?>
-
-                    
                 </div>
                 <input type="button" id="back" class="boton btn_back" value="Back">
             </div>
