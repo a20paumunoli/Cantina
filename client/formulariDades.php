@@ -78,8 +78,9 @@
                             $_SESSION['nproductos']=$nproductos;
                     ?>
 
-                    <input type="button" id="back" class="boton btn_back" value="Back">
+                    
                 </div>
+                <input type="button" id="back" class="boton btn_back" value="Back">
             </div>
 
 
