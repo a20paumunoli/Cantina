@@ -1,7 +1,7 @@
 *{ box-sizing: border-box; }
 
 .slider{
-    width: 99.1vw;
+    width: 98.9vw;
     height: 80vh;
     overflow: hidden;
     background: black;
@@ -15,7 +15,7 @@
 .slider ul{
     display: flex;
     animation: cambio 20s infinite alternate linear;
-    width: 700%;
+    width: 400%;
     margin: 0;
     padding: 0;
 }
@@ -25,18 +25,9 @@
 }
 
 .foto{
-    width: 99.2vw;
+    width: 99vw;
     height: 80vh;
     opacity: 90%; 
-}
-
-.button{
-    margin: 15%;
-    padding: 0px;
-    height: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
 }
 
 .btn{
@@ -62,6 +53,14 @@
     box-shadow: 0 0 10px rgba(128, 46, 32, 0.856);
     transform: scale(1.1);
 }
+.button{
+    margin: 15%;
+    padding: 0px;
+    height: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
 
 /* Transició carousel */
 @keyframes cambio{
@@ -80,24 +79,15 @@
 
 .more{
     display: grid;
-    grid-gap: 50px 100px;
-    grid-template-columns: auto auto auto;    
-    justify-content:space-evenly; 
-    margin: 35px;
-    margin-bottom: 200px;
-    margin-top: 100px;
-    margin-left: 250px;
+    gap: 50px 100px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    margin: 100px;
 }
 
 .menu{
     background-image: url("../img/menu.png");
-    width: 550px;
-    height: 300px;
     text-align: center;
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
     border-radius: 2px;
 }
 
@@ -106,24 +96,10 @@
     flex-direction: column;
     background-color: #E2E3E5;
     width: 330px;
-    height: 200px;
+    height: 150px;
     margin: auto;
 }
-
-.admin2{
-    display: flex;
-    align-self: center;
-    width: max-content;
-}
-
 .imgg{
     margin: 10px;
     width: 100px;
-}
-
-.admin-button{
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
 }

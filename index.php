@@ -14,21 +14,14 @@
     <body>
         <?php include("client/header.php") ?>
 
+        <!-- Carrousel de fotos -->
         <div class="carousel">
             <div class="slider">
                 <ul>
-                    <li>
-                        <img class="foto" src="./client/img/foto1.png">
-                    </li>
-                    <li>
-                        <img class="foto" src="./client/img/foto3.PNG">
-                    </li>
-                    <li>
-                        <img class="foto" src="./client/img/foto5.png">
-                    </li>
-                    <li>
-                        <img class="foto" src="./client/img/foto7.png">
-                    </li>
+                    <li><img class="foto" src="./client/img/foto1.png"></li>
+                    <li><img class="foto" src="./client/img/foto3.PNG"></li>
+                    <li><img class="foto" src="./client/img/foto5.png"></li>
+                    <li><img class="foto" src="./client/img/foto7.png"></li>
                 </ul>
             </div> 
         </div>
@@ -36,9 +29,7 @@
         <!-- Novetats i admin -->
         <div class="more">
             <div class="menu">
-                <div class="button">
-                    <a href="./client/menu.php" class="btn boton">VEURE MENÚ</a>
-                </div>
+                <a href="./client/menu.php" class="btn boton">VEURE MENÚ</a>
             </div>
 
             <div class="admin">
@@ -51,7 +42,6 @@
                     <a href="./administrador/admin.php" class="admin_btn boton">Entrar com admin</a>
                 </div>
             </div>
-
         </div>
 
         <?php include ("client/footer.php")?>
