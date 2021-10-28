@@ -48,13 +48,19 @@
     transition-property: box-shadow, transform;
 }
 
-.btn:hover, .btn:active, .btn:focus{
-    box-shadow: 0 0 10px  rgba(128, 46, 32, 0.856);
-    transform: scale(1.1);
+.admin_btn{
+    background-color: #A63D2B;
+    width: 100px;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 105px  rgba(0, 0, 0, 0.1) ;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
 }
 
-.btn:visited{
-    color: white;
+.btn:hover, .btn:active, .btn:focus, .admin_btn:hover, .admin_btn:active, .admin_btn:focus{
+    box-shadow: 0 0 10px rgba(128, 46, 32, 0.856);
+    transform: scale(1.1);
 }
 
 /* Transició carousel */
@@ -81,7 +87,6 @@
     margin-bottom: 200px;
     margin-top: 100px;
     margin-left: 250px;
-    
 }
 
 .menu{
@@ -109,13 +114,6 @@
     display: flex;
     align-self: center;
     width: max-content;
-}
-
-.admin_btn{
-    margin:10px;
-    font-size: 14px;
-    background-color: #A63D2B;
-    width: 120px;
 }
 
 .imgg{
