@@ -84,8 +84,11 @@
         }while(file_exists($nF));
 
         file_put_contents($nF, json_encode($json));
-
-        include ("footer.php"); 
     ?>
+
+    <div class="div_foot">
+        <?php include("footer.php"); ?>
+    </div>
+
 </body>
 </html>

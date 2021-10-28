@@ -6,6 +6,6 @@
         <p class="n">Cantina<span class="sp2"> de l'Ins Pedralbes</span></p> 
     </div>
     <div id="h-3"> 
-        <a href="/Cantina/index.php" class="boton btn_menu">Home</a>
+        <a href="./index.php" class="boton btn_menu">Home</a> <!-- en cantina1.alumnes poner solo "/index.php" -->
     </div>
 </div>
