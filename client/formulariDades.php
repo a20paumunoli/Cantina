@@ -19,15 +19,17 @@
             session_start();
             include("header.php") 
         ?>
-
+    
         <div class="grid_div">
+        
             <div class="head">
                 <h1>Validació comanda</h1>
             </div>
-
+        
             <div class="dades_comanda">
-                <div class="tit">
-
+            
+            <div class="tit">
+                
                     <!-- Dades comanda -->
 
                     <h2>Dades comanda</h2>
@@ -169,7 +171,7 @@
 
     </script>
 
-<img src="img/error_pizza.png">
+    
 
 
     <div class="div_foot">
