@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 2fr 1fr;
     background-color: #e2e3e5;
     padding: 20px;
+    height: 36px;
 }
 #d1{
     justify-self: left;

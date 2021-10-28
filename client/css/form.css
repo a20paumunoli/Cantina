@@ -1,30 +1,33 @@
 .grid_div{
     display: grid;
-    justify-items: center;
-    align-content: center ;
     grid-template-areas: "head head"
                         "ticket dades";
-    grid-template-columns: 800px 450px;
-    grid-template-rows: auto auto;
-    grid-column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
     padding: 20px;
-    margin: 50px;
-}
+    place-items: stretch center;
+    margin: 190px;  
+    align-content: stretch;
+    }
 
 body{
     background-image: url("../img/fondo_comanda.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .dades_comanda{
     grid-area: ticket;
-    width: 60%;
     background-image: url("../img/ticket.png");
-    height: 300px;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-self: end;
+    padding: 20px;
+    width: 340px;
 }
 
 .tit{
-       font-family: monospace;
+    font-family: monospace;
 }
 
 
@@ -32,6 +35,7 @@ body{
     background-color: white;
     border-radius: 5px;
     padding: 16px;
+    justify-self: start;
 }
 
 .head{
