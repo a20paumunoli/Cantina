@@ -6,7 +6,7 @@
         <a class="a_foot" href="" >Contactanos</a>
     </div>
     <div id="d2">
-        <p>Copyright © 2021 Ins Pedralbes. Todos los derechos reservados.</p>
+        <p class="p_footer">Copyright © 2021 Ins Pedralbes. Todos los derechos reservados.</p>
     </div>
     <div id="d3">
         <span class="sp">
