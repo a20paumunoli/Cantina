@@ -126,7 +126,7 @@
                 document.getElementById("pr").innerHTML = total.toFixed(1);
                 
                 /* Afegir el botó de finalitzar compra si s'ha seleccionat un producte i esborrar-ho si no hi ha cap producte seleccionat*/
-                t = (parseInt(document.getElementById("pr").innerHTML) > 0) ? "inline" : "none" ;
+                t = (parseFloat(document.getElementById("pr").innerHTML) > 0) ? "inline" : "none" ;
                 document.getElementById("submit").style.display = t;
             }
         </script>

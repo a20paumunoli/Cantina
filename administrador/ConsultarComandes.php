@@ -34,7 +34,7 @@
         <h1>Consultar Comandes</h1>
             <div class="wrapper">
         <?php
-        $p = 1;
+            $p = 1;
             $carp = opendir("./comandes");
             while(false !== ($arch = readdir($carp))){
                 if(strstr($arch, date("d"."-"."m"."-"."Y"))){

@@ -34,12 +34,11 @@
             </div>
 
             <div class="admin">
-                <div class="admin-button">
+                <div>
                     <img class="imgg" src="./client/img/admin.png">
-                    <h4>Ets administrador?</h4>
                 </div>
-
-                <div class="admin2">
+                <div class="ad">
+                    <h3>Ets administrador de la cantina de l'Institut Pedralbes?</h3></br>
                     <a href="./administrador/admin.php" class="admin_btn boton">Entrar com admin</a>
                 </div>
             </div>
@@ -54,7 +53,7 @@
                     title: 'Avui ja has fet una comanda...',
                     showConfirmButton: false,
                     timer: 2500
-                })
+                });
             }
         </script>
     </body>
