@@ -74,7 +74,7 @@
                         <h2 class="end">Total: <span id="pr">0.0</span>€</h2>
                     </div>
                     <div class="sbm">
-                        <input type="submit" class="boton btn_ticket" value="Finalitzar comanda ->">
+                        <input type="submit" id="submit" class="boton btn_ticket" value="Finalitzar comanda ->">
                     </div>
                     
                 </div>
@@ -84,7 +84,7 @@
         <script>
             /* Menú matí o tarda */
             let d = new Date();
-            let h;
+            let h, t;
             if(d.getHours() < 11){ h = 0; }
             else if(d.getHours() == 11 && d.getMinutes() <= "30"){ h = 0; }
             else{ h = 1; }
