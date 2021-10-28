@@ -17,6 +17,7 @@
 #d3{
     justify-self: right;
     align-self: center;
+    margin-right: 10px;
 }
 
 p{
@@ -24,8 +25,7 @@ p{
 }
 
 .sp{
-    border-right: 1px solid black;
-    margin-right: 5px;
+    margin: 6px;
 }
 
 .a_foot, .a_foot:visited, .a_foot:focus, .a_foot:active, .a_foot:visited{
@@ -37,4 +37,14 @@ p{
     background-color: #a63D2B;
     border-color: #a63D2B;
     color: white;
+}
+
+.icon{
+    width: 25px;
+    padding-top: 5px;
+}
+
+.icon2{
+    width: 27px;
+    padding-bottom: 1px;
 }
