@@ -10,7 +10,6 @@
     <title>Consultar Comandes</title>
     <style>
         .box {
-            border: 1px black solid;
             padding: 20px 20px 20px 20px;
             width: 325px;
 
@@ -25,6 +24,25 @@
         h1{
             text-align: center;
         }
+        .table{
+            padding: 5px 15px 5px 5px;
+            border: 1px black solid;
+            background: white;
+            border-radius: 8px;
+        }
+        th{
+            padding: 5px;
+            text-align: end;
+            width: 30%;
+        }
+
+        td{
+            text-align: left;
+            width: 70%;
+        }
+        h3{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -32,6 +50,7 @@
 
     <div>
         <h1>Consultar Comandes</h1>
+        <hr>
             <div class="wrapper">
             <?php
                     $p = 1;
@@ -42,26 +61,41 @@
                             $fitx = json_decode($data, true);
                             //print_r($fitx);
 
-                            echo "<div class='box'>";
-                            echo "<div>";
+                    echo "<div class='box'>";
+                        echo "<div>";
+                            echo '<table class="table">';
+                                echo '<tbody>';
+                                    echo '<tr>';
+                                        echo "<h3>Comanda nº$p</h3>";
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                        echo "<th>Nombre:</th> <td>".$fitx["Nombre"]."</td>";
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                        echo "<th>Telefon:</th> <td>".$fitx["Telefon"]."</td>";
+                                    echo '</tr>';
+                                    echo '<tr>';
+                                        echo "<th>Correu:</th> <td>".$fitx["Correu"]."</td>";
+                                    echo '</tr>';
+                                    echo '<tr>';
 
-                                echo "<div><h3>Comanda nº$p</h3></div>";
-                                echo "<div><b>Nombre:</b> ".$fitx["Nombre"]."</div>";
-                                echo "<div><b>Telefon:</b> ".$fitx["Telefon"]."</div>";
-                                echo "<div><b>Correu:</b> ".$fitx["Correu"]."</div>";
-
-                                $nprod = (count($fitx)-4);
-                                //echo $nprod;
-                                echo "<div><b>Comanda: </b></div>";
-                                for($i=0; $i<$nprod; $i++){
-                                echo "<div>".$fitx['producte'.$i]."</div>";
-                                };
-                                echo  "<div><b>Preu total:</b> ".$fitx["total"]." €</div>";
-                            echo "</div>";
-                            echo "</div>";
-                            $p ++;
-                        }
-                    }
+                                        $nprod = (count($fitx)-4);
+                                        //echo $nprod;
+                                        echo "<th>Comanda: </th><tr></tr>";
+                                        for($i=0; $i<$nprod; $i++){
+                                            echo "<th></th><td><li>".$fitx['producte'.$i]."</li></td>";
+                                    echo '</tr>';
+                                        };
+                                    echo '<tr>';
+                                        echo  "<th >Total:</th> <td>".$fitx["total"]." €</td>";
+                                    echo '</tr>';
+                                echo '</tbody>';
+                            echo '</table>';
+                        echo "</div>";
+                    echo "</div>";
+                    $p ++;
+                }
+            }
 
                     closedir($carp);
                 ?>
