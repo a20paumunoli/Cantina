@@ -33,38 +33,38 @@
     <div>
         <h1>Consultar Comandes</h1>
             <div class="wrapper">
-        <?php
-            $p = 1;
-            $carp = opendir("./comandes");
-            while(false !== ($arch = readdir($carp))){
-                if(strstr($arch, date("d"."-"."m"."-"."Y"))){
-                    $data = file_get_contents("./comandes/".$arch);
-                    $fitx = json_decode($data, true);
-                    //print_r($fitx);
+            <?php
+                    $p = 1;
+                    $carp = opendir("./comandes");
+                    while(false !== ($arch = readdir($carp))){
+                        if(strstr($arch, date("d"."-"."m"."-"."Y"))){
+                            $data = file_get_contents("./comandes/".$arch);
+                            $fitx = json_decode($data, true);
+                            //print_r($fitx);
 
-                    echo "<div class='box'>";
-                    echo "<div>";
+                            echo "<div class='box'>";
+                            echo "<div>";
 
-                        echo "<div><h3>Comanda nº$p</h3></div>";
-                        echo "<div><b>Nombre:</b> ".$fitx["Nombre"]."</div>";
-                        echo "<div><b>Telefon:</b> ".$fitx["Telefon"]."</div>";
-                        echo "<div><b>Correu:</b> ".$fitx["Correu"]."</div>";
+                                echo "<div><h3>Comanda nº$p</h3></div>";
+                                echo "<div><b>Nombre:</b> ".$fitx["Nombre"]."</div>";
+                                echo "<div><b>Telefon:</b> ".$fitx["Telefon"]."</div>";
+                                echo "<div><b>Correu:</b> ".$fitx["Correu"]."</div>";
 
-                        $nprod = (count($fitx)-4);
-                        //echo $nprod;
-                        echo "<div><b>Comanda: </b></div>";
-                        for($i=0; $i<$nprod; $i++){
-                        echo "<div>".$fitx['producte'.$i]."</div>";
-                        };
-                        echo  "<div><b>Preu total:</b> ".$fitx["total"]." €</div>";
-                    echo "</div>";
-                    echo "</div>";
-                    $p ++;
-                }
-            }
+                                $nprod = (count($fitx)-4);
+                                //echo $nprod;
+                                echo "<div><b>Comanda: </b></div>";
+                                for($i=0; $i<$nprod; $i++){
+                                echo "<div>".$fitx['producte'.$i]."</div>";
+                                };
+                                echo  "<div><b>Preu total:</b> ".$fitx["total"]." €</div>";
+                            echo "</div>";
+                            echo "</div>";
+                            $p ++;
+                        }
+                    }
 
-            closedir($carp);
-        ?>
+                    closedir($carp);
+                ?>
             </div>
     </div>
 
