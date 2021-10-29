@@ -20,9 +20,9 @@
             <div class="slider">
                 <ul>
                     <li><img class="foto" src="./client/img/foto1.png"></li>
-                    <li><img class="foto" src="./client/img/foto3.PNG"></li>
-                    <li><img class="foto" src="./client/img/foto5.png"></li>
-                    <li><img class="foto" src="./client/img/foto7.png"></li>
+                    <li><img class="foto" src="./client/img/foto2.PNG"></li>
+                    <li><img class="foto" src="./client/img/foto3.jpg"></li>
+                    <li><img class="foto" src="./client/img/foto4.png"></li>
                 </ul>
             </div> 
         </div>
