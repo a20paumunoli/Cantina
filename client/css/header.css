@@ -52,12 +52,11 @@ p{ margin: 0px 0px 0px 0px; }
     color: white;
     border-radius: 8px;
     cursor: pointer;
-    padding: 7px;
+    padding: 8px;
 }
 
 .btn_menu{
     background-color: #A63D2B;
-    width: 100px;
     font-size: 14px;
     transition-duration: 0.3s;
     transition-property: box-shadow;
