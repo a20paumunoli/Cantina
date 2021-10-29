@@ -53,6 +53,7 @@
                             <th>Comanda: </th>
                                 <td>
                                     <?php
+                                        /*  */
                                         if($_SESSION){
                                             for($i=0; $i<count($_SESSION['nombre']); $i++){
                                                 echo $_SESSION['nombre'][$i]."  x".$_SESSION['nproductos'][$i]."<br>";
@@ -75,7 +76,8 @@
         <?php
             session_destroy();
             $n = 1;
-            /* Afegir dades comanda */
+            
+            /* Crea arxiu de la comanda i pasa les dades a dit fitxer */
             do{
                 $nF = "../administrador/comandes/".date("d"."-"."m"."-"."Y")."-n".$n.".json";
                 if(file_exists($nF)){ $n++; }
