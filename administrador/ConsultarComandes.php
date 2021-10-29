@@ -63,8 +63,8 @@
                 }
             }
 
-            closedir($carp);
-        ?>
+                    closedir($carp);
+                ?>
             </div>
     </div>
 
