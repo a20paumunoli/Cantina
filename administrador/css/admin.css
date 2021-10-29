@@ -1,6 +1,6 @@
 .pantalla{
     width: auto;
-    height: 81vh;
+    height: 75vh;
     display: flex;
     text-align: center;
     justify-content:center;
@@ -38,4 +38,16 @@
 
 h2{
     background-color: black;
+}
+
+.btn_back{
+    background-color: #A63D2B;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    border: 1px solid #A63D2B;
+    margin: 10px 0px 0px 10px;
+}
+
+.btn_back:hover, .btn_back:active, .btn_back:focus{
+    transform: scale(1.05);
 }

@@ -101,7 +101,7 @@
     display: grid;
     gap: 20px;
     align-items: center;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
     place-self: center center;
     padding: 20px;
 }

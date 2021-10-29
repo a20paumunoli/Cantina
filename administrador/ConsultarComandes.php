@@ -12,6 +12,9 @@
 </head>
 <body>
     <?php include("../client/header.php")?>  
+    <div>
+        <input type="button" id="back" class="boton btn_back" value="Back">
+    </div>
 
     <div>
         <h1>Consultar Comandes</h1>
@@ -43,15 +46,14 @@
                                     echo '<tr>';
                                         echo "<th>Correu:</th> <td>".$fitx["Correu"]."</td>";
                                     echo '</tr>';
-                                    echo '<tr>';
+                                    
 
                                         $nprod = (count($fitx)-4);
-                                        //echo $nprod;
-                                        echo "<th>Comanda: </th><tr></tr>";
-                                        for($i=0; $i<$nprod; $i++){
-                                            echo "<th></th><td><li>".$fitx['producte'.$i]."</li></td>";
-                                    echo '</tr>';
+                                        echo "<tr><th>Comanda: </th><td> - ".$fitx['producte0']."</td></tr>";
+                                        for($i=1; $i<$nprod; $i++){
+                                            echo "<tr><th></th><td> - ".$fitx['producte'.$i]."</td></tr>";                                            
                                         };
+                                        
                                     echo '<tr>';
                                         echo  "<th >Total:</th> <td>".$fitx["total"]." €</td>";
                                     echo '</tr>';
@@ -68,9 +70,11 @@
             </div>
     </div>
 
-    <div class="div_foot">
-        <?php include("../client/footer.php"); ?>
-    </div>
-
+    <?php include("../client/footer.php"); ?>
+    <script>
+        document.getElementById("back").addEventListener("click", function(e){
+            window.history.back();
+        });
+    </script>
 </body>
 </html>

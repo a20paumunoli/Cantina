@@ -12,13 +12,15 @@
 </head>
     <body>
     <?php include ("../client/header.php")?>
-
+    <div>
+        <input type="button" id="back" class="boton btn_back" value="Back">
+    </div>
     <div class="pantalla">
         <div id="area1" class="novetats1">
             <h2>Consultar Comandes</h2>
         </div>
         <div id="area2" class="novetats2">
-            <h2>Modificar Menú</h2>
+            <h2>Modificar preus dels Menús</h2>
         </div>
     </div>
 
@@ -33,6 +35,10 @@
     });
     document.getElementById("area2").addEventListener("click", function(){
         window.location.href = "./ModificarMenu.php";
+    });
+
+    document.getElementById("back").addEventListener("click", function(e){
+        window.history.back();
     });
 </script>
 </html>
