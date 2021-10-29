@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,17 +11,16 @@
         <link type="text/css" rel="stylesheet" href="css/form.css">
         <title>Validació comanda</title>
     </head>
-
-
     <body>
         <?php
-            // siniciem sessió session
+            // iniciem sessió session
             session_start();
-            include("header.php") 
+            include("header.php");
         ?>
     
         <div class="grid_div">
-        
+
+            <!-- Titol Pagina --> 
             <div class="head">
                 <h1>Validació comanda</h1>
             </div>
@@ -32,8 +30,9 @@
                     <h1>Dades de la comanda</h1>
 
                     <!-- Dades comanda -->
-
                     <?php
+
+                        //En funció de l'hora, escollim el nom i la ruta dels fitx .json 
                         if(date("H") < 11){ $h = 0; }
                         else if( date("H") == 11 && date("i") <= "30"){ $h = 0; }
                         else{ $h = 1; }
@@ -46,7 +45,6 @@
                         }
 
                         $total=0;
-
                         if($_POST){
                             $prodTot = 12;
                             $data = file_get_contents($fit);
@@ -54,6 +52,7 @@
                             $bocatas = array();
                             $nproductos = array();
 
+                            //Mostrar els productes seleccionats al menu
                             for($i=1; $i<=$prodTot; $i++){
                                 if($_POST[$nom.$i] > 0){
                                     foreach($menu as $m){
@@ -69,7 +68,11 @@
                                 }
                             }
                         }
+
+                        //Mostrar el preu total
                         echo "<h2>Total: ".$total."€</h2>";
+                        
+                        //Pasar les dades de la comnada a la variable $_SESSION
                         $_SESSION['total']=$total;
                         $_SESSION['nombre']=$bocatas;
                         $_SESSION['nproductos']=$nproductos;
@@ -82,7 +85,6 @@
 
 
             <!--Formulari Confirmació compra-->
-
             <div class="dades_persona">
                 <h2 class="h2">Dades Personals</h2>
                 <form class="from1" method="post" name="form" action="ticket.php">
@@ -91,18 +93,18 @@
                             <label for="name">Nom</label>
                             <input class="input" name="name" type="text" id="nom">
                         </div>
-                        <br>
+                        </br>
                         <div class="form_item">
                             <label for="tlf">Telèfon</label>
                             <input class="input" name="tel" type="tel" id="tlf" width="10">
                         </div>
-                        <br>
+                        </br>
                         <div class="form_item">
                             <label for="email">Correu </label>
                             <input class="input" name="email" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
                         </div>
                     </div>
-                    <br>
+                    </br>
                     <div class="sub">
                         <input type="submit" value="Fer comanda" class="boton btn_submit" id="submit">
                     </div>
@@ -110,70 +112,68 @@
             </div>
         </div>
 
-    <script>
-        /* Fer focus al camp nom al carregar la pàgina web */
-        window.onload = function(){
-            document.getElementById("nom").focus();
-        }
+        <div class="div_foot">
+            <?php include("footer.php"); ?>
+        </div>
 
-        /* Array amb els missatages d'error de validació  */
-        const err = ["Introdueix nom", "Introdueix un telèfon", "Telèfon no numeric", "Número de telèfon incorrecte (9 dígits)", "Introdueix un email", "Email incorrecte (@inspedrables.cat)" ];
-
-        /* Mostrar missatges d'error */
-        document.getElementById("submit").addEventListener("click", function(e){
-            var n, text="", error = 0;
-
-            if(errorNom()){ text += ("<b>"+err[0]+"!</b></br>"); error = 1;}
-
-            n = errorTel();
-            if(n){ text += ("<b>"+err[n]+"!</b></br>"); error = 1; }
-
-            n = errorEmail();
-            if(n){ text += ("<b>"+err[n]+"!</b>"); error = 1;}
-
-            if(error){
-                e.preventDefault(); //preveu/bloqueja la funció predeterminada del form, submit
-                Swal.fire({
-                    icon: 'error',
-                    title: 'ERROR...',
-                    html: text
-                });
+        <script>
+            /* Fer focus al camp "nom" al carregar la pàgina web */
+            window.onload = function(){
+                document.getElementById("nom").focus();
             }
-        });
 
-        /* Funcions comprovació Nom, Telefon & Email */
-        function errorNom(){
-            return (document.getElementById("nom").value === "") ? true : false;
-        }
+            /* Array amb els missatages d'error de validació  */
+            const err = ["Introdueix nom", "Introdueix un telèfon", "Telèfon no numeric", "Número de telèfon incorrecte (9 dígits)", "Introdueix un email", "Email incorrecte (@inspedrables.cat)" ];
 
-        function errorTel(){
-            let tlf = document.getElementById("tlf").value, n;
-            if(tlf == ""){ n = 1; }
-            else if(!(/^[0-9]+$/.test(tlf))){ n = 2; }
-            else if (tlf.length != 9){ n = 3; }
-            else{ n = 0; }
-            return n;
-        }
+            /* Mostrar missatges d'error */
+            document.getElementById("submit").addEventListener("click", function(e){
+                var n, text="", error = 0;
 
-        function errorEmail() {
-            let correu = document.getElementById("correu").value, n;
-            if(correu == ""){ n = 4; }
-            else if(!(/^([a-zA-Z0-9._-]+)@inspedralbes.cat$/.exec(correu))){ n = 5; }
-            else{ n = 0; }
-            return n;
-        }
+                if(errorNom()){ text += ("<b>"+err[0]+"!</b></br>"); error = 1;}
 
-        /* Funció per a tornar a la pàgina anterior (menú.php) */
-        document.getElementById("back").addEventListener("click",function (e){
-            window.history.back();
-        });
+                n = errorTel();
+                if(n){ text += ("<b>"+err[n]+"!</b></br>"); error = 1; }
 
-    </script>
+                n = errorEmail();
+                if(n){ text += ("<b>"+err[n]+"!</b>"); error = 1;}
 
+                if(error){
+                    e.preventDefault(); //preveu|bloqueja la funció predeterminada submit del form
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'ERROR...',
+                        html: text
+                    });
+                }
+            });
 
-    <div class="div_foot">
-        <?php include("footer.php"); ?>
-    </div>
-    
+            /* Funcions comprovació Nom, Telefon & Email */
+            function errorNom(){
+                return (document.getElementById("nom").value === "") ? true : false;
+            }
+
+            function errorTel(){
+                let tlf = document.getElementById("tlf").value, n;
+                if(tlf == ""){ n = 1; }
+                else if(!(/^[0-9]+$/.test(tlf))){ n = 2; }
+                else if (tlf.length != 9){ n = 3; }
+                else{ n = 0; }
+                return n;
+            }
+
+            function errorEmail() {
+                let correu = document.getElementById("correu").value, n;
+                if(correu == ""){ n = 4; }
+                else if(!(/^([a-zA-Z0-9._-]+)@inspedralbes.cat$/.exec(correu))){ n = 5; }
+                else{ n = 0; }
+                return n;
+            }
+
+            /* Funció per a tornar a la pàgina anterior (menú.php) */
+            document.getElementById("back").addEventListener("click",function (e){
+                window.history.back();
+            });
+
+        </script>
     </body>
 </html>

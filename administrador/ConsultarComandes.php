@@ -11,7 +11,9 @@
     <title>Consultar Comandes</title>
 </head>
 <body>
-    <?php include("../client/header.php")?>  
+    <?php include("../client/header.php")?>
+    
+    <!-- Boto anar enrere -->
     <div>
         <input type="button" id="back" class="boton btn_back" value="Back">
     </div>
@@ -19,59 +21,58 @@
     <div>
         <h1>Consultar Comandes</h1>
         <hr>
-            <div class="wrapper">
-                <!-- IMPRIMIM PER PANTALLA LES COMANDES QUE ESTAN GUARDADES AL JSON COMANDES -->
-        <?php
-            $p = 1;
-            $carp = opendir("./comandes");
-            while(false !== ($arch = readdir($carp))){
-                if(strstr($arch, date("d"."-"."m"."-"."Y"))){
-                    $data = file_get_contents("./comandes/".$arch);
-                    $fitx = json_decode($data, true);
-                    //print_r($fitx);
+        <div class="wrapper">
+            <!-- IMPRIMIR PER PANTALLA TOTES LES DADES DE LES COMANDES QUE ESTAN GUARDADES A ADMINISTRADOR/COMANDES -->
+            <?php
+                $p = 1;
+                $carp = opendir("./comandes");
+                while(false !== ($arch = readdir($carp))){
+                    if(strstr($arch, date("d"."-"."m"."-"."Y"))){
+                        $data = file_get_contents("./comandes/".$arch);
+                        $fitx = json_decode($data, true);
+                        //print_r($fitx);
 
-                    echo "<div class='box'>";
-                        echo "<div>";
-                            echo '<table class="table">';
-                                echo '<tbody>';
-                                    echo '<tr>';
-                                        echo "<h3>Comanda nº$p</h3>";
-                                    echo '</tr>';
-                                    echo '<tr>';
-                                        echo "<th>Nombre:</th> <td>".$fitx["Nombre"]."</td>";
-                                    echo '</tr>';
-                                    echo '<tr>';
-                                        echo "<th>Telefon:</th> <td>".$fitx["Telefon"]."</td>";
-                                    echo '</tr>';
-                                    echo '<tr>';
-                                        echo "<th>Correu:</th> <td>".$fitx["Correu"]."</td>";
-                                    echo '</tr>';
-                                    
-
+                        echo "<div class='box'>";
+                            echo "<div>";
+                                echo '<table class="table">';
+                                    echo '<tbody>';
+                                        echo '<tr>';
+                                            echo "<h3>Comanda nº$p</h3>";
+                                        echo '</tr>';
+                                        echo '<tr>';
+                                            echo "<th>Nombre:</th> <td>".$fitx["Nombre"]."</td>";
+                                        echo '</tr>';
+                                        echo '<tr>';
+                                            echo "<th>Telefon:</th> <td>".$fitx["Telefon"]."</td>";
+                                        echo '</tr>';
+                                        echo '<tr>';
+                                            echo "<th>Correu:</th> <td>".$fitx["Correu"]."</td>";
+                                        echo '</tr>';
+                                        
                                         $nprod = (count($fitx)-4);
                                         echo "<tr><th>Comanda: </th><td> - ".$fitx['producte0']."</td></tr>";
                                         for($i=1; $i<$nprod; $i++){
                                             echo "<tr><th></th><td> - ".$fitx['producte'.$i]."</td></tr>";                                            
                                         };
-                                        
-                                    echo '<tr>';
-                                        echo  "<th >Total:</th> <td>".$fitx["total"]." €</td>";
-                                    echo '</tr>';
-                                echo '</tbody>';
-                            echo '</table>';
+                                            
+                                        echo '<tr>';
+                                            echo  "<th >Total:</th> <td>".$fitx["total"]." €</td>";
+                                        echo '</tr>';
+                                    echo '</tbody>';
+                                echo '</table>';
+                            echo "</div>";
                         echo "</div>";
-                    echo "</div>";
-                    $p ++;
+                        $p ++;
+                    }
                 }
-            }
-
-                    closedir($carp);
-                ?>
-            </div>
+                closedir($carp);
+            ?>
+        </div>
     </div>
 
     <?php include("../client/footer.php"); ?>
     <script>
+        //Boto anar enrere
         document.getElementById("back").addEventListener("click", function(e){
             window.history.back();
         });

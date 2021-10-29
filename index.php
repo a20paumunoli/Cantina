@@ -15,7 +15,7 @@
     <body>
         <?php include("client/header.php") ?>
 
-        <!-- Carrousel de fotos -->
+        <!-- Mostrar un carrousel de fotos -->
         <div class="carousel">
             <div class="slider">
                 <ul>
@@ -27,7 +27,7 @@
             </div> 
         </div>
         
-        <!-- Novetats i admin -->
+        <!-- Mostrar dos <div> amb un botó cadascún per tal d'accedir al menú i a l'apartat d'administració -->
         <div class="more">
             <div class="menu">
                 <a href="./client/menu.php" class="btn boton">VEURE MENÚ</a>
@@ -46,6 +46,7 @@
 
         <?php include ("client/footer.php")?>
         <script>
+            // Si el client ja ha fet una comanda, es mostrará un avís - No funciona 
             if (document.cookie.split(';').some((item) => item.trim().startsWith('comanda='))) {
                 Swal.fire({
                     position: 'center-center',
