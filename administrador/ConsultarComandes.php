@@ -8,7 +8,6 @@
     <link type="text/css" rel="stylesheet" href="../client/css/header.css">
     <link type="text/css" rel="stylesheet" href="../client/css/footer.css">
     <link type="text/css" rel="stylesheet" href="./css/comandes.css">
-    <script type="text/javascript" src="./js/ConsultarComandes.js"> </script>
     <title>Consultar Comandes</title>
 </head>
 <body>
@@ -31,8 +30,7 @@
                     if(strstr($arch, date("d"."-"."m"."-"."Y"))){
                         $data = file_get_contents("./comandes/".$arch);
                         $fitx = json_decode($data, true);
-                        //print_r($fitx);
-
+                        
                         echo "<div class='box'>";
                             echo "<div>";
                                 echo '<table class="table">';
@@ -71,6 +69,9 @@
         </div>
     </div>
 
-    <?php include("../client/footer.php"); ?>
+    <div class="div_foot">
+            <?php include("footer.php"); ?>
+        </div>
+    <script type="text/javascript" src="./js/ConsultarComandes.js"> </script>
 </body>
 </html>

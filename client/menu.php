@@ -15,7 +15,6 @@
         <link type="text/css" rel="stylesheet" href="css/header.css">
         <link type="text/css" rel="stylesheet" href="css/footer.css">
         <link type="text/css" rel="stylesheet" href="css/menu.css">
-        <script type="text/javascript" src="./js/menu.js"> </script>
         <title>MENU</title>
     </head>
 
@@ -86,9 +85,6 @@
         <div class="div_foot">
             <?php include("footer.php"); ?>
         </div>
-
-    <div class="div_foot">
-        <?php include("footer.php"); ?>
-    </div>
+        <script type="text/javascript" src="./js/menu.js"></script>
     </body>
 </html>

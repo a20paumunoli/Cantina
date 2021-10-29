@@ -9,7 +9,6 @@
         <link type="text/css" rel="stylesheet" href="client/css/header.css">
         <link type="text/css" rel="stylesheet" href="client/css/footer.css">
         <link type="text/css" rel="stylesheet" href="client/css/index.css">
-        <script type="text/javascript" src="client/js/index.js"> </script>
         <title>Landing page</title>
     </head>
      
@@ -44,8 +43,10 @@
                 </div>
             </div>
         </div>
-
-        <?php include ("client/footer.php")?>
+        <div class="div_foot">
+            <?php include("footer.php"); ?>
+        </div>
+        <script type="text/javascript" src="client/js/index.js"> </script>
     </body>
 </html>
 

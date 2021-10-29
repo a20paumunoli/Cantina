@@ -8,7 +8,6 @@
     <link type="text/css" rel="stylesheet" href="../client/css/header.css">
     <link type="text/css" rel="stylesheet" href="../client/css/footer.css">
     <link type="text/css" rel="stylesheet" href="./css/modificar.css">
-    <script type="text/javascript" src="./js/ModificarMenu.js"> </script>
     <title>Modificar Menu</title>
 </head>
 <body>
@@ -19,7 +18,7 @@
         <input type="button" id="back" class="boton btn_back" value="Back"">
     </div>
 
-    <!-- Mostrar  anar enrere -->
+    <!-- Mostrar grid per modificar el preu dels productes dels menus -->
     <div class="cont">
         <div class="tit int-cont">
             <h1>Modificar preu dels productes dels menús</h1>
@@ -99,5 +98,6 @@
     <div class="div_foot">
         <?php include("../client/footer.php"); ?>
     </div>
+    <script type="text/javascript" src="./js/ModificarMenu.js"> </script>
 </body>
 </html>

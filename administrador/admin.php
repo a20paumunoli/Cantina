@@ -31,10 +31,6 @@
         <div class="div_foot">
             <?php include("../client/footer.php"); ?>
         </div>
-    </body>
-
-    <div class="div_foot">
-        <?php include("../client/footer.php"); ?>
-    </div>
+    <script type="text/javascript" src="./js/admin.js"></script>
 </body>
 </html>

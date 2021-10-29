@@ -9,7 +9,6 @@
         <link type="text/css" rel="stylesheet" href="css/header.css">
         <link type="text/css" rel="stylesheet" href="css/footer.css">
         <link type="text/css" rel="stylesheet" href="css/form.css">
-        <script type="text/javascript" src="./js/formulariDades.js"> </script>
         <title>Validació comanda</title>
     </head>
     <body>
@@ -112,11 +111,11 @@
                 </form>
             </div>
         </div>
-
-
     <div class="div_foot">
         <?php include("footer.php"); ?>
     </div>
+
+    <script type="text/javascript" src="./js/formulariDades.js"></script>
     
     </body>
 </html>
