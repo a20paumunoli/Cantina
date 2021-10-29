@@ -57,7 +57,7 @@
                                 if($_POST[$nom.$i] > 0){
                                     foreach($menu as $m){
                                         if($m['id'] == $i){
-                                            echo ("<p>- ".$m['nombre']." x".$_POST[$nom.$i]."</p>");
+                                            echo ("<p class='prod'>- ".$m['nombre']." x".$_POST[$nom.$i]."</p>");
                                             array_push($bocatas, $m['nombre']);
                                             array_push($nproductos, $_POST[$nom.$i]);
                                             for($j=0; $j<$_POST[$nom.$i]; $j++){
@@ -81,6 +81,7 @@
             <!--Formulari Confirmació compra-->
 
             <div class="dades_persona">
+                <h2 class="h2">Dades Personals</h2>
                 <form class="from1" method="post" name="form" action="ticket.php">
                     <div class="form_cont">
                         <div class="form_item">
