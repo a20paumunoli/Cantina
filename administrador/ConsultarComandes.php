@@ -7,43 +7,8 @@
     <link type="text/css" rel="stylesheet" href="../client/css/normalize.css">
     <link type="text/css" rel="stylesheet" href="../client/css/header.css">
     <link type="text/css" rel="stylesheet" href="../client/css/footer.css">
+    <link type="text/css" rel="stylesheet" href="./css/comandes.css">
     <title>Consultar Comandes</title>
-    <style>
-        .box {
-            padding: 20px 20px 20px 20px;
-            width: 325px;
-
-        }
-        .wrapper {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
-            grid-column-gap: 6px;
-            grid-row-gap:6px;
-            margin-left: 25px;
-        }
-        h1{
-            text-align: center;
-        }
-        .table{
-            padding: 5px 15px 5px 5px;
-            border: 1px black solid;
-            background: white;
-            border-radius: 8px;
-        }
-        th{
-            padding: 5px;
-            text-align: end;
-            width: 30%;
-        }
-
-        td{
-            text-align: left;
-            width: 70%;
-        }
-        h3{
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <?php include("../client/header.php")?>  
@@ -52,6 +17,7 @@
         <h1>Consultar Comandes</h1>
         <hr>
             <div class="wrapper">
+                <!-- IMPRIMIM PER PANTALLA LES COMANDES QUE ESTAN GUARDADES AL JSON COMANDES -->
         <?php
             $p = 1;
             $carp = opendir("./comandes");

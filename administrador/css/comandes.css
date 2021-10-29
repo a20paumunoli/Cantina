@@ -1,0 +1,34 @@
+.box {
+    padding: 20px 20px 20px 20px;
+    width: 325px;
+
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    grid-column-gap: 6px;
+    grid-row-gap:6px;
+    margin-left: 25px;
+}
+h1{
+    text-align: center;
+}
+.table{
+    padding: 5px 15px 5px 5px;
+    border: 1px black solid;
+    background: white;
+    border-radius: 8px;
+}
+th{
+    padding: 5px;
+    text-align: end;
+    width: 30%;
+}
+
+td{
+    text-align: left;
+    width: 70%;
+}
+h3{
+    text-align: center;
+}

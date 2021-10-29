@@ -1,3 +1,4 @@
+<!-- AQUI CALCULEM EL TEMPS QUE QUEDA FINS ACABAR EL DIA PER FER QUE LA COOKIE FINALITZI */ -->
 <?php
     $segundosActuales = (date('G')*3600 + date('i')*60 + date('s'));
     $segundos24h = 86400;
@@ -5,7 +6,8 @@
     
     /*  Cookie  */
     setcookie('comanda', "comanda_hecha_".uniqid(), time()+$restaTiempo);
-    
+
+    /* AQUI OBRIM LA SESSIÓ I A CONTINUACIÓ IMPRIMIREM PER PANTALLA EL TICKET */
     /*  Sessió  */
     session_start();
     $json = array("Nombre" => "'".$_POST["name"]."'",
@@ -72,7 +74,7 @@
                 </table>
             </div>
         </div>
-
+        <!-- TANQUEM SESSIÓ QUAN S'ACABI D'IMPRIMIR PER PANTALLA EL TICKET I A CONTINUACIÓ GUARDEM LES DADES DEL TICKET AL JSON COMANDES */ -->
         <?php
             session_destroy();
             $n = 1;
