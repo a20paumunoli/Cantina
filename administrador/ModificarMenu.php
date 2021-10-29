@@ -7,16 +7,16 @@
     <link type="text/css" rel="stylesheet" href="../client/css/normalize.css">
     <link type="text/css" rel="stylesheet" href="../client/css/header.css">
     <link type="text/css" rel="stylesheet" href="../client/css/footer.css">
-    <link type="text/css" rel="stylesheet" href="./css/mostrarm.css">  
+    <link type="text/css" rel="stylesheet" href="./css/modificar.css">
+    <script type="text/javascript" src="./js/ModificarMenu.js"> </script>
     <title>Modificar Menu</title>
 </head>
-
 <body>
     <?php include("../client/header.php")?>
 
     <!-- Boto anar enrere -->
     <div>
-        <input type="button" id="back" class="boton btn_back" value="Back">
+        <input type="button" id="back" class="boton btn_back" value="Back"">
     </div>
 
     <!-- Mostrar  anar enrere -->
@@ -99,11 +99,5 @@
     <div class="div_foot">
         <?php include("../client/footer.php"); ?>
     </div>
-    <script>
-        // Boto anar enrere 
-        document.getElementById("back").addEventListener("click", function(e){
-            window.history.back();
-        });
-    </script>
 </body>
 </html>

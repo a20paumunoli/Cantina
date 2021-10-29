@@ -33,20 +33,8 @@
         </div>
     </body>
 
-    <script>
-        //Redirigir a ConsultarComandes.php
-        document.getElementById("area1").addEventListener("click", function(){
-            window.location.href = "./ConsultarComandes.php";
-        });
-
-        //Redirigir a ModificarMenu.php
-        document.getElementById("area2").addEventListener("click", function(){
-            window.location.href = "./ModificarMenu.php";
-        });
-
-        //Boto anar enrere
-        document.getElementById("back").addEventListener("click", function(e){
-            window.history.back();
-        });
-    </script>
+    <div class="div_foot">
+        <?php include("../client/footer.php"); ?>
+    </div>
+</body>
 </html>

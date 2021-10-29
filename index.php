@@ -9,8 +9,9 @@
         <link type="text/css" rel="stylesheet" href="client/css/header.css">
         <link type="text/css" rel="stylesheet" href="client/css/footer.css">
         <link type="text/css" rel="stylesheet" href="client/css/index.css">
+        <script type="text/javascript" src="client/js/index.js"> </script>
         <title>Landing page</title>
-    </head>   
+    </head>
      
     <body>
         <?php include("client/header.php") ?>
@@ -45,18 +46,6 @@
         </div>
 
         <?php include ("client/footer.php")?>
-        <script>
-            // Si el client ja ha fet una comanda, es mostrará un avís - No funciona 
-            if (document.cookie.split(';').some((item) => item.trim().startsWith('comanda='))) {
-                Swal.fire({
-                    position: 'center-center',
-                    icon: 'warning',
-                    title: 'Avui ja has fet una comanda...',
-                    showConfirmButton: false,
-                    timer: 2500
-                });
-            }
-        </script>
     </body>
 </html>
 
