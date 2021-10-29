@@ -16,7 +16,7 @@
 
     <body>
         <?php
-            // start a session
+            // siniciem sessió session
             session_start();
             include("header.php") 
         ?>
@@ -32,6 +32,7 @@
                     <h1>Dades de la comanda</h1>
 
                     <!-- Dades comanda -->
+
                     <?php
                         if(date("H") < 11){ $h = 0; }
                         else if( date("H") == 11 && date("i") <= "30"){ $h = 0; }
@@ -57,7 +58,7 @@
                                 if($_POST[$nom.$i] > 0){
                                     foreach($menu as $m){
                                         if($m['id'] == $i){
-                                            echo ("<p>- ".$m['nombre']." x".$_POST[$nom.$i]."</p>");
+                                            echo ("<p class='prod'>- ".$m['nombre']." x".$_POST[$nom.$i]."</p>");
                                             array_push($bocatas, $m['nombre']);
                                             array_push($nproductos, $_POST[$nom.$i]);
                                             for($j=0; $j<$_POST[$nom.$i]; $j++){
@@ -74,6 +75,8 @@
                         $_SESSION['nproductos']=$nproductos;
                     ?>
                 </div>
+
+                <!-- Botó tornar enrrere -->
                 <input type="button" id="back" class="boton btn_back" value="Back">
             </div>
 
@@ -81,6 +84,7 @@
             <!--Formulari Confirmació compra-->
 
             <div class="dades_persona">
+                <h2 class="h2">Dades Personals</h2>
                 <form class="from1" method="post" name="form" action="ticket.php">
                     <div class="form_cont">
                         <div class="form_item">
@@ -128,7 +132,7 @@
             if(n){ text += ("<b>"+err[n]+"!</b>"); error = 1;}
 
             if(error){
-                e.preventDefault(); //prevee/bloqueja la funció predeterminada del form, submit
+                e.preventDefault(); //preveu/bloqueja la funció predeterminada del form, submit
                 Swal.fire({
                     icon: 'error',
                     title: 'ERROR...',
@@ -159,15 +163,12 @@
             return n;
         }
 
-
         /* Funció per a tornar a la pàgina anterior (menú.php) */
         document.getElementById("back").addEventListener("click",function (e){
             window.history.back();
         });
 
     </script>
-
-    
 
 
     <div class="div_foot">

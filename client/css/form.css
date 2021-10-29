@@ -45,8 +45,6 @@ body{
 }
 
 .form_cont{
-    /*margin-left: 140px;*/
-    /*margin-right: 140px;*/
     padding: 10px;
 }
 
@@ -85,4 +83,12 @@ body{
 
 .btn_back:hover, .btn_back:active, .btn_back:focus, .btn_submit:hover, .btn_submit:active, .btn_submit:focus{
     transform: scale(1.05);
+}
+
+.h2,h1{
+    text-align: center;
+}
+
+.prod{
+    font-size: 15px;
 }

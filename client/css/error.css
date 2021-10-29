@@ -1,7 +1,12 @@
+body{
+    background-image: url("../img/1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .pantalla{
     width: auto;
     height: 81vh;
-    display: flex;
     align-items: center;
 }
 
@@ -14,5 +19,6 @@
 }
 
 .err_h1{
-    color: #800000;
+    color: white;
+    font-size: 50px;
 }

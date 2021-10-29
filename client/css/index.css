@@ -1,7 +1,7 @@
 *{ box-sizing: border-box; }
 
 .slider{
-    width: 98.9vw;
+    width: 99.1vw;
     height: 80vh;
     overflow: hidden;
     background: black;
@@ -25,7 +25,7 @@
 }
 
 .foto{
-    width: 99vw;
+    width: 99.1vw;
     height: 80vh;
     opacity: 90%; 
 }
@@ -68,14 +68,14 @@
     0%{margin-left: 0;}
     20%{margin-left: 0;}
     
-    25%{margin-left: -100.2%;}
-    45%{margin-left: -100.2%;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
     
-    50%{margin-left: -200.2%;}
-    70%{margin-left: -200.2%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
     
-    75%{margin-left: -300.3%;}
-    100%{margin-left: -300.3%;}
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
 }
 
 .more{
