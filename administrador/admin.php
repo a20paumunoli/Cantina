@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="../client/css/header.css">
     <link type="text/css" rel="stylesheet" href="../client/css/footer.css">
     <link type="text/css" rel="stylesheet" href="./css/admin.css">
+    <script type="text/javascript" src="./js/admin.js"> </script>
     <title>Admin</title>
 </head>
     <body>
@@ -28,17 +29,4 @@
         <?php include("../client/footer.php"); ?>
     </div>
 </body>
-
-<script>
-    document.getElementById("area1").addEventListener("click", function(){
-        window.location.href = "./ConsultarComandes.php";
-    });
-    document.getElementById("area2").addEventListener("click", function(){
-        window.location.href = "./ModificarMenu.php";
-    });
-
-    document.getElementById("back").addEventListener("click", function(e){
-        window.history.back();
-    });
-</script>
 </html>

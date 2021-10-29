@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="../client/css/header.css">
     <link type="text/css" rel="stylesheet" href="../client/css/footer.css">
     <link type="text/css" rel="stylesheet" href="./css/comandes.css">
+    <script type="text/javascript" src="./js/ConsultarComandes.js"> </script>
     <title>Consultar Comandes</title>
 </head>
 <body>
@@ -71,10 +72,5 @@
     </div>
 
     <?php include("../client/footer.php"); ?>
-    <script>
-        document.getElementById("back").addEventListener("click", function(e){
-            window.history.back();
-        });
-    </script>
 </body>
 </html>
