@@ -10,32 +10,32 @@
     /* Añadir & Quitar producto */
     const idProductoJSON = 6;
     document.getElementById("bot").addEventListener("click", function(e){
-    let idProd;
-    if(e.target.classList.contains("añadir")){
-    idProd = e.target.parentElement.childNodes[idProductoJSON].id;
-    document.getElementById(idProd).value++;
-    actualizar_carrito();
-}
-    else if(e.target.classList.contains("quitar")){
-    idProd = e.target.parentElement.childNodes[idProductoJSON].id;
-    if(document.getElementById(idProd).value > 0){ document.getElementById(idProd).value--; }
-    actualizar_carrito();
-}
-});
+        let idProd;
+        if(e.target.classList.contains("añadir")){
+            idProd = e.target.parentElement.childNodes[idProductoJSON].id;
+            document.getElementById(idProd).value++;
+            actualizar_carrito();
+        }
+        else if(e.target.classList.contains("quitar")){
+            idProd = e.target.parentElement.childNodes[idProductoJSON].id;
+            if(document.getElementById(idProd).value > 0){ document.getElementById(idProd).value--; }
+            actualizar_carrito();
+        }
+    });
 
     /* Actualizar carrito */
     function actualizar_carrito(){
-    const prodTot = 13;
-    let nom = (h) ? "prodtarda-" : "prodmati-" ;
-    let precio, nombre, text = "", total = 0, i, j;
-    for(i=1; i<prodTot; i++){
-    nombre = document.getElementById(nom+i).previousElementSibling.previousElementSibling.innerHTML;
-    precio = parseFloat(document.getElementById(nom+i).previousElementSibling.innerHTML);
-    if(document.getElementById(nom+i).value > 0){
-    text += ("<p>"+nombre+" x"+document.getElementById(nom+i).value+"</p></br>");
-    for(j=0; j<document.getElementById(nom+i).value; j++){
-    total += precio;
-}
+        const prodTot = 13;
+        let nom = (h) ? "prodtarda-" : "prodmati-" ;
+        let precio, nombre, text = "", total = 0, i, j;
+        for(i=1; i<prodTot; i++){
+        nombre = document.getElementById(nom+i).previousElementSibling.previousElementSibling.innerHTML;
+        precio = parseFloat(document.getElementById(nom+i).previousElementSibling.innerHTML);
+        if(document.getElementById(nom+i).value > 0){
+        text += ("<p>"+nombre+" x"+document.getElementById(nom+i).value+"</p></br>");
+        for(j=0; j<document.getElementById(nom+i).value; j++){
+        total += precio;
+    }
 }
 }
 

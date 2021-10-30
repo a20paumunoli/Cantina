@@ -43,8 +43,8 @@
                 </div>
             </div>
         </div>
-        <div class="div_foot">
-            <?php include("footer.php"); ?>
+        <div>
+            <?php include("client/footer.php"); ?>
         </div>
         <script type="text/javascript" src="client/js/index.js"> </script>
     </body>

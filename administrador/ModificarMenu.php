@@ -21,7 +21,7 @@
     <!-- Mostrar grid per modificar el preu dels productes dels menus -->
     <div class="cont">
         <div class="tit int-cont">
-            <h1>Modificar preu dels productes dels menús</h1>
+            <h1>Modificar preu dels productes dels menús - No funciona</h1>
         </div>
 
         <div class='header1 int-cont'>
@@ -98,6 +98,6 @@
     <div class="div_foot">
         <?php include("../client/footer.php"); ?>
     </div>
-    <script type="text/javascript" src="./js/ModificarMenu.js"> </script>
+    <script type="text/javascript" src="./js/ModificarMenu.js"></script>
 </body>
 </html>

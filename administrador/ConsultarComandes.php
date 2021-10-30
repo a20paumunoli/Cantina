@@ -69,9 +69,9 @@
         </div>
     </div>
 
-    <div class="div_foot">
-            <?php include("footer.php"); ?>
-        </div>
+    <div>
+        <?php include("../client/footer.php"); ?>
+    </div>
     <script type="text/javascript" src="./js/ConsultarComandes.js"> </script>
 </body>
 </html>
