@@ -1,6 +1,8 @@
-*{ box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
-.slider{
+.slider {
     width: 99.1vw;
     height: 80vh;
     overflow: hidden;
@@ -8,11 +10,11 @@
     position: relative;
 }
 
-.carousel{
+.carousel {
     position: relative;
 }
 
-.slider ul{
+.slider ul {
     display: flex;
     animation: cambio 20s infinite alternate linear;
     width: 400%;
@@ -20,65 +22,85 @@
     padding: 0;
 }
 
-.slider li{
+.slider li {
     list-style: none;
 }
 
-.foto{
+.foto {
     width: 99.1vw;
     height: 80vh;
-    opacity: 90%; 
+    opacity: 90%;
 }
 
-.btn{
+.btn {
     background-color: #A63D2B;
     width: 160px;
     padding: 20px;
-    box-shadow: 105px  rgba(0, 0, 0, 0.1) ;
+    box-shadow: 105px rgba(0, 0, 0, 0.1);
     transition-duration: 0.3s;
     transition-property: box-shadow, transform;
 }
 
-.admin_btn{
+.admin_btn {
     background-color: #A63D2B;
     width: 100px;
     padding: 10px;
     font-size: 14px;
-    box-shadow: 105px  rgba(0, 0, 0, 0.1) ;
+    box-shadow: 105px rgba(0, 0, 0, 0.1);
     transition-duration: 0.3s;
     transition-property: box-shadow, transform;
 }
 
-.btn:hover, .btn:active, .btn:focus, .admin_btn:hover, .admin_btn:active, .admin_btn:focus{
+.btn:hover,
+.btn:active,
+.btn:focus,
+.admin_btn:hover,
+.admin_btn:active,
+.admin_btn:focus {
     box-shadow: 0 0 10px rgba(128, 46, 32, 0.856);
     transform: scale(1.1);
 }
 
-.button{
+.button {
     margin: 15%;
     padding: 0px;
     height: 0%;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
+
 
 /* Transició carousel */
-@keyframes cambio{
-    0%{margin-left: 0;}
-    20%{margin-left: 0;}
-    
-    25%{margin-left: -100%;}
-    45%{margin-left: -100%;}
-    
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
-    
-    75%{margin-left: -300%;}
-    100%{margin-left: -300%;}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: -300%;
+    }
 }
 
-.more{
+.more {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
@@ -87,7 +109,7 @@
     height: 300px;
 }
 
-.menu{
+.menu {
     background-image: url("../img/menu.png");
     display: grid;
     justify-content: center;
@@ -96,7 +118,7 @@
     border-radius: 2px;
 }
 
-.admin{
+.admin {
     background-color: #E2E3E5;
     display: grid;
     gap: 20px;
@@ -106,10 +128,14 @@
     padding: 20px;
 }
 
-.imgg{
+.imgg {
     height: 180px;
 }
 
-.ad{ height: 100px;}
+.ad {
+    height: 100px;
+}
 
-h3{ margin: 0px 0px 5px 0px; }
+h3 {
+    margin: 0px 0px 5px 0px;
+}

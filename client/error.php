@@ -12,8 +12,8 @@
     </head>
 
     <body>
-        <?php include("header.php")?>
-        
+        <?php include("header.php") ?>
+
         <div class="pantalla err">
             <img src="img/error_pizza.png">
             <h1 class="err_h1">Error, ja has fet la comanda d'avui!</h1>

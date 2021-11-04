@@ -11,20 +11,21 @@
         <link type="text/css" rel="stylesheet" href="css/form.css">
         <title>Validació comanda</title>
     </head>
+
     <body>
         <?php
-            // iniciem sessió session
-            session_start();
-            include("header.php");
+        // iniciem sessió session
+        session_start();
+        include("header.php");
         ?>
-    
+
         <div class="grid_div">
 
-            <!-- Titol Pagina --> 
+            <!-- Titol Pagina -->
             <div class="head">
                 <h1>Validació comanda</h1>
             </div>
-        
+
             <div class="dades_comanda">
                 <div class="tit">
                     <h1>Dades de la comanda</h1>
@@ -32,50 +33,54 @@
                     <!-- Dades comanda -->
                     <?php
 
-                        //En funció de l'hora, escollim el nom i la ruta dels fitx .json 
-                        if(date("H") < 11){ $h = 0; }
-                        else if( date("H") == 11 && date("i") <= "30"){ $h = 0; }
-                        else{ $h = 1; }
-                        if($h){
-                            $nom = "prodtarda-" ;
-                            $fit = "../administrador/json/ctarda.json";
-                        }else{
-                            $nom = "prodmati-" ;
-                            $fit = "../administrador/json/cmati.json";
-                        }
+                    //En funció de l'hora, escollim el nom i la ruta dels fitx .json 
+                    if (date("H") < 11) {
+                        $h = 0;
+                    } else if (date("H") == 11 && date("i") <= "30") {
+                        $h = 0;
+                    } else {
+                        $h = 1;
+                    }
+                    if ($h) {
+                        $nom = "prodtarda-";
+                        $fit = "../administrador/json/ctarda.json";
+                    } else {
+                        $nom = "prodmati-";
+                        $fit = "../administrador/json/cmati.json";
+                    }
 
-                        $total=0;
-                        if($_POST){
-                            $prodTot = 12;
-                            $data = file_get_contents($fit);
-                            $menu = json_decode($data, true);
-                            $bocatas = array();
-                            $nproductos = array();
+                    $total = 0;
+                    if ($_POST) {
+                        $prodTot = 12;
+                        $data = file_get_contents($fit);
+                        $menu = json_decode($data, true);
+                        $bocatas = array();
+                        $nproductos = array();
 
-                            //Mostrar els productes seleccionats al menu
-                            for($i=1; $i<=$prodTot; $i++){
-                                if($_POST[$nom.$i] > 0){
-                                    foreach($menu as $m){
-                                        if($m['id'] == $i){
-                                            echo ("<p class='prod'>- ".$m['nombre']." x".$_POST[$nom.$i]."</p>");
-                                            array_push($bocatas, $m['nombre']);
-                                            array_push($nproductos, $_POST[$nom.$i]);
-                                            for($j=0; $j<$_POST[$nom.$i]; $j++){
-                                                $total += $m['precio'];
-                                            }
+                        //Mostrar els productes seleccionats al menu
+                        for ($i = 1; $i <= $prodTot; $i++) {
+                            if ($_POST[$nom . $i] > 0) {
+                                foreach ($menu as $m) {
+                                    if ($m['id'] == $i) {
+                                        echo ("<p class='prod'>- " . $m['nombre'] . " x" . $_POST[$nom . $i] . "</p>");
+                                        array_push($bocatas, $m['nombre']);
+                                        array_push($nproductos, $_POST[$nom . $i]);
+                                        for ($j = 0; $j < $_POST[$nom . $i]; $j++) {
+                                            $total += $m['precio'];
                                         }
                                     }
                                 }
                             }
                         }
+                    }
 
-                        //Mostrar el preu total
-                        echo "<h2>Total: ".$total."€</h2>";
-                        
-                        //Pasar les dades de la comnada a la variable $_SESSION
-                        $_SESSION['total']=$total;
-                        $_SESSION['nombre']=$bocatas;
-                        $_SESSION['nproductos']=$nproductos;
+                    //Mostrar el preu total
+                    echo "<h2>Total: " . $total . "€</h2>";
+
+                    //Pasar les dades de la comnada a la variable $_SESSION
+                    $_SESSION['total'] = $total;
+                    $_SESSION['nombre'] = $bocatas;
+                    $_SESSION['nproductos'] = $nproductos;
                     ?>
                 </div>
 
@@ -111,11 +116,10 @@
                 </form>
             </div>
         </div>
-    <div class="div_foot">
-        <?php include("footer.php"); ?>
-    </div>
+        <div class="div_foot">
+            <?php include("footer.php"); ?>
+        </div>
 
-    <script type="text/javascript" src="./js/formulariDades.js"></script>
-    
+        <script type="text/javascript" src="./js/formulariDades.js"></script>
     </body>
 </html>

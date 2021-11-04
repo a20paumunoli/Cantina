@@ -1,53 +1,55 @@
-body{
+body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #040e33;
 }
 
-#h-cont{
-    display: grid; 
-    grid-template-columns: auto 1fr auto; 
-    align-content: center; 
+#h-cont {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-content: center;
     padding: 10px 16px 10px 60px;
     background-color: #e2e3e5;
 }
 
-#h-1{
+#h-1 {
     justify-self: left;
     align-self: end;
-    padding-left: 14px; 
+    padding-left: 14px;
     padding-right: 14px;
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
 
-#h-2{
+#h-2 {
     align-self: end;
     justify-self: left;
     margin-left: 10px;
 }
 
-#h-3{
+#h-3 {
     justify-self: right;
     align-self: end;
     padding-bottom: 6px;
 }
 
-p{ margin: 0px 0px 0px 0px; }
+p {
+    margin: 0px 0px 0px 0px;
+}
 
-.sp2{
+.sp2 {
     font-weight: 100;
     font-size: 30px;
 }
 
-.n{
+.n {
     font-weight: 400;
     font-size: 55px;
     height: 55px;
 }
 
-.boton{
+.boton {
     font-weight: bold;
-    text-align: center; 
+    text-align: center;
     text-decoration: none;
     color: white;
     border-radius: 8px;
@@ -55,16 +57,19 @@ p{ margin: 0px 0px 0px 0px; }
     padding: 8px;
 }
 
-.btn_menu{
+.btn_menu {
     background-color: #A63D2B;
     font-size: 14px;
     transition-duration: 0.3s;
     transition-property: box-shadow;
 }
 
-.btn_menu:hover, .btn_menu:active, .btn_menu:focus{
+.btn_menu:hover,
+.btn_menu:active,
+.btn_menu:focus {
     box-shadow: 0 0 10px rgba(128, 46, 32, 0.856);
 }
+
 
 /*.btn:hover, .btn:active, .btn:focus, .admin_btn:hover, .admin_btn:active, .admin_btn:focus{
     box-shadow: 0 0 10px rgba(128, 46, 32, 0.856);

@@ -1,5 +1,5 @@
-
-    if (document.cookie.split(';').some((item) => item.trim().startsWith('comanda='))) {
+//Comprovar si se ha hecho comanda
+if (document.cookie.split(';').some((item) => item.trim().startsWith('comanda='))) {
     Swal.fire({
         position: 'center-center',
         icon: 'warning',

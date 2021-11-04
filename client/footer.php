@@ -4,7 +4,7 @@
     <div id="d1">
         <a class="a_foot" href="">About us</a>
         </br>
-        <a class="a_foot" href="" >Contactans</a>
+        <a class="a_foot" href="">Contactans</a>
     </div>
 
     <!-- Apartat "Copyright" -->

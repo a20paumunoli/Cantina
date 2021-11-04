@@ -11,7 +11,7 @@
         <link type="text/css" rel="stylesheet" href="client/css/index.css">
         <title>Landing page</title>
     </head>
-     
+
     <body>
         <?php include("client/header.php") ?>
 
@@ -24,9 +24,9 @@
                     <li><img class="foto" src="./client/img/foto3.jpg"></li>
                     <li><img class="foto" src="./client/img/foto4.png"></li>
                 </ul>
-            </div> 
+            </div>
         </div>
-        
+
         <!-- Mostrar dos <div> amb un botó cadascún per tal d'accedir al menú i a l'apartat d'administració -->
         <div class="more">
             <div class="menu">
@@ -49,4 +49,3 @@
         <script type="text/javascript" src="client/js/index.js"> </script>
     </body>
 </html>
-

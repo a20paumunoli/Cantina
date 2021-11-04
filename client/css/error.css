@@ -1,24 +1,24 @@
-body{
+body {
     background-image: url("../img/1.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.pantalla{
+.pantalla {
     width: auto;
     height: 81vh;
     align-items: center;
 }
 
-.err{
+.err {
     margin-left: auto;
     display: flex;
     justify-content: center;
-    margin-right: auto; 
-    flex-direction: column;          
+    margin-right: auto;
+    flex-direction: column;
 }
 
-.err_h1{
+.err_h1 {
     color: white;
     font-size: 50px;
 }

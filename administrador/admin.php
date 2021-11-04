@@ -10,15 +10,16 @@
         <link type="text/css" rel="stylesheet" href="./css/admin.css">
         <title>Admin</title>
     </head>
-        <body>
-        <?php include ("../client/header.php")?>
+
+    <body>
+        <?php include("../client/header.php") ?>
 
         <!-- Boto anar enrere -->
         <div>
             <input type="button" id="back" class="boton btn_back" value="Back">
         </div>
 
-        <!-- 2 Div per anar a ModificarMenu.php i ConsultarComandes.php --> 
+        <!-- 2 Div per anar a ModificarMenu.php i ConsultarComandes.php -->
         <div class="pantalla">
             <div id="area1" class="novetats1">
                 <h2>Consultar Comandes</h2>
@@ -31,6 +32,6 @@
         <div class="div_foot">
             <?php include("../client/footer.php"); ?>
         </div>
-    <script type="text/javascript" src="./js/admin.js"></script>
-</body>
+        <script type="text/javascript" src="./js/admin.js"></script>
+    </body>
 </html>

@@ -1,57 +1,61 @@
-#grid-c{
-    display: grid;  
+#grid-c {
+    display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     background-color: #e2e3e5;
     padding: 20px;
     position: unset;
 }
-#d1{
+
+#d1 {
     justify-self: left;
     align-self: center;
 }
 
-#d2{
+#d2 {
     justify-self: center;
     align-self: center;
 }
 
-#d3{
+#d3 {
     justify-self: right;
     align-self: center;
     margin-right: 10px;
 }
 
-.p_footer{
+.p_footer {
     margin: 0px 0px 0px 0px;
     font-size: 15px;
     color: #666666;
 }
 
-.sp{
+.sp {
     margin: 6px;
 }
 
-.a_foot, .a_foot:visited, .a_foot:focus, .a_foot:active{
+.a_foot,
+.a_foot:visited,
+.a_foot:focus,
+.a_foot:active {
     color: #a63D2B;
     font-size: 16px;
     text-decoration: none;
 }
 
-.a_foot:hover{
+.a_foot:hover {
     color: #040e33;
 }
 
-.icon{
+.icon {
     width: 25px;
     padding-top: 5px;
 }
 
-.icon2{
+.icon2 {
     width: 27px;
     padding-bottom: 1px;
 }
 
-.div_foot{
+.div_foot {
     width: 100vw;
     position: absolute;
     bottom: 0;

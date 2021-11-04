@@ -1,12 +1,12 @@
-.pantalla{
+.pantalla {
     width: auto;
     height: 75vh;
     display: flex;
     text-align: center;
-    justify-content:center;
+    justify-content: center;
 }
 
-.novetats1{
+.novetats1 {
     color: white;
     background-color: #E2E3E5;
     width: 500px;
@@ -21,7 +21,7 @@
     background-position: center;
 }
 
-.novetats2{
+.novetats2 {
     color: white;
     background-color: #E2E3E5;
     width: 500px;
@@ -36,11 +36,11 @@
     background-position: center;
 }
 
-h2{
+h2 {
     background-color: black;
 }
 
-.btn_back{
+.btn_back {
     background-color: #A63D2B;
     transition-duration: 0.3s;
     transition-property: transform;
@@ -48,6 +48,8 @@ h2{
     margin: 10px 0px 0px 10px;
 }
 
-.btn_back:hover, .btn_back:active, .btn_back:focus{
+.btn_back:hover,
+.btn_back:active,
+.btn_back:focus {
     transform: scale(1.05);
 }

@@ -1,100 +1,153 @@
-.cont{
-    display:grid;
+.cont {
+    display: grid;
     grid-template-columns: 130px 130px 130px 130px;
-    grid-template-areas: "tit tit tit tit"
-                        "header1 header1 header2 header2"
-                        "b1 b1 b2 b2"
-                        "b3 b4 b5 b6"
-                        "b7 b8 b9 b10"
-                        "b11 b12 b13 b14"
-                        "footer footer footer footer";
+    grid-template-areas: "tit tit tit tit" "header1 header1 header2 header2" "b1 b1 b2 b2" "b3 b4 b5 b6" "b7 b8 b9 b10" "b11 b12 b13 b14" "footer footer footer footer";
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin:50px;
+    margin: 50px;
 }
 
-.int-cont{
+.int-cont {
     justify-self: center;
 }
 
-.tit{ grid-area: tit; text-align: center; }
-.header1{ grid-area: header1; }
-.header2{ grid-area: header2; }
-.c1{ grid-area: b3; }
-.c2{ grid-area: b4; }
-.c3{ grid-area: b5; }
-.c4{ grid-area: b6; }
-.c5{ grid-area: b7; }
-.c6{ grid-area: b8; }
-.c7{ grid-area: b9; }
-.c8{ grid-area: b10; }
-.c9{ grid-area: b11; }
-.c10{ grid-area: b12; }
-.c11{ grid-area: b13; }
-.c12{ grid-area: b14; }
+.tit {
+    grid-area: tit;
+    text-align: center;
+}
 
-.footer{ 
-    grid-area: footer; 
+.header1 {
+    grid-area: header1;
+}
+
+.header2 {
+    grid-area: header2;
+}
+
+.c1 {
+    grid-area: b3;
+}
+
+.c2 {
+    grid-area: b4;
+}
+
+.c3 {
+    grid-area: b5;
+}
+
+.c4 {
+    grid-area: b6;
+}
+
+.c5 {
+    grid-area: b7;
+}
+
+.c6 {
+    grid-area: b8;
+}
+
+.c7 {
+    grid-area: b9;
+}
+
+.c8 {
+    grid-area: b10;
+}
+
+.c9 {
+    grid-area: b11;
+}
+
+.c10 {
+    grid-area: b12;
+}
+
+.c11 {
+    grid-area: b13;
+}
+
+.c12 {
+    grid-area: b14;
+}
+
+.footer {
+    grid-area: footer;
     margin-top: 10px;
 }
 
-.btn{
+.btn {
     background-color: #A63D2B;
     transition-duration: 0.3s;
     transition-property: transform;
     border: 1px solid #A63D2B
 }
 
-.btn:hover, .btn:active, .btn:focus{
+.btn:hover,
+.btn:active,
+.btn:focus {
     transform: scale(1.05);
 }
 
-.btn2{
+.btn2 {
     background-color: #040e33;
     transition-duration: 0.3s;
     transition-property: transform;
     border: 1px solid #040e33;
 }
 
-.btn2:hover, .btn2:active, .btn2:focus{
+.btn2:hover,
+.btn2:active,
+.btn2:focus {
     transform: scale(1.05);
 }
 
-input{
+input {
     padding: 5px;
 }
 
-.g-cont{
+.g-cont {
     display: grid;
-    grid-template-areas: "g1 g2"
-                            "g3 g4"
-                            "g5 g6"
-                            "g7 g7";
+    grid-template-areas: "g1 g2" "g3 g4" "g5 g6" "g7 g7";
     gap: 10px 10px;
     margin-top: 20px;
     justify-items: center;
     align-items: center;
 }
 
-
-.g1{ grid-area: g1; 
+.g1 {
+    grid-area: g1;
     justify-self: end;
 }
 
-.g2{ grid-area: g2; }
+.g2 {
+    grid-area: g2;
+}
 
-.g3{ 
+.g3 {
     grid-area: g3;
     justify-self: end;
 }
 
-.g4{ grid-area: g4; }
-.g5{ grid-area: g5; }
-.g6{ grid-area: g6; }
-.g7{ grid-area: g7; }
+.g4 {
+    grid-area: g4;
+}
 
-.btn_back{
+.g5 {
+    grid-area: g5;
+}
+
+.g6 {
+    grid-area: g6;
+}
+
+.g7 {
+    grid-area: g7;
+}
+
+.btn_back {
     background-color: #A63D2B;
     transition-duration: 0.3s;
     transition-property: transform;
@@ -102,6 +155,8 @@ input{
     margin: 10px 0px 0px 10px;
 }
 
-.btn_back:hover, .btn_back:active, .btn_back:focus{
+.btn_back:hover,
+.btn_back:active,
+.btn_back:focus {
     transform: scale(1.05);
 }

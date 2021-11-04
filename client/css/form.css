@@ -1,22 +1,21 @@
-.grid_div{
+.grid_div {
     display: grid;
-    grid-template-areas: "head head"
-                        "ticket dades";
+    grid-template-areas: "head head" "ticket dades";
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
     padding: 20px;
     place-items: stretch center;
-    margin: 61px;  
+    margin: 61px;
     align-content: stretch;
-    }
+}
 
-body{
+body {
     background-image: url("../img/fondo_comanda.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.dades_comanda{
+.dades_comanda {
     grid-area: ticket;
     background-image: url("../img/ticket.png");
     background-repeat: no-repeat;
@@ -26,69 +25,75 @@ body{
     width: 340px;
 }
 
-.tit{
+.tit {
     font-family: monospace;
 }
 
-
-.dades_persona{
+.dades_persona {
     background-color: white;
     border-radius: 5px;
     padding: 16px;
     justify-self: start;
 }
 
-.head{
+.head {
     grid-area: head;
     justify-self: center;
     color: white;
 }
 
-.form_cont{
+.form_cont {
     padding: 10px;
 }
 
-.form_item{
+.form_item {
     margin-bottom: 18px;
     margin-left: 28px;
     margin-right: 28px;
 }
 
-.input{
+.input {
     float: right;
     margin-left: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
     padding-left: 6px;
-    outline: none ;
+    outline: none;
 }
 
-.input:focus{
+.input:focus {
     border-color: #A63D2B;
 }
 
-.sub{
+.sub {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 5px;
 }
 
-.btn_submit, .btn_back{
+.btn_submit,
+.btn_back {
     background-color: #A63D2B;
     transition-duration: 0.3s;
     transition-property: transform;
     border: 1px solid #A63D2B;
 }
 
-.btn_back:hover, .btn_back:active, .btn_back:focus, .btn_submit:hover, .btn_submit:active, .btn_submit:focus{
+.btn_back:hover,
+.btn_back:active,
+.btn_back:focus,
+.btn_submit:hover,
+.btn_submit:active,
+.btn_submit:focus {
     transform: scale(1.05);
 }
 
-.h2,h1{
+.h2,
+h1 {
     text-align: center;
 }
 
-.prod{
+.prod {
     font-size: 15px;
 }
